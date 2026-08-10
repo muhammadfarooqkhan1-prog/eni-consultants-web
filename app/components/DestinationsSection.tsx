@@ -72,7 +72,7 @@ export default function DestinationsSection() {
         "Business Visit & Trade Visas",
         "Overseas Academic Enrolments",
       ],
-      link: "/destinations/holiday-destinations",
+      link: "/destinations/asia-turkey-malaysia",
     },
   ];
 
