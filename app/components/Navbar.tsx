@@ -109,6 +109,8 @@ export default function Navbar() {
                   <Link href="/destinations/usa" className="block px-4 py-2 hover:bg-[#e05a14] no-underline text-white">🇺🇸 USA</Link>
                   <Link href="/destinations/australia" className="block px-4 py-2 hover:bg-[#e05a14] no-underline text-white">🇦🇺 Australia</Link>
                   <Link href="/destinations/new-zealand" className="block px-4 py-2 hover:bg-[#e05a14] no-underline text-white">🇳🇿 New Zealand</Link>
+                  <Link href="/destinations/middle-east" className="block px-4 py-2 hover:bg-[#e05a14] no-underline text-white">🇬cc Middle East</Link>
+                  <Link href="/destinations/schengen" className="block px-4 py-2 hover:bg-[#e05a14] no-underline text-white">sch Schengen</Link>
                 </div>
               )}
             </div>
@@ -199,6 +201,8 @@ export default function Navbar() {
                   <Link href="/destinations/usa" onClick={() => setMobileMenuOpen(false)} className="text-white no-underline text-sm">🇺🇸 USA</Link>
                   <Link href="/destinations/australia" onClick={() => setMobileMenuOpen(false)} className="text-white no-underline text-sm">🇦🇺 Australia</Link>
                   <Link href="/destinations/new-zealand" onClick={() => setMobileMenuOpen(false)} className="text-white no-underline text-sm">🇳🇿 New Zealand</Link>
+                  <Link href="/destinations/middle-east" onClick={() => setMobileMenuOpen(false)} className="text-white no-underline text-sm">🇬cc Middle East</Link>
+                  <Link href="/destinations/schengen" onClick={() => setMobileMenuOpen(false)} className="text-white no-underline text-sm"> sch Schengen</Link>
                 </div>
               )}
             </div>

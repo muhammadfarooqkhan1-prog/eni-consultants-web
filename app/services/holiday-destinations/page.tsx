@@ -2,9 +2,9 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Holiday & Visit Visa Services | Tourist, Business & Family Visas | ENI Consultants",
+  title: "Holiday & Visit Visa Services | Schengen, Japan, Asia & Worldwide Visas | ENI Consultants",
   description:
-    "Expert visit visa consultancy for Schengen Europe, UK, USA, Canada, Turkey, UAE, and Asia. Fast processing, error-free documentation, and high approval rates.",
+    "Expert visit visa consultancy for Schengen, UK, USA, Canada, Japan, Turkey, Azerbaijan, Singapore, Thailand, Malaysia, Indonesia, Uzbekistan, Hong Kong, and South Africa.",
 };
 
 export default function HolidayDestinationsServicePage() {
@@ -13,16 +13,106 @@ export default function HolidayDestinationsServicePage() {
       country: "Schengen Europe",
       flag: "https://flagcdn.com/w160/eu.png",
       title: "29 European Nations, Single Visa Access",
-      badge: "Multi-Entry Tourist & Business",
+      badge: "Multi-Entry Short Stay",
       description:
-        "Travel seamlessly across France, Germany, Italy, Spain, Switzerland, and 24 other European nations with a single Schengen short-stay visa.",
+        "Travel seamlessly across France, Germany, Italy, Spain, Switzerland, and 24 other European nations with a single Schengen short-stay visitor visa.",
       features: [
         "VFS / TLS / BLS Appointment Slot Booking",
         "Schengen-Compliant Travel Insurance & Itinerary Drafting",
-        "Bank Statement & Ties to Home Country File Structuring",
+        "Bank Statement & Home Ties File Structuring",
       ],
       mediaUrl: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=1000&auto=format&fit=crop",
       mediaAlt: "Schengen European Union Visit Visa Consultancy",
+    },
+    {
+      country: "Japan",
+      flag: "https://flagcdn.com/w160/jp.png",
+      title: "Japan e-Visa & Consular Tourist Visas",
+      badge: "East Asia Tourist Visa",
+      description:
+        "Explore Tokyo, Kyoto, and Mount Fuji with fast-track Japanese visitor visa file preparation and electronic visa processing.",
+      features: [
+        "Day-by-Day Detailed Itinerary Planning (Schedule of Stay)",
+        "Financial Support & Bank Proof Auditing",
+        "E-Visa Submission & Passport Tracking Support",
+      ],
+      mediaUrl: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=1000&auto=format&fit=crop",
+      mediaAlt: "Japan Tourist Visa Advisory",
+    },
+    {
+      country: "Turkey",
+      flag: "https://flagcdn.com/w160/tr.png",
+      title: "Turkey eVisa & Consular Sticker Visas",
+      badge: "E-Visa & Consular Filing",
+      description:
+        "Discover Istanbul and Cappadocia with official Turkish e-visa issuance and embassy sticker visa application file structuring.",
+      features: [
+        "Instant eVisa Processing for Eligible Passport/Visa Holders",
+        "Gateway / Embassy Biometric Slot Scheduling",
+        "Confirmed Flight & Hotel Reservation Vouchers",
+      ],
+      mediaUrl: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?q=80&w=1000&auto=format&fit=crop",
+      mediaAlt: "Turkey Visit Visa Services",
+    },
+    {
+      country: "Thailand, Malaysia & Indonesia",
+      flag: "https://flagcdn.com/w160/th.png",
+      title: "Southeast Asia Tourist & eVisa Hubs",
+      badge: "Island & Holiday Visas",
+      description:
+        "Fast-track processing for tropical holidays in Thailand, Malaysia (MDAC / eVisa), and Indonesia (Bali E-VOA & B211A visas).",
+      features: [
+        "Thai eVisa & Extension Documentation Support",
+        "Malaysia Digital Arrival Card (MDAC) & eVisa Submission",
+        "Indonesia E-VOA (Electronic Visa on Arrival) Processing",
+      ],
+      mediaUrl: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=1000&auto=format&fit=crop",
+      mediaAlt: "Thailand Malaysia Indonesia Holiday Visas",
+    },
+    {
+      country: "Singapore & Hong Kong",
+      flag: "https://flagcdn.com/w160/sg.png",
+      title: "Singapore E-Visa & Hong Kong PAR Clearances",
+      badge: "Fast Business & Travel",
+      description:
+        "Effortless tourist and trade delegation entry into Asia's premier financial and shopping hubs with official pre-arrival filings.",
+      features: [
+        "Authorized Singapore E-Visa Submission & SG Arrival Card",
+        "Hong Kong Pre-Arrival Registration (PAR) Clearance",
+        "Express Corporate & Leisure Travel Filing",
+      ],
+      mediaUrl: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?q=80&w=1000&auto=format&fit=crop",
+      mediaAlt: "Singapore and Hong Kong Travel Visas",
+    },
+    {
+      country: "Azerbaijan & Uzbekistan",
+      flag: "https://flagcdn.com/w160/az.png",
+      title: "Silk Road & Central Asia Fast-Track eVisas",
+      badge: "3-5 Day Digital Visas",
+      description:
+        "Experience Baku's modern skyline or Uzbekistan's historic Silk Road landmarks with simplified digital e-visa processing.",
+      features: [
+        "Azerbaijan ASAN 30-Day E-Visa Processing (Urgent 3-Hour Available)",
+        "Uzbekistan Official Tourist E-Visa Filing",
+        "Hotel Voucher & Digital Travel Documents Management",
+      ],
+      mediaUrl: "https://images.unsplash.com/photo-1528728329032-2972f65dfb3f?q=80&w=1000&auto=format&fit=crop",
+      mediaAlt: "Azerbaijan and Uzbekistan Tourist Visas",
+    },
+    {
+      country: "South Africa",
+      flag: "https://flagcdn.com/w160/za.png",
+      title: "South Africa Visitor & Safari Visas",
+      badge: "Tourist & Family Visit",
+      description:
+        "Comprehensive visa application filing for holiday safaris, Cape Town sightseeing, or visiting family members in South Africa.",
+      features: [
+        "DHA Electronic Visa & Consular Application File Review",
+        "Detailed Financial Ties & Bank Proof Verification",
+        "Complete Safari & Hotel Accommodation Itinerary Mapping",
+      ],
+      mediaUrl: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?q=80&w=1000&auto=format&fit=crop",
+      mediaAlt: "South Africa Safari Visit Visa",
     },
     {
       country: "United Kingdom",
@@ -53,21 +143,6 @@ export default function HolidayDestinationsServicePage() {
       ],
       mediaUrl: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1000&auto=format&fit=crop",
       mediaAlt: "USA B1 B2 and Canada Tourist Visa",
-    },
-    {
-      country: "Turkey, Malaysia & Asia",
-      flag: "https://flagcdn.com/w160/tr.png",
-      title: "eVisa, Sticker Visas & Asian Destinations",
-      badge: "Hassle-Free & Fast Processing",
-      description:
-        "Quick turnarounds for leisure trips, island getaways, and trade delegation visits across Turkey, Malaysia, Thailand, and East Asia.",
-      features: [
-        "Official eVisa Verification & Immediate Issuance",
-        "Hotel Voucher & Flight Reservation Management",
-        "Express Processing for Urgent Travel Schedules",
-      ],
-      mediaUrl: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?q=80&w=1000&auto=format&fit=crop",
-      mediaAlt: "Turkey and Asia Holiday Visit Visas",
     },
   ];
 
@@ -118,7 +193,7 @@ export default function HolidayDestinationsServicePage() {
               <div className="absolute bottom-6 left-6 right-6 p-4 bg-slate-900/90 backdrop-blur-md border border-slate-800 rounded-xl">
                 <p className="text-xs font-bold text-[#ff7027] uppercase">Precision Visa File Preparation</p>
                 <p className="text-white font-bold text-sm">Minimal Rejection Risk</p>
-                <p className="text-slate-400 text-xs mt-0.5">Schengen, UK, USA, Canada & Worldwide Visas</p>
+                <p className="text-slate-400 text-xs mt-0.5">Schengen, Japan, UK, USA, Asia & Worldwide Visas</p>
               </div>
             </div>
           </div>
@@ -164,7 +239,7 @@ export default function HolidayDestinationsServicePage() {
               <span className="text-3xl font-extrabold text-[#ff7027]">04</span>
               <h3 className="text-white font-bold text-base">Interview Prep & Collection</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
-                Conducting embassy interview practice (for USA/Germany) and tracking passport collection status.
+                Conducting embassy interview practice (for USA/Japan/Germany) and tracking passport collection status.
               </p>
             </div>
           </div>
