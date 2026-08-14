@@ -27,18 +27,7 @@ export default function DestinationsSection() {
       link: "/destinations/uk",
     },
     
-    {
-      country: "Middle East & GCC",
-      title: "Saudi Arabia, UAE, Qatar & Oman",
-      flagUrl: "https://flagcdn.com/w640/sa.png", // Main GCC flag anchor
-      tag: "Tax-Free Salaries",
-      highlights: [
-        "Senior Executive & Professional Careers",
-        "GCC Work Permits & Iqama Transfers",
-        "High-Growth Industrial Pathways",
-      ],
-      link: "/destinations/middle-east",
-    },
+  
     {
       country: "Schengen Europe",
       title: "Visit, Business & Work Mobility",
