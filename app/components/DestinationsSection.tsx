@@ -26,18 +26,7 @@ export default function DestinationsSection() {
       ],
       link: "/destinations/uk",
     },
-    {
-      country: "Australia",
-      title: "Subclass 189 / 190 / 491 Visas",
-      flagUrl: "https://flagcdn.com/w640/au.png",
-      tag: "High Quality of Life",
-      highlights: [
-        "Subclass 189 (Independent PR)",
-        "Subclass 190 (State Nominated)",
-        "Subclass 491 (Regional Provisional)",
-      ],
-      link: "/destinations/australia",
-    },
+    
     {
       country: "Middle East & GCC",
       title: "Saudi Arabia, UAE, Qatar & Oman",

@@ -26,23 +26,7 @@ export default function SkilledImmigrationServicePage() {
       mediaUrl: "https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1000&auto=format&fit=crop", 
       mediaAlt: "Canada Express Entry Permanent Residency Consultancy",
     },
-    {
-      country: "Australia",
-      flag: "https://flagcdn.com/w160/au.png",
-      title: "Subclass 189, 190 & Regional 491 Visas",
-      badge: "Points-Tested PR",
-      description:
-        "Points-based migration pathways for engineers, IT specialists, healthcare workers, and tradespeople seeking direct PR or State-Nominated permanent residency status.",
-      features: [
-        "Skills Assessment Filing (ACS, Engineers Australia, VETASSESS)",
-        "Expression of Interest (EOI) Management in SkillSelect",
-        "State and Regional Sponsorship Strategy",
-      ],
-      mediaType: "image",
-      // Recommended Image: Modern Australian architecture or Sydney landmark
-      mediaUrl: "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?q=80&w=1000&auto=format&fit=crop",
-      mediaAlt: "Australia Skilled Migration Services",
-    },
+    
     {
       country: "United Kingdom",
       flag: "https://flagcdn.com/w160/gb.png",
@@ -102,7 +86,7 @@ export default function SkilledImmigrationServicePage() {
                 href="/check-eligibility"
                 className="bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline"
               >
-                Evaluate Your PR Points Free
+                Check Your Eligibility
               </Link>
               <Link
                 href="/book-appointment"

@@ -24,7 +24,7 @@ export default function AboutPage() {
     {
       icon: "🌐",
       title: "Global Reach & Partnerships",
-      desc: "Direct partnerships with accredited universities and institutions across Canada, UK, Australia, USA, New Zealand, Europe, and the GCC.",
+      desc: "Direct partnerships with accredited universities and institutions across Canada, UK, USA, New Zealand, Europe, and the GCC.",
     },
     {
       icon: "⚡",
@@ -56,7 +56,6 @@ export default function AboutPage() {
       desc: "Points-based skilled immigration and direct residency programs for qualified professionals and families looking to settle overseas.",
       list: [
         "Canada Express Entry & Provincial Nominee Programs (PNP)",
-        "Australia General Skilled Migration (Subclasses 189, 190, 491)",
         "New Zealand Skilled Migrant Category (SMC) & Green List",
         "Middle East & GCC Golden Visas and Investor Residencies",
       ],

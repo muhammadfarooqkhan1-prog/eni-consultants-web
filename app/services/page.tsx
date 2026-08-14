@@ -4,7 +4,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Services | Overseas Education, Skilled Migration & Visit Visas | ENI Consultants",
   description:
-    "Comprehensive immigration and education advisory services: Study Visas, Permanent Residency (Canada, Australia, NZ), Schengen, Middle East Golden Visas, and Asian Tourist Visas.",
+    "Comprehensive immigration and education advisory services: Study Visas, Permanent Residency (Canada, NZ), Schengen, and Asian Tourist Visas.",
 };
 
 export default function ServicesPage() {
@@ -33,9 +33,7 @@ export default function ServicesPage() {
         "Points-based migration strategy, qualification assessments, and direct residency filing for qualified professionals seeking long-term settlement.",
       destinations: [
         { name: "Canada Express Entry & PNP", desc: "Category-Based Selection (STEM, Healthcare, Trades) and Provincial Nominations." },
-        { name: "Australia GSM (189, 190, 491)", desc: "Skills Assessment (ACS, EA, VETASSESS) and State Nominated Residency." },
         { name: "New Zealand SMC 6-Points", desc: "Skilled Migrant Category 6-Points calculation & Green List Tier 1/2 fast-tracks." },
-        { name: "Middle East & GCC Golden Visas", desc: "Self-sponsored long-term residency in Saudi Arabia (KSA Gold), UAE, and Qatar." },
       ],
       mediaUrl: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1000&auto=format&fit=crop",
       mediaAlt: "Permanent Residency and Skilled Migration Advisory",
