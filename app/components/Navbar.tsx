@@ -110,6 +110,7 @@ export default function Navbar() {
                   <Link href="/destinations/new-zealand" className="block px-4 py-2 hover:bg-[#e05a14] no-underline text-white">🇳🇿 New Zealand</Link>
                   <Link href="/destinations/schengen" className="block px-4 py-2 hover:bg-[#e05a14] no-underline text-white">sch Schengen</Link>
                   <Link href="/destinations/asia-turkey-malaysia" className="block px-4 py-2 hover:bg-[#e05a14] no-underline text-white"> atm Asia, Turkey, Malaysia</Link>
+                  <Link href="/destinations/srilanka" className="block px-4 py-2 hover:bg-[#e05a14] no-underline text-white"> s🇱🇰 Srilanka</Link>
                 </div>
               )}
             </div>
@@ -201,6 +202,7 @@ export default function Navbar() {
                   <Link href="/destinations/new-zealand" onClick={() => setMobileMenuOpen(false)} className="text-white no-underline text-sm">🇳🇿 New Zealand</Link>
                   <Link href="/destinations/schengen" onClick={() => setMobileMenuOpen(false)} className="text-white no-underline text-sm"> sch Schengen</Link>
                   <Link href="/destinations/asia-turkey-malaysia" onClick={() => setMobileMenuOpen(false)} className="text-white no-underline text-sm"> atm Asia, Turkey, Malaysia</Link>
+                  <Link href="/destinations/srilanka" onClick={() => setMobileMenuOpen(false)} className="text-white no-underline text-sm"> s🇱🇰 Srilanka</Link>
                 </div>
               )}
             </div>

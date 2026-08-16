@@ -44,7 +44,7 @@ export default function BookAppointmentSection() {
             Book a 1-on-1 Consultation
           </h2>
           <p className="text-slate-400 text-base sm:text-lg">
-            Schedule a confidential 48-hour assessment session with senior consultant <strong className="text-white">Muhammad Farooq Khan</strong> to evaluate your profile for global visas or career optimization.
+            Schedule a confidential 48-hour assessment session with Chief Immigration consultant <strong className="text-white">Muhammad Farooq Khan</strong> to evaluate your profile for global visas or career optimization.
           </p>
         </div>
 

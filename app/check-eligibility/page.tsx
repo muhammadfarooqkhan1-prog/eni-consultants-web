@@ -67,7 +67,7 @@ export default function CheckEligibilityPage() {
             Check Your Eligibility Status
           </h1>
           <p className="text-slate-400 text-base sm:text-lg">
-            Evaluate your points and qualifications for Skilled PR, Overseas Admission, or Profile Optimization across Canada, Australia, UK, Europe, and the Middle East.
+            Evaluate your points and qualifications for Skilled PR, Overseas Admission, or Profile Optimization across Canada, UK, Europe, and Asia.
           </p>
         </div>
 
