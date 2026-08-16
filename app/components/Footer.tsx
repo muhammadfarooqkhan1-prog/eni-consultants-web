@@ -98,8 +98,8 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/destinations/australia" className="hover:text-[#ff7027] transition-colors no-underline">
-                Australia Express Entry
+              <Link href="/destinations/turkey" className="hover:text-[#ff7027] transition-colors no-underline">
+                Turkey
               </Link>
             </li>
             <li>

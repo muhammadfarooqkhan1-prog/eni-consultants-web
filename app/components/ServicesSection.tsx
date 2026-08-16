@@ -35,14 +35,17 @@ export default function ServicesSection() {
       highlight: false, 
     },
   ];
+  
 
   return (
+    
     <section className="bg-slate-900 text-white py-16 px-5 sm:px-8">
+      
       
       {/* 1. Quick Stats & Trust Banner */}
       <div className="max-w-7xl mx-auto mb-20 bg-slate-800/80 rounded-2xl p-8 border border-slate-700 shadow-xl grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
         <div>
-          <h3 className="text-3xl sm:text-4xl font-extrabold text-[#ff7027]">10+</h3>
+          <h3 className="text-3xl sm:text-4xl font-extrabold text-[#ff7027]">7+</h3>
           <p className="text-slate-300 text-sm mt-1">Years Experience</p>
         </div>
         <div>
