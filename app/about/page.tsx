@@ -9,9 +9,9 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   const stats = [
-    { label: "Years of Excellence", value: "25+" },
+    { label: "Years of Excellence", value: "7+" },
     { label: "Global Destinations", value: "15+" },
-    { label: "Successful Visas", value: "10,000+" },
+    { label: "Successful Visas", value: "5,000+" },
     { label: "Partner Universities", value: "500+" },
   ];
 
