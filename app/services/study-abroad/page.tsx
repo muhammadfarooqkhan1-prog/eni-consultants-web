@@ -4,7 +4,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Study Abroad & Overseas Admissions Consultancy | ENI Consultants",
   description:
-    "Get admitted to top universities in Canada, UK, Australia, Germany, and USA. End-to-end guidance for university selection, SOPs, scholarships, and student visas.",
+    "Get admitted to top universities in Canada, UK, Germany, and USA. End-to-end guidance for university selection, SOPs, scholarships, and student visas.",
 };
 
 export default function StudyAbroadServicePage() {
@@ -39,21 +39,7 @@ export default function StudyAbroadServicePage() {
       mediaUrl: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=1000&auto=format&fit=crop",
       mediaAlt: "Study in UK Higher Education",
     },
-    {
-      country: "Australia",
-      flag: "https://flagcdn.com/w160/au.png",
-      title: "Group of Eight (Go8) & Regional Universities",
-      badge: "Extended Post-Study Work Rights",
-      description:
-        "Enroll in high-demand degree programs across Sydney, Melbourne, Brisbane, and regional Australian academic hubs with streamlined Genuine Student (GS) processing.",
-      features: [
-        "Genuine Student (GS) Assessment & Documentation",
-        "Subclass 500 Student Visa Application Management",
-        "Regional Study Points Bonus for Future Australia PR",
-      ],
-      mediaUrl: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1000&auto=format&fit=crop",
-      mediaAlt: "Australian Overseas Higher Education Admissions",
-    },
+    
     {
       country: "Germany & Europe",
       flag: "https://flagcdn.com/w160/de.png",

@@ -18,7 +18,6 @@ export default function ServicesPage() {
       destinations: [
         { name: "United Kingdom", desc: "Undergraduate & Master's degrees with Post-Study Work Visas (Graduate Route)." },
         { name: "Canada", desc: "Designated Learning Institution (DLI) admissions with Post-Graduation Work Permit (PGWP)." },
-        { name: "Australia", desc: "CRICOS registered course admissions with Subclass 500 Student Visa processing." },
         { name: "New Zealand", desc: "NZQA Level 7+ degree admissions leading to 3-year Post-Study Work Visas (PSWV)." },
         { name: "USA & Europe", desc: "F-1 Student Visa coaching & public university admissions across Germany/Schengen." },
       ],
