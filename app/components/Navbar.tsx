@@ -116,6 +116,7 @@ export default function Navbar() {
                   <Link href="/destinations/azerbaijan" className="block px-4 py-2 hover:bg-[#e05a14] no-underline text-white"> 🇦🇿 Azerbaijan</Link>
                   <Link href="/destinations/thailand" className="block px-4 py-2 hover:bg-[#e05a14] no-underline text-white"> 🇹🇭 Thailand</Link>
                   <Link href="/destinations/mauritius" className="block px-4 py-2 hover:bg-[#e05a14] no-underline text-white"> 🇹🇭 Mauritius</Link>
+                  <Link href="/destinations/indonesia" className="block px-4 py-2 hover:bg-[#e05a14] no-underline text-white"> 🇮🇩 Indonesia</Link>
                 </div>
               )}
             </div>
@@ -213,6 +214,7 @@ export default function Navbar() {
                   <Link href="/destinations/azerbaijan" onClick={() => setMobileMenuOpen(false)} className="text-white no-underline text-sm"> 🇦🇿 Azerbaijan</Link>
                   <Link href="/destinations/thailand" onClick={() => setMobileMenuOpen(false)} className="text-white no-underline text-sm"> 🇹🇭 Thailand</Link>
                   <Link href="/destinations/mauritius" onClick={() => setMobileMenuOpen(false)} className="text-white no-underline text-sm"> 🇹🇭 Mauritius</Link>
+                  <Link href="/destinations/indonesia" onClick={() => setMobileMenuOpen(false)} className="text-white no-underline text-sm"> 🇮🇩 Indonesia</Link>
                 </div>
               )}
             </div>
