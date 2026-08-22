@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import ServicesSection from "./components/ServicesSection";
 import WhyChooseUs from "./components/WhyChooseUs";
+import SchengenPhdBanner from "./components/SchengenPhdBanner"; 
 
 export default function HomePage() {
   return (
@@ -10,6 +11,7 @@ export default function HomePage() {
       {/* Hero section with video & overlay text */}
       <Hero />
       <ServicesSection />
+      <SchengenPhdBanner />
       <DestinationsSection />
       <WhyChooseUs />
       <Footer />

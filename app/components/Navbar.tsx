@@ -88,6 +88,9 @@ export default function Navbar() {
                   <Link href="/services/cv-optimization" className="block px-4 py-2 hover:bg-[#e05a14] no-underline text-white">
                     📄 CV & LinkedIn Optimization
                   </Link>
+                  <Link href="/services/schengen-phd" className="block px-4 py-2 hover:bg-[#e05a14] no-underline text-white">
+                    🧬 Schengen PhD
+                  </Link>
                 </div>
               )}
             </div>
@@ -186,6 +189,7 @@ export default function Navbar() {
                   <Link href="/services/study-abroad" onClick={() => setMobileMenuOpen(false)} className="text-white no-underline text-sm">🎓 Study Abroad</Link>
                   <Link href="/services/holiday-destinations" onClick={() => setMobileMenuOpen(false)} className="text-white no-underline text-sm">✈️ Holiday Visas</Link>
                   <Link href="/services/cv-optimization" onClick={() => setMobileMenuOpen(false)} className="text-white no-underline text-sm">📄 CV & LinkedIn Optimization</Link>
+                  <Link href="/services/schengen-phd" onClick={() => setMobileMenuOpen(false)} className="text-white no-underline text-sm">🧬 Schengen PhD</Link>
                 </div>
               )}
             </div>
