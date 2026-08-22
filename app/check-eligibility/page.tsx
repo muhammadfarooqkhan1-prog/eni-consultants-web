@@ -195,7 +195,7 @@ export default function CheckEligibilityPage() {
                       className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#ff7027] text-sm"
                     >
                       <option value="Canada Express Entry / PR">Canada Express Entry / PNP PR</option>
-                      <option value="Australia Skilled Migration (189/190)">Australia Skilled Migration (189/190)</option>
+                      <option value="Schengen PhD Placement & Research Fellowships">Schengen PhD Placement & Research Fellowships</option>
                       <option value="UK Skilled Worker Route">UK Skilled Worker Route</option>
                       <option value="CV & LinkedIn Optimization (Middle East / Western)">CV & LinkedIn Optimization</option>
                       <option value="Study Abroad Admissions">Study Abroad & Student Visa</option>
