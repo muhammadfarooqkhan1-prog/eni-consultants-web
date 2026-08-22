@@ -111,7 +111,7 @@ export default function SkilledImmigrationServicePage() {
               
               <div className="absolute bottom-6 left-6 right-6 p-4 bg-slate-900/90 backdrop-blur-md border border-slate-800 rounded-xl">
                 <p className="text-xs font-bold text-[#ff7027] uppercase">Senior Immigration Counsel</p>
-                <p className="text-white font-bold text-sm">Led by Muhammad Farooq Khan</p>
+                <p className="text-white font-bold text-sm">Led by Chief Immigration Officer Muhammad Farooq Khan</p>
                 <p className="text-slate-400 text-xs mt-0.5">Custom points evaluation & legal documentation guidance</p>
               </div>
             </div>
