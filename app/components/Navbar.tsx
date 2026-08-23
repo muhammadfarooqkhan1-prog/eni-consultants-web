@@ -24,7 +24,7 @@ export default function Navbar() {
         textAlign: "center",
         fontWeight: "500"
       }}>
-        Serving Overseas Pakistanis in <strong>KSA (Riyadh, Jeddah, Dammam, Khobar, Abha), UAE, Qatar, Bahrain, Muscat & Kuwait</strong>
+        Serving Pakistanis & Overseas Pakistanis in <strong>KSA (Riyadh, Jeddah, Dammam, Khobar, Abha), UAE, Qatar, Bahrain, Muscat & Kuwait</strong>
       </div>
 
       {/* 2. Main Navigation Bar */}
