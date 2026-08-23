@@ -19,7 +19,7 @@ export default function CanadaDestinationPage() {
         "Canadian Experience Class (CEC) for candidates with Canadian work history",
         "CRS Score optimization & ECA (WES) verification strategy",
       ],
-      mediaUrl: "https://images.unsplash.com/photo-1517935706615-2717063c2225?q=80&w=1000&auto=format&fit=crop",
+      mediaUrl: "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=1000",
       mediaAlt: "Canada Express Entry Consultation",
     },
     {
@@ -33,7 +33,7 @@ export default function CanadaDestinationPage() {
         "Trades, Transport & Agriculture professions",
         "French Language Proficiency stream",
       ],
-      mediaUrl: "https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1000&auto=format&fit=crop",
+      mediaUrl: "https://images.pexels.com/photos/2048865/pexels-photo-2048865.jpeg?auto=compress&cs=tinysrgb&w=1000",
       mediaAlt: "Canada Category Based Selection",
     },
     {
@@ -47,7 +47,7 @@ export default function CanadaDestinationPage() {
         "British Columbia PNP (BC PNP) Tech & Healthcare streams",
         "Saskatchewan SINP & Atlantic Immigration Program (AIP)",
       ],
-      mediaUrl: "https://images.unsplash.com/photo-1519832979-6fa011b87667?q=80&w=1000&auto=format&fit=crop",
+      mediaUrl: "https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1000",
       mediaAlt: "Canada Provincial Nominee Program PNP",
     },
     {
@@ -60,7 +60,7 @@ export default function CanadaDestinationPage() {
         "Provincial Attestation Letter (PAL) guidance",
         "Spouse Open Work Permit (SOWP) eligibility for Master's programs",
       ],
-      mediaUrl: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1000&auto=format&fit=crop",
+      mediaUrl: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1000",
       mediaAlt: "Study in Canada Universities",
     },
   ];
@@ -85,7 +85,7 @@ export default function CanadaDestinationPage() {
               Immigrate to Canada: Permanent Residency & Visa Pathways
             </h1>
             <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
-              Canada remains a top destination for skilled professionals, offering universal healthcare, high living standards, free education for children, and direct citizenship pathways. ENI Consultants provides end-to-end legal and technical representation for your Canadian immigration application.
+              As a global economic hub, Canada heavily relies on international talent to run its industries. With structured pathways to PR, universal healthcare, and citizenship, ENI Consultants provides complete legal and technical representation for your immigration journey.
             </p>
             
             <div className="pt-2 flex flex-wrap gap-4">
@@ -108,7 +108,7 @@ export default function CanadaDestinationPage() {
           <div className="lg:col-span-5 relative z-10">
             <div className="relative rounded-2xl overflow-hidden border border-slate-700 shadow-2xl group">
               <img
-                src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1000&auto=format&fit=crop"
+                src="https://images.pexels.com/photos/1549326/pexels-photo-1549326.jpeg?auto=compress&cs=tinysrgb&w=1000"
                 alt="Canada Permanent Residency Advisory"
                 className="w-full h-80 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-700"
               />
@@ -123,49 +123,103 @@ export default function CanadaDestinationPage() {
           </div>
         </div>
 
-        {/* KEY ADVANTAGES OF CANADA PR */}
-        <section className="space-y-8">
-          <div className="text-center max-w-3xl mx-auto">
+        {/* STATS & ECONOMIC LANDSCAPE SECTION */}
+        <section className="bg-slate-900/80 border border-slate-800 rounded-3xl p-8 sm:p-12 space-y-8 shadow-xl">
+          <div className="max-w-3xl space-y-3">
+            <span className="text-[#ff7027] font-bold text-xs uppercase tracking-wider">Economic & Demographic Landscape</span>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-white">
-              Why Choose Canada Permanent Residency?
+              Over $2 Trillion Economy is run by Immigration
             </h2>
-            <p className="text-slate-400 text-sm sm:text-base mt-2">
-              Key benefits granted to PR status holders and their dependent family members.
+            <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+              Canada is the world&apos;s 9th largest economy, supported by advanced technology, energy, healthcare, and engineering sectors. To keep the economy growing and deal with the problem of people the Canadian government always brings in almost "500,000 new permanent residents each year". The focus is, on people who come for reasons because they can help fill important jobs that are needed.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">🍁</span>
-              <h3 className="text-white font-bold text-base">Direct PR Status</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
+            <div className="bg-slate-950 border border-slate-800 p-6 rounded-2xl space-y-2">
+              <p className="text-3xl font-black text-[#ff7027]">Over $2.1T</p>
+              <h3 className="text-white font-bold text-sm">Nominal GDP</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
-                Live, work, and study anywhere in Canada with full constitutional rights and job mobility.
+                Strong financial foundation with steady job growth across various provinces.
               </p>
             </div>
 
-            <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">🏥</span>
-              <h3 className="text-white font-bold text-base">Universal Healthcare</h3>
+            <div className="bg-slate-950 border border-slate-800 p-6 rounded-2xl space-y-2">
+              <p className="text-3xl font-black text-[#ff7027]">500k/yr</p>
+              <h3 className="text-white font-bold text-sm">Annual Immigration Target</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
-                Free medical coverage for you and your family through Medicare upon arrival.
+                Calculated IRCC levels designed to maintain labor requirements nationwide.
               </p>
             </div>
 
-            <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">🎓</span>
-              <h3 className="text-white font-bold text-base">Free Child Education</h3>
+            <div className="bg-slate-950 border border-slate-800 p-6 rounded-2xl space-y-2">
+              <p className="text-3xl font-black text-[#ff7027]">Over 60%</p>
+              <h3 className="text-white font-bold text-sm">Economic Class Focus</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
-                Free high-quality public school education from Primary to High School (K-12).
+                Majority of quotas reserved strictly for skilled workers and professionals.
               </p>
             </div>
 
-            <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">🛂</span>
-              <h3 className="text-white font-bold text-base">Citizenship in 3 Years</h3>
+            <div className="bg-slate-950 border border-slate-800 p-6 rounded-2xl space-y-2">
+              <p className="text-3xl font-black text-[#ff7027]">#1</p>
+              <h3 className="text-white font-bold text-sm">G7 Quality of Life</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
-                Eligible to apply for a Canadian Passport after completing 1,095 days of physical residency.
+                Consistently ranked amongst top global nations for safety, education, and equality.
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* LIFE IN CANADA & WHY MOVE SECTION */}
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Life in Canada */}
+          <div className="bg-slate-900 border border-slate-800 p-8 rounded-3xl space-y-6">
+            <div className="space-y-2">
+              <span className="text-[#ff7027] text-xs font-bold uppercase tracking-wider">Lifestyle & Infrastructure</span>
+              <h3 className="text-2xl font-bold text-white">What Life in Canada Looks Like</h3>
+            </div>
+            <p className="text-slate-400 text-sm leading-relaxed">
+              Living in Canada feels like a blend of top‑tier city life and stunning nature. People in Canada enjoy a multicultural society, great public transport, clean air and water and a strong system of help for everyone.
+            </p>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
+                <span className="text-[#ff7027] font-bold">✓</span>
+                <span><strong>Clean & Safe Communities:</strong> Very low crime rates across major cities like Toronto, Vancouver, Calgary, and Ottawa.</span>
+              </li>
+              <li className="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
+                <span className="text-[#ff7027] font-bold">✓</span>
+                <span><strong>Work-Life Balance:</strong> Canada has solid labor laws, fair wages, paid leave and strong employee protection.</span>
+              </li>
+              <li className="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
+                <span className="text-[#ff7027] font-bold">✓</span>
+                <span><strong>Inclusive Multiculturalism:</strong> Canada welcomes people from cultures, religions and backgrounds and they thrive together.</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Why You Should Move */}
+          <div className="bg-slate-900 border border-slate-800 p-8 rounded-3xl space-y-6">
+            <div className="space-y-2">
+              <span className="text-[#ff7027] text-xs font-bold uppercase tracking-wider">Value Proposition</span>
+              <h3 className="text-2xl font-bold text-white">Why You Should Move to Canada</h3>
+            </div>
+            <p className="text-slate-400 text-sm leading-relaxed">
+              Getting Canadian Permanent Residency isn&apos;t just a visa—it&apos;s a long-term investment in your family&apos;s future, providing benefits to generations from day one.
+            </p>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
+                <span className="text-[#ff7027] font-bold">✓</span>
+                <span><strong>Universal Healthcare:</strong> Free essential medical treatments, surgeries, and doctor visits via Medicare.</span>
+              </li>
+              <li className="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
+                <span className="text-[#ff7027] font-bold">✓</span>
+                <span><strong>Free K-12 Schooling:</strong> World-class public primary and secondary education for your children at zero tuition cost.</span>
+              </li>
+              <li className="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
+                <span className="text-[#ff7027] font-bold">✓</span>
+                <span><strong>Direct Passport Pathway:</strong> Become eligible for a top-tier Canadian passport after completing 3 years of residency.</span>
+              </li>
+            </ul>
           </div>
         </section>
 
@@ -238,7 +292,7 @@ export default function CanadaDestinationPage() {
             Ready to Start Your Canadian PR Journey?
           </h3>
           <p className="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
-            Get an exact CRS score assessment, NOC/TEER classification, and customized PNP strategy from senior consultant Muhammad Farooq Khan.
+            Get an exact CRS score assessment, NOC/TEER classification, and customized PNP strategy from Chief Immigration consultant Muhammad Farooq Khan.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
