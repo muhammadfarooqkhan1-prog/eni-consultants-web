@@ -21,7 +21,7 @@ export default function ServicesSection() {
     {
       title: "Holiday & Visit Visas",
       icon: "✈️",
-      description: "Hassle-free tourist and family visit visa processing for overseas Pakistani passport holders.",
+      description: "Seamless tourist and family visit visa processing for local & overseas Pakistani passport holders.",
       features: ["Maldives & Mauritius", "Azerbaijan & Turkey", "Thailand & Malaysia"],
       link: "/services/holiday-destinations",
       highlight: false,
@@ -29,8 +29,8 @@ export default function ServicesSection() {
     {
       title: "CV & LinkedIn Optimization",
       icon: "📄",
-      description: "Stand out to global recruiters with ATS-optimized CVs, customized cover letters, and high-impact LinkedIn profiles redesigned for successful job offers in the Middle East & First World countries.",
-      features: ["ATS-Compliant CV Formatting", "Tailored Cover Letter Design", "LinkedIn Profile Optimization", "Tailored for Middle East & Global Job Markets"],
+      description: "Stand out to global recruiters with optimized CVs, customized cover letters, and high-impact LinkedIn profiles redesigned for successful job offers in the Middle East & First World countries.",
+      features: ["Optimized CV Formatting", "Tailored Cover Letter Design", "LinkedIn Profile Optimization", "Tailored for Middle East & Global Job Markets"],
       link: "/services/cv-optimization",
       highlight: false, 
     },
