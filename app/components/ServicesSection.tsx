@@ -6,7 +6,7 @@ export default function ServicesSection() {
       title: "Skilled Immigration",
       icon: "🌐",
       description: "Direct PR & Work pathways for qualified professionals in KSA, UAE, Qatar, and across the Gulf.",
-      features: ["Canada Express Entry & PNP", "Australia Subclass 189/190", "UK Skilled Worker"],
+      features: ["Canada Express Entry & PNP", "Europe", "UK Skilled Worker"],
       link: "/services/skilled-immigration",
       highlight: false,
     },
