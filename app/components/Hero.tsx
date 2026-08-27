@@ -33,7 +33,7 @@ export default function Hero() {
 
         {/* Responsive Sub-headline */}
         <p className="text-base sm:text-lg md:text-xl text-slate-200 max-w-2xl mb-8 leading-relaxed">
-          Expert global guidance for Overseas Pakistanis across the Middle East, GCC, and worldwide.
+          Expert global guidance for Local & Overseas Pakistanis across the Middle East, GCC, and worldwide.
         </p>
 
         {/* Action Buttons (Stacked on Mobile, Side-by-Side on Desktop) */}
