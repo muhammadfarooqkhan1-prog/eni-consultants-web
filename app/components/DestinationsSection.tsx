@@ -144,7 +144,7 @@ export default function DestinationsSection() {
         "University Exchange Programs",
         "Leisure & Heritage Tourism",
       ],
-      link: "destinations/sri-lanka",
+      link: "destinations/srilanka",
     },
     {
       country: "Mauritius",
