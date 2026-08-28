@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { submitAppointmentForm } from "@/app/actions/bookAppointment";
 
 export default function BookAppointmentSection() {
   const initialFormState = {
@@ -15,11 +16,24 @@ export default function BookAppointmentSection() {
   };
 
   const [formData, setFormData] = useState(initialFormState);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
+    setIsSubmitting(true);
+    setErrorMessage("");
+
+    const res = await submitAppointmentForm(formData);
+
+    setIsSubmitting(false);
+
+    if (res.success) {
+      setIsSubmitted(true);
+    } else {
+      setErrorMessage(res.message || "Failed to submit request.");
+    }
   };
 
   const handleChange = (
@@ -33,6 +47,7 @@ export default function BookAppointmentSection() {
   const handleReset = () => {
     setFormData(initialFormState);
     setIsSubmitted(false);
+    setErrorMessage("");
   };
 
   return (
@@ -172,7 +187,7 @@ export default function BookAppointmentSection() {
                   <span className="text-[#ff7027]">
                     {formData.preferredDate}
                   </span>
-                  ) and confirm your schedule within 24 hours.
+                  ) and contact you within <strong>48 hours</strong> to confirm your schedule.
                 </p>
                 <button
                   onClick={handleReset}
@@ -191,6 +206,12 @@ export default function BookAppointmentSection() {
                     * Required fields
                   </span>
                 </div>
+
+                {errorMessage && (
+                  <div className="bg-rose-500/10 border border-rose-500/30 text-rose-400 p-3 rounded-xl text-xs">
+                    {errorMessage}
+                  </div>
+                )}
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
@@ -376,9 +397,10 @@ export default function BookAppointmentSection() {
 
                 <button
                   type="submit"
-                  className="w-full bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-base cursor-pointer mt-2"
+                  disabled={isSubmitting}
+                  className="w-full bg-[#ff7027] hover:bg-[#e05a14] disabled:bg-slate-800 text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-base cursor-pointer mt-2"
                 >
-                  Confirm Appointment Booking
+                  {isSubmitting ? "Sending Request..." : "Confirm Appointment Booking"}
                 </button>
               </form>
             )}
