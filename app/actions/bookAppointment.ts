@@ -15,20 +15,47 @@ export async function submitAppointmentForm(formData: Record<string, string>) {
       notes,
     } = formData;
 
+    // 1. Basic Validation
     if (!fullName || !email || !phone || !preferredDate) {
-      return { success: false, message: "Please fill out all required fields." };
+      return {
+        success: false,
+        message: "Please fill out all required fields.",
+      };
     }
 
+    // 2. Validate Environment Variables
+    const smtpHost = process.env.SMTP_HOST;
+    const smtpPort = Number(process.env.SMTP_PORT) || 465;
+    const smtpUser = process.env.SMTP_USER;
+    const smtpPass = process.env.SMTP_PASS;
+
+    if (!smtpHost || !smtpUser || !smtpPass) {
+      console.error(
+        "[Nodemailer Error]: Missing SMTP environment variables in .env.local"
+      );
+      return {
+        success: false,
+        message:
+          "Server configuration error: Missing SMTP credentials. Check server logs.",
+      };
+    }
+
+    // 3. Configure Nodemailer Transporter
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT) || 465,
-      secure: true,
+      host: smtpHost,
+      port: smtpPort,
+      secure: smtpPort === 465, // true for port 465, false for 587/other ports
       auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
+        user: smtpUser,
+        pass: smtpPass,
+      },
+      tls: {
+        // Prevents failures caused by self-signed SSL certificates or local proxy issues
+        rejectUnauthorized: false,
       },
     });
 
+    // 4. Construct Email HTML Template
     const emailHtml = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background-color: #0f172a; padding: 24px; border-radius: 12px; color: #ffffff;">
         <h2 style="color: #ff7027; border-bottom: 2px solid #1e293b; padding-bottom: 12px; margin-top: 0;">
@@ -87,8 +114,9 @@ export async function submitAppointmentForm(formData: Record<string, string>) {
       </div>
     `;
 
+    // 5. Send Email
     await transporter.sendMail({
-      from: `"ENI Web Booking" <${process.env.SMTP_USER}>`,
+      from: `"ENI Web Booking" <${smtpUser}>`,
       to: "info@eniconsultants.com",
       replyTo: email,
       subject: `New Appointment Booking: ${fullName} (${country})`,
@@ -96,8 +124,18 @@ export async function submitAppointmentForm(formData: Record<string, string>) {
     });
 
     return { success: true };
-  } catch (error) {
-    console.error("Failed to process appointment request:", error);
-    return { success: false, message: "Server error. Please try again later." };
+  } catch (error: any) {
+    // Detailed error logging to terminal / server logs
+    console.error("=== BOOKING ACTION ERROR LOG ===");
+    console.error("Message:", error?.message || error);
+    console.error("Code:", error?.code);
+    console.error("Command:", error?.command);
+    console.error("Full Error:", error);
+    console.error("================================");
+
+    return {
+      success: false,
+      message: error?.message || "Failed to submit request due to server error.",
+    };
   }
 }
