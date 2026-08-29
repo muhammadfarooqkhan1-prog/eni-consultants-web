@@ -25,7 +25,7 @@ export async function submitAppointmentForm(formData: Record<string, string>) {
 
     // 2. Validate Environment Variables (Default port updated to 587)
     const smtpHost = process.env.SMTP_HOST || "smtp.hostinger.com";
-    const smtpPort = Number(process.env.SMTP_PORT) || 465; 
+    const smtpPort = Number(process.env.SMTP_PORT) || 587; 
     const smtpUser = process.env.SMTP_USER;
     const smtpPass = process.env.SMTP_PASS;
 
@@ -44,7 +44,7 @@ export async function submitAppointmentForm(formData: Record<string, string>) {
     const transporter = nodemailer.createTransport({
       host: smtpHost,
       port: smtpPort,
-      secure: smtpPort === 465, // true for port 465 (SSL), false for port 587 (TLS/STARTTLS)
+      secure: smtpPort === 587, // true for port 465 (SSL), false for port 587 (TLS/STARTTLS)
       auth: {
         user: smtpUser,
         pass: smtpPass,
