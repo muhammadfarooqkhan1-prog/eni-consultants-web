@@ -23,15 +23,15 @@ export async function submitAppointmentForm(formData: Record<string, string>) {
       };
     }
 
-    // 2. Validate Environment Variables
-    const smtpHost = process.env.SMTP_HOST;
-    const smtpPort = Number(process.env.SMTP_PORT) || 465;
+    // 2. Validate Environment Variables (Default port updated to 587)
+    const smtpHost = process.env.SMTP_HOST || "smtp.hostinger.com";
+    const smtpPort = Number(process.env.SMTP_PORT) || 587; 
     const smtpUser = process.env.SMTP_USER;
     const smtpPass = process.env.SMTP_PASS;
 
     if (!smtpHost || !smtpUser || !smtpPass) {
       console.error(
-        "[Nodemailer Error]: Missing SMTP environment variables in .env.local"
+        "[Nodemailer Error]: Missing SMTP environment variables in configuration"
       );
       return {
         success: false,
@@ -40,11 +40,11 @@ export async function submitAppointmentForm(formData: Record<string, string>) {
       };
     }
 
-    // 3. Configure Nodemailer Transporter
+    // 3. Configure Nodemailer Transporter with Timeouts
     const transporter = nodemailer.createTransport({
       host: smtpHost,
       port: smtpPort,
-      secure: smtpPort === 465, // true for port 465, false for 587/other ports
+      secure: smtpPort === 465, // true for port 465 (SSL), false for port 587 (TLS/STARTTLS)
       auth: {
         user: smtpUser,
         pass: smtpPass,
@@ -53,6 +53,10 @@ export async function submitAppointmentForm(formData: Record<string, string>) {
         // Prevents failures caused by self-signed SSL certificates or local proxy issues
         rejectUnauthorized: false,
       },
+      // Timeout settings to prevent Railway from hanging
+      connectionTimeout: 10000, // 10 seconds timeout to establish connection
+      greetingTimeout: 10000,   // 10 seconds timeout to receive greeting
+      socketTimeout: 15000,     // 15 seconds timeout for socket inactivity
     });
 
     // 4. Construct Email HTML Template
