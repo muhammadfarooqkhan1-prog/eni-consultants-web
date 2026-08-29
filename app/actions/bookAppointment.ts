@@ -23,9 +23,9 @@ export async function submitAppointmentForm(formData: Record<string, string>) {
       };
     }
 
-    // 2. Validate Environment Variables (Default port updated to 587)
+    // 2. Validate Environment Variables
     const smtpHost = process.env.SMTP_HOST || "smtp.hostinger.com";
-    const smtpPort = Number(process.env.SMTP_PORT) || 587; 
+    const smtpPort = Number(process.env.SMTP_PORT) || 587;
     const smtpUser = process.env.SMTP_USER;
     const smtpPass = process.env.SMTP_PASS;
 
@@ -40,24 +40,23 @@ export async function submitAppointmentForm(formData: Record<string, string>) {
       };
     }
 
-    // 3. Configure Nodemailer Transporter with Timeouts
+    // 3. Configure Nodemailer Transporter
     const transporter = nodemailer.createTransport({
       host: smtpHost,
       port: smtpPort,
-      secure: smtpPort === 587, // true for port 465 (SSL), false for port 587 (TLS/STARTTLS)
+      secure: smtpPort === 465, // FIX: false for 587/2525, true ONLY for 465
       auth: {
         user: smtpUser,
         pass: smtpPass,
       },
       tls: {
-        // Prevents failures caused by self-signed SSL certificates or local proxy issues
         rejectUnauthorized: false,
       },
-      // Timeout settings to prevent Railway from hanging
-      connectionTimeout: 10000, // 10 seconds timeout to establish connection
-      greetingTimeout: 10000,   // 10 seconds timeout to receive greeting
-      socketTimeout: 15000,     // 15 seconds timeout for socket inactivity
-    });
+      family: 4, // FIX: Forces IPv4 to prevent ENETUNREACH IPv6 errors on Railway
+      connectionTimeout: 10000,
+      greetingTimeout: 10000,
+      socketTimeout: 15000,
+    } as any);
 
     // 4. Construct Email HTML Template
     const emailHtml = `
