@@ -25,7 +25,7 @@ export async function submitAppointmentForm(formData: Record<string, string>) {
 
     // 2. Validate Environment Variables (Default port updated to 587)
     const smtpHost = process.env.SMTP_HOST || "smtp.hostinger.com";
-    const smtpPort = Number(process.env.SMTP_PORT) || 587; 
+    const smtpPort = Number(process.env.SMTP_PORT) || 465; 
     const smtpUser = process.env.SMTP_USER;
     const smtpPass = process.env.SMTP_PASS;
 
