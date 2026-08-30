@@ -1,6 +1,9 @@
 "use server";
 
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
+
+// Strictly reference process.env — DO NOT paste the actual key string here
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function submitAppointmentForm(formData: Record<string, string>) {
   try {
@@ -23,42 +26,7 @@ export async function submitAppointmentForm(formData: Record<string, string>) {
       };
     }
 
-    // 2. Validate Environment Variables
-    const smtpHost = process.env.SMTP_HOST || "smtp.hostinger.com";
-    const smtpPort = Number(process.env.SMTP_PORT) || 465;
-    const smtpUser = process.env.SMTP_USER;
-    const smtpPass = process.env.SMTP_PASS;
-
-    if (!smtpHost || !smtpUser || !smtpPass) {
-      console.error(
-        "[Nodemailer Error]: Missing SMTP environment variables in configuration"
-      );
-      return {
-        success: false,
-        message:
-          "Server configuration error: Missing SMTP credentials. Check server logs.",
-      };
-    }
-
-    // 3. Configure Nodemailer Transporter
-    const transporter = nodemailer.createTransport({
-      host: smtpHost,
-      port: smtpPort,
-      secure: smtpPort === 465, // true for port 465, false for 587/2525
-      auth: {
-        user: smtpUser,
-        pass: smtpPass,
-      },
-      tls: {
-        rejectUnauthorized: false,
-      },
-      family: 4, // Forces IPv4 to bypass Railway IPv6 connection errors
-      connectionTimeout: 10000,
-      greetingTimeout: 10000,
-      socketTimeout: 15000,
-    } as any);
-
-    // 4. Construct Email HTML Template
+    // 2. Email HTML Layout
     const emailHtml = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background-color: #0f172a; padding: 24px; border-radius: 12px; color: #ffffff;">
         <h2 style="color: #ff7027; border-bottom: 2px solid #1e293b; padding-bottom: 12px; margin-top: 0;">
@@ -77,36 +45,36 @@ export async function submitAppointmentForm(formData: Record<string, string>) {
           </thead>
           <tbody>
             <tr>
-              <td style="padding: 10px; border: 1px solid #334155; font-weight: bold; background-color: #0f172a;">Full Name</td>
-              <td style="padding: 10px; border: 1px solid #334155; background-color: #0f172a;">${fullName}</td>
+              <td style="padding: 10px; border: 1px solid #334155; font-weight: bold;">Full Name</td>
+              <td style="padding: 10px; border: 1px solid #334155;">${fullName}</td>
             </tr>
             <tr>
-              <td style="padding: 10px; border: 1px solid #334155; font-weight: bold; background-color: #1e293b;">Email Address</td>
-              <td style="padding: 10px; border: 1px solid #334155; background-color: #1e293b;"><a href="mailto:${email}" style="color: #ff7027;">${email}</a></td>
+              <td style="padding: 10px; border: 1px solid #334155; font-weight: bold;">Email Address</td>
+              <td style="padding: 10px; border: 1px solid #334155;"><a href="mailto:${email}" style="color: #ff7027;">${email}</a></td>
             </tr>
             <tr>
-              <td style="padding: 10px; border: 1px solid #334155; font-weight: bold; background-color: #0f172a;">Phone / WhatsApp</td>
-              <td style="padding: 10px; border: 1px solid #334155; background-color: #0f172a;">${phone}</td>
+              <td style="padding: 10px; border: 1px solid #334155; font-weight: bold;">Phone / WhatsApp</td>
+              <td style="padding: 10px; border: 1px solid #334155;">${phone}</td>
             </tr>
             <tr>
-              <td style="padding: 10px; border: 1px solid #334155; font-weight: bold; background-color: #1e293b;">Current Residence</td>
-              <td style="padding: 10px; border: 1px solid #334155; background-color: #1e293b;">${country}</td>
+              <td style="padding: 10px; border: 1px solid #334155; font-weight: bold;">Current Residence</td>
+              <td style="padding: 10px; border: 1px solid #334155;">${country}</td>
             </tr>
             <tr>
-              <td style="padding: 10px; border: 1px solid #334155; font-weight: bold; background-color: #0f172a;">Consultation Topic</td>
-              <td style="padding: 10px; border: 1px solid #334155; background-color: #0f172a;">${service}</td>
+              <td style="padding: 10px; border: 1px solid #334155; font-weight: bold;">Consultation Topic</td>
+              <td style="padding: 10px; border: 1px solid #334155;">${service}</td>
             </tr>
             <tr>
-              <td style="padding: 10px; border: 1px solid #334155; font-weight: bold; background-color: #1e293b;">Preferred Date</td>
-              <td style="padding: 10px; border: 1px solid #334155; background-color: #1e293b;">${preferredDate}</td>
+              <td style="padding: 10px; border: 1px solid #334155; font-weight: bold;">Preferred Date</td>
+              <td style="padding: 10px; border: 1px solid #334155;">${preferredDate}</td>
             </tr>
             <tr>
-              <td style="padding: 10px; border: 1px solid #334155; font-weight: bold; background-color: #0f172a;">Preferred Slot</td>
-              <td style="padding: 10px; border: 1px solid #334155; background-color: #0f172a;">${preferredTime}</td>
+              <td style="padding: 10px; border: 1px solid #334155; font-weight: bold;">Preferred Slot</td>
+              <td style="padding: 10px; border: 1px solid #334155;">${preferredTime}</td>
             </tr>
             <tr>
-              <td style="padding: 10px; border: 1px solid #334155; font-weight: bold; background-color: #1e293b;">Background / Goal Notes</td>
-              <td style="padding: 10px; border: 1px solid #334155; background-color: #1e293b;">${notes || "None provided"}</td>
+              <td style="padding: 10px; border: 1px solid #334155; font-weight: bold;">Notes</td>
+              <td style="padding: 10px; border: 1px solid #334155;">${notes || "None provided"}</td>
             </tr>
           </tbody>
         </table>
@@ -117,9 +85,9 @@ export async function submitAppointmentForm(formData: Record<string, string>) {
       </div>
     `;
 
-    // 5. Send Email
-    await transporter.sendMail({
-      from: `"ENI Web Booking" <${smtpUser}>`,
+    // 3. Send Email via Resend API (HTTP Port 443)
+    await resend.emails.send({
+      from: "ENI Web Booking <onboarding@resend.dev>", // Replace with your domain once verified on Resend
       to: "info@eniconsultants.com",
       replyTo: email,
       subject: `New Appointment Booking: ${fullName} (${country})`,
@@ -128,10 +96,7 @@ export async function submitAppointmentForm(formData: Record<string, string>) {
 
     return { success: true };
   } catch (error: any) {
-    console.error("=== BOOKING ACTION ERROR LOG ===");
-    console.error("Message:", error?.message || error);
-    console.error("================================");
-
+    console.error("Resend API Error:", error);
     return {
       success: false,
       message: error?.message || "Failed to submit request due to server error.",
