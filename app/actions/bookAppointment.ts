@@ -86,8 +86,8 @@ export async function submitAppointmentForm(formData: Record<string, string>) {
 
     // 3. Send Email via Resend API
     const { data, error } = await resend.emails.send({
-      from: "ENI Web Booking <info@eniconsultants.com>", // Switched from onboarding@resend.dev
-      to: ["info@eniconsultants.com"],                   // Switched recipient back
+      from: "ENI Web Portal <notifications@eniconsultants.com>", // Or booking@eniconsultants.com
+      to: ["info@eniconsultants.com"],
       replyTo: email,
       subject: `New Appointment Booking: ${fullName} (${country})`,
       html: emailHtml,
