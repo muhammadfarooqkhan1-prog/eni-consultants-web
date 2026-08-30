@@ -2,7 +2,6 @@
 
 import { Resend } from "resend";
 
-// Strictly reference process.env — DO NOT paste the actual key string here
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function submitAppointmentForm(formData: Record<string, string>) {
@@ -85,18 +84,27 @@ export async function submitAppointmentForm(formData: Record<string, string>) {
       </div>
     `;
 
-    // 3. Send Email via Resend API (HTTP Port 443)
-    await resend.emails.send({
-      from: "ENI Web Booking <onboarding@resend.dev>", // Replace with your domain once verified on Resend
-      to: "info@eniconsultants.com",
+    // 3. Send Email via Resend API
+    const { data, error } = await resend.emails.send({
+      from: "ENI Web Booking <onboarding@resend.dev>", // Update to your domain email (e.g. info@eniconsultants.com) once domain is verified on Resend
+      to: ["info@eniconsultants.com"],
       replyTo: email,
       subject: `New Appointment Booking: ${fullName} (${country})`,
       html: emailHtml,
     });
 
+    // Explicitly handle Resend API response errors
+    if (error) {
+      console.error("Resend Response Error:", error);
+      return {
+        success: false,
+        message: `Email sending failed: ${error.message}`,
+      };
+    }
+
     return { success: true };
   } catch (error: any) {
-    console.error("Resend API Error:", error);
+    console.error("Resend Execution Error:", error);
     return {
       success: false,
       message: error?.message || "Failed to submit request due to server error.",
