@@ -89,7 +89,7 @@ export default function CheckEligibilityPage() {
                 Assessment Submitted Successfully!
               </h2>
               <p className="text-slate-400 text-sm sm:text-base max-w-lg mx-auto leading-relaxed">
-                Thank you, <strong className="text-white">{formData.fullName}</strong>. Senior consultant <strong className="text-white">Muhammad Farooq Khan</strong> and our technical evaluation team will review your point parameters and contact you within 24 to 48 hours.
+                Thank you, <strong className="text-white">{formData.fullName}</strong>. Chief Immigration consultant <strong className="text-white">Muhammad Farooq Khan</strong> and our technical evaluation team will review your point parameters and contact you within 24 to 48 hours.
               </p>
               <div className="pt-4 flex flex-col sm:flex-row justify-center gap-4">
                 <button
