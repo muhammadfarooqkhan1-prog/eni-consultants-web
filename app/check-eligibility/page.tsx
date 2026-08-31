@@ -3,21 +3,22 @@
 import { useState } from "react";
 import Link from "next/link";
 
-export default function CheckEligibilityPage() {
-  const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    phone: "",
-    countryOfResidence: "Saudi Arabia",
-    pathway: "Canada Express Entry / PR",
-    ageGroup: "21 - 32 years (Max points)",
-    educationLevel: "Master's Degree / Dual Bachelor's",
-    workExperience: "3 - 5 Years",
-    englishProficiency: "IELTS / PTE Completed",
-    hasJobOffer: "No (Seeking Optimization)",
-    notes: "",
-  });
+const initialFormData = {
+  fullName: "",
+  email: "",
+  phone: "",
+  countryOfResidence: "Saudi Arabia",
+  pathway: "Canada Express Entry / PR",
+  ageGroup: "21 - 32 years (Max points)",
+  educationLevel: "Master's Degree / Dual Bachelor's",
+  workExperience: "3 - 5 Years",
+  englishProficiency: "IELTS / PTE Completed",
+  hasJobOffer: "No (Seeking Optimization)",
+  notes: "",
+};
 
+export default function CheckEligibilityPage() {
+  const [formData, setFormData] = useState(initialFormData);
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -39,7 +40,7 @@ export default function CheckEligibilityPage() {
       if (result.success) {
         setIsSubmitted(true);
       } else {
-        setErrorMessage("Transmission failed. Please check your details and try again.");
+        setErrorMessage(result.message || "Transmission failed. Please check your details and try again.");
       }
     } catch (error) {
       setErrorMessage("Network connection error. Please try again.");
@@ -52,6 +53,11 @@ export default function CheckEligibilityPage() {
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleResetForm = () => {
+    setFormData(initialFormData);
+    setIsSubmitted(false);
   };
 
   return (
@@ -87,14 +93,14 @@ export default function CheckEligibilityPage() {
               </p>
               <div className="pt-4 flex flex-col sm:flex-row justify-center gap-4">
                 <button
-                  onClick={() => setIsSubmitted(false)}
+                  onClick={handleResetForm}
                   className="bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-3 rounded-xl transition-all text-sm border-0 cursor-pointer"
                 >
                   Submit Another Profile
                 </button>
                 <Link
                   href="/"
-                  className="bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold px-8 py-3 rounded-xl transition-all text-sm no-underline border border-slate-700"
+                  className="bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold px-8 py-3 rounded-xl transition-all text-sm no-underline border border-slate-700 text-center"
                 >
                   Back to Home
                 </Link>
