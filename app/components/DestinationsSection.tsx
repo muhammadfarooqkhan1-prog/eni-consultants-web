@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 
 export default function DestinationsSection() {
@@ -21,7 +23,7 @@ export default function DestinationsSection() {
       tag: "High Job Demand",
       highlights: [
         "UK Skilled Worker Visa",
-        "Student Visas & Post-Study Work Permits",
+        "Student Visas & after Study Work Permits",
         "Fast-Track Healthcare Visa",
       ],
       link: "destinations/uk",
@@ -45,7 +47,7 @@ export default function DestinationsSection() {
       tag: "High Quality of Life",
       highlights: [
         "Skilled Resident Pathway",
-        "Higher Education & Post-Study Work",
+        "Higher Education & after Study Work",
         "Visitor & Family Immigration",
       ],
       link: "destinations/new-zealand",
@@ -92,7 +94,7 @@ export default function DestinationsSection() {
       flagUrl: "https://flagcdn.com/w640/tr.png",
       tag: "Fast Processing",
       highlights: [
-        "Hassle-Free Family Visit Visas",
+        "Effortless Family Visit Visas",
         "Business Visit & Trade Visas",
         "Overseas Academic Enrolments",
       ],
@@ -104,7 +106,7 @@ export default function DestinationsSection() {
       flagUrl: "https://flagcdn.com/w640/mv.png",
       tag: "Island Paradise",
       highlights: [
-        "Pre-Arrival Visa Assistance",
+        "Advanced Visa Assistance",
         "Luxury Resort & Honeymoon Packages",
         "Corporate & Business Delegations",
       ],
@@ -142,7 +144,7 @@ export default function DestinationsSection() {
       highlights: [
         "Electronic Travel Authorization (ETA)",
         "University Exchange Programs",
-        "Leisure & Heritage Tourism",
+        "Free Time & Traditional Tourism",
       ],
       link: "destinations/srilanka",
     },
@@ -153,7 +155,7 @@ export default function DestinationsSection() {
       tag: "Indian Ocean Gem",
       highlights: [
         "Tourist & Premium Long-Stay Visas",
-        "Honeymoon & Leisure Packages",
+        "Honeymoon & Free Time Packages",
         "Business & Offshore Setup Travel",
       ],
       link: "destinations/mauritius",
@@ -174,8 +176,48 @@ export default function DestinationsSection() {
 
   return (
     <section className="bg-slate-950 text-white py-20 px-5 sm:px-8 border-t border-slate-800">
+      {/* Dynamic Wind Flutter Keyframe Styles */}
+      <style jsx global>{`
+        @keyframes windFlutter {
+          0% {
+            transform: perspective(300px) rotateY(0deg) skewY(0deg) scale(1);
+          }
+          25% {
+            transform: perspective(300px) rotateY(15deg) skewY(-3deg) scale(1.03);
+          }
+          50% {
+            transform: perspective(300px) rotateY(-10deg) skewY(3deg) scale(0.98);
+          }
+          75% {
+            transform: perspective(300px) rotateY(12deg) skewY(-2deg) scale(1.02);
+          }
+          100% {
+            transform: perspective(300px) rotateY(0deg) skewY(0deg) scale(1);
+          }
+        }
+
+        @keyframes shadowSheen {
+          0%, 100% {
+            opacity: 0.1;
+            transform: translateX(-100%);
+          }
+          50% {
+            opacity: 0.45;
+            transform: translateX(100%);
+          }
+        }
+
+        .animate-wind-flag {
+          animation: windFlutter 2.4s ease-in-out infinite;
+          transform-origin: left center;
+        }
+
+        .animate-flag-sheen {
+          animation: shadowSheen 2.4s ease-in-out infinite;
+        }
+      `}</style>
+
       <div className="max-w-7xl mx-auto">
-        
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-[#ff7027] font-bold uppercase tracking-wider text-xs sm:text-sm bg-[#ff7027]/10 px-4 py-1.5 rounded-full border border-[#ff7027]/20">
@@ -185,7 +227,7 @@ export default function DestinationsSection() {
             Top World Regions We Serve
           </h2>
           <p className="text-slate-400 text-base sm:text-lg">
-            Explore dedicated immigration, study, and career opportunities across premier global destinations.
+            Explore immigration, study, and career opportunities across leading global destinations.
           </p>
         </div>
 
@@ -196,10 +238,9 @@ export default function DestinationsSection() {
               key={idx}
               className="bg-slate-900 border border-slate-800 rounded-3xl p-8 relative overflow-hidden group hover:border-[#ff7027]/50 transition-all duration-300 flex flex-col justify-between shadow-xl"
             >
-              
               {/* BACKGROUND FLAG IMAGE OVERLAY */}
               <div 
-                className="absolute inset-0 bg-cover bg-center opacity-[0.08] group-hover:opacity-[0.15] transition-opacity duration-500 pointer-events-none filter blur-[1px] group-hover:blur-0 scale-110 group-hover:scale-100 transition-transform duration-700"
+                className="absolute inset-0 bg-cover bg-center opacity-[0.08] group-hover:opacity-[0.18] transition-all duration-700 pointer-events-none filter blur-[1px] group-hover:blur-0 scale-105 group-hover:scale-110"
                 style={{ backgroundImage: `url(${item.flagUrl})` }}
               />
 
@@ -208,19 +249,30 @@ export default function DestinationsSection() {
 
               {/* CARD CONTENT */}
               <div className="relative z-10">
-                
-                {/* Header Tag + Country */}
+                {/* Header Tag + Wind-Blowing Flag */}
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-xs font-bold text-[#ff7027] bg-[#ff7027]/10 border border-[#ff7027]/20 px-3 py-1 rounded-full uppercase tracking-wider">
                     {item.tag}
                   </span>
                   
-                  {/* Small Flag Badge Top Right */}
-                  <img
-                    src={item.flagUrl}
-                    alt={`${item.country} Flag`}
-                    className="w-8 h-5 object-cover rounded shadow-md border border-slate-700/80"
-                  />
+                  {/* Small Flag Badge Top Right - Wind Fluttering Animation */}
+                  <div className="relative overflow-hidden rounded shadow-lg border border-slate-700/80 bg-slate-950 p-0.5">
+                    <img
+                      src={item.flagUrl}
+                      alt={`${item.country} Flag`}
+                      className="w-10 h-6 object-cover animate-wind-flag rounded-sm"
+                      style={{
+                        animationDelay: `${(idx % 3) * 0.4}s`, // Staggered ripple effect across cards
+                      }}
+                    />
+                    {/* Dynamic Fabric Light Highlight Overlay */}
+                    <div 
+                      className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent pointer-events-none animate-flag-sheen"
+                      style={{
+                        animationDelay: `${(idx % 3) * 0.4}s`,
+                      }}
+                    />
+                  </div>
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-[#ff7027] transition-colors">
