@@ -5,7 +5,7 @@ export default function ServicesSection() {
     {
       title: "Skilled Immigration",
       icon: "🌐",
-      description: "Direct PR & Work pathways for qualified professionals in KSA, UAE, Qatar, and across the Gulf.",
+      description: "Direct PR & Work pathways for qualified professionals in Pakistan, KSA, UAE, Qatar, and across the Gulf.",
       features: ["Canada Express Entry & PNP", "Europe", "UK Skilled Worker"],
       link: "/services/skilled-immigration",
       highlight: false,
@@ -30,7 +30,7 @@ export default function ServicesSection() {
       title: "CV & LinkedIn Optimization",
       icon: "📄",
       description: "Stand out to global recruiters with optimized CVs, customized cover letters, and high-impact LinkedIn profiles redesigned for successful job offers in the Middle East & First World countries.",
-      features: ["Optimized CV Formatting", "Tailored Cover Letter Design", "LinkedIn Profile Optimization", "Tailored for Middle East & Global Job Markets"],
+      features: ["Optimized CV Formatting", "Cover Letter Design", "LinkedIn Profile Optimization", "Optimized for Middle East & Global Job Markets"],
       link: "/services/cv-optimization",
       highlight: false, 
     },
