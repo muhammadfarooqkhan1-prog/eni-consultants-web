@@ -79,7 +79,7 @@ export default function SkilledImmigrationServicePage() {
               Skilled Immigration & Permanent Residency (PR) Services
             </h1>
             <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
-              We provide end-to-end strategic guidance for professionals, engineers, IT experts, and healthcare specialists seeking Permanent Residency, work visas, and long-term citizenship in First World economies.
+              We offer end to end strategic guidance to professionals, engineers, IT experts, medical practitioners, and other skilled workers seeking to gain permanent residency, work visas, and citizenship in first-world countries.
             </p>
             <div className="pt-2 flex flex-wrap gap-4">
               <Link
@@ -139,7 +139,7 @@ export default function SkilledImmigrationServicePage() {
               <span className="text-3xl font-extrabold text-[#ff7027]">01</span>
               <h3 className="text-white font-bold text-base">Points & Profile Audit</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
-                Comprehensive evaluation of your age, qualifications, NOC/ANZSCO code, and foreign points criteria.
+                Detailed assessment of your age, qualifications, NOC/ANZSCO code, and foreign points criteria.
               </p>
             </div>
 
