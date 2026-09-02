@@ -169,7 +169,7 @@ export default function HolidayDestinationsServicePage() {
                 href="/check-eligibility"
                 className="bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline"
               >
-                Assess Visit Eligibility Free
+                Assess Visit Eligibility
               </Link>
               <Link
                 href="/book-appointment"
