@@ -15,7 +15,7 @@ export default function StudyAbroadServicePage() {
       title: "Designated Learning Institutions (DLIs) & PGWP",
       badge: "Post-Study Work Visa up to 3 Years",
       description:
-        "Gain access to public colleges and universities offering direct eligibility for the Post-Graduation Work Permit (PGWP), paving a clear pathway toward Canadian Permanent Residency through Express Entry (CEC).",
+        "Secure youraccess to public colleges and universities offering direct eligibility for the Post-Graduation Work Permit (PGWP), for Canadian Permanent Residency through Express Entry (CEC).",
       features: [
         "DLI-Approved Public College & University Admissions",
         "Study Permit & Provincial Attestation Letter (PAL) Guidance",
@@ -73,14 +73,14 @@ export default function StudyAbroadServicePage() {
               Study Abroad & Global University Admissions Services
             </h1>
             <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
-              Transform your academic ambitions into international career success. From institution selection and compelling Statement of Purpose (SOP) drafting to visa filing and scholarship acquisition, ENI Consultants manages your complete overseas education journey.
+              Transform your dream to pursue higher education abroad, into a successful career overseas. Be it choosing the right university or Statement of Purpose (SOP) writing, visa filing or scholarships, ENI Consultants take care of every aspect of your overseas education needs.
             </p>
             <div className="pt-2 flex flex-wrap gap-4">
               <Link
                 href="/check-eligibility"
                 className="bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline"
               >
-                Assess Study Eligibility Free
+                Assess Study Eligibility
               </Link>
               <Link
                 href="/book-appointment"
@@ -117,7 +117,7 @@ export default function StudyAbroadServicePage() {
               Our 4-Stage Admissions & Visa Framework
             </h2>
             <p className="text-slate-400 text-sm sm:text-base mt-2">
-              A structured roadmap ensuring smooth admission offers and visa grant success.
+              Professional counseling for higher studies, admissions, scholarships, and student visa services in the best universities abroad.
             </p>
           </div>
 
@@ -126,7 +126,7 @@ export default function StudyAbroadServicePage() {
               <span className="text-3xl font-extrabold text-[#ff7027]">01</span>
               <h3 className="text-white font-bold text-base">Course & University Selection</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
-                Shortlisting accredited universities aligned with your career goals, budget, and post-study work visa eligibility.
+                Shortlisting the best universities that offer courses of your career interest, budget-friendly options, and work visa eligibility after studies.
               </p>
             </div>
 
@@ -134,7 +134,7 @@ export default function StudyAbroadServicePage() {
               <span className="text-3xl font-extrabold text-[#ff7027]">02</span>
               <h3 className="text-white font-bold text-base">SOP & Application Portfolio</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
-                Professional drafting of custom Statements of Purpose (SOP), LORs, CVs, and application submission.
+                Preparation of a powerful Statements of Purpose (SOP), LORs, CVs, and application submission.
               </p>
             </div>
 
@@ -142,7 +142,7 @@ export default function StudyAbroadServicePage() {
               <span className="text-3xl font-extrabold text-[#ff7027]">03</span>
               <h3 className="text-white font-bold text-base">Offer Letter & Financial Guidance</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
-                Securing Offer Letters, CAS, or I-20 forms, along with bank statement, proof of funds, and scholarship support.
+                Receiving Offer Letters, CAS, or I-20 forms, along with bank statement, proof of funds, and scholarship support.
               </p>
             </div>
 
@@ -150,7 +150,7 @@ export default function StudyAbroadServicePage() {
               <span className="text-3xl font-extrabold text-[#ff7027]">04</span>
               <h3 className="text-white font-bold text-base">Student Visa & Departure Prep</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
-                Strict visa documentation filing, embassy interview coaching, medical insurance, and pre-departure orientation.
+                Strict visa documentation filing, embassy interview coaching, medical insurance, and departure formalities before leaving for the study abroad country.
               </p>
             </div>
           </div>
