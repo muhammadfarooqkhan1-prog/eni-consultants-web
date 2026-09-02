@@ -1,5 +1,18 @@
 import Link from "next/link";
 import { Metadata } from "next";
+import {
+  Target,
+  Globe2,
+  Zap,
+  Handshake,
+  CheckCircle2,
+  Rocket,
+  Award,
+  GraduationCap,
+  Briefcase,
+  Plane,
+  ArrowRight,
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About Us | Education & Immigration Consultants Pakistan (ENI Consultants)",
@@ -9,30 +22,30 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   const stats = [
-    { label: "Years of Excellence", value: "9+" },
-    { label: "Global Destinations", value: "15+" },
-    { label: "Successful Visas", value: "5,000+" },
-    { label: "Partner Universities", value: "500+" },
+    { label: "Years of Excellence", value: "9+", icon: Award },
+    { label: "Global Destinations", value: "15+", icon: Globe2 },
+    { label: "Successful Visas", value: "5,000+", icon: CheckCircle2 },
+    { label: "Partner Universities", value: "500+", icon: GraduationCap },
   ];
 
   const coreValues = [
     {
-      icon: "🎯",
+      icon: Target,
       title: "Integrity & Transparency",
       desc: "We provide honest, transparent profile evaluations without false promises, ensuring full clarity on costs, timelines, and visa odds.",
     },
     {
-      icon: "🌐",
+      icon: Globe2,
       title: "Global Reach & Partnerships",
       desc: "Direct partnerships with accredited universities and institutions across Canada, UK, USA, New Zealand, Europe, and the GCC.",
     },
     {
-      icon: "⚡",
+      icon: Zap,
       title: "End-to-End File Structuring",
       desc: "From initial profile assessment to cover letters, financial proof verification, and post-visa arrival assistance, we handle every detail.",
     },
     {
-      icon: "🤝",
+      icon: Handshake,
       title: "Client-Centric Dedication",
       desc: "Every applicant is assigned their own advisors catering to their immigration and study plans according to their personal and career needs.",
     },
@@ -41,6 +54,7 @@ export default function AboutPage() {
   const servicePillars = [
     {
       badge: "Student Migration",
+      badgeIcon: GraduationCap,
       title: "Global Study Abroad Pathways",
       desc: "All round guidance for higher studies, admissions in universities, scholarships & student visa assistance across top study abroad destinations.",
       list: [
@@ -52,6 +66,7 @@ export default function AboutPage() {
     },
     {
       badge: "Residency & Skilled Migration",
+      badgeIcon: Briefcase,
       title: "Permanent Residency & Skilled Migration",
       desc: "Points-based skilled immigration and direct residency programs for qualified professionals and families looking to settle overseas.",
       list: [
@@ -62,6 +77,7 @@ export default function AboutPage() {
     },
     {
       badge: "Visit & Business Visas",
+      badgeIcon: Plane,
       title: "Tourist, Holiday & Corporate Travel Visas",
       desc: "Fast-track processing for free-time, family visits, business delegations, and global tourism.",
       list: [
@@ -99,9 +115,10 @@ export default function AboutPage() {
             <div className="pt-2 flex flex-wrap gap-4">
               <Link
                 href="/check-eligibility"
-                className="bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline"
+                className="bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline inline-flex items-center gap-2"
               >
-                Assess Your Eligibility
+                <span>Assess Your Eligibility</span>
+                <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/book-appointment"
@@ -133,20 +150,26 @@ export default function AboutPage() {
 
         {/* METRICS & STATS */}
         <section className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-          {stats.map((stat, idx) => (
-            <div key={idx} className="bg-slate-900 border border-slate-800 p-6 sm:p-8 rounded-2xl text-center space-y-2">
-              <p className="text-3xl sm:text-5xl font-extrabold text-[#ff7027]">{stat.value}</p>
-              <p className="text-slate-400 text-xs sm:text-sm font-medium">{stat.label}</p>
-            </div>
-          ))}
+          {stats.map((stat, idx) => {
+            const Icon = stat.icon;
+            return (
+              <div key={idx} className="bg-slate-900 border border-slate-800 p-6 sm:p-8 rounded-2xl text-center space-y-3">
+                <div className="w-10 h-10 mx-auto bg-[#ff7027]/10 border border-[#ff7027]/30 rounded-xl flex items-center justify-center text-[#ff7027]">
+                  <Icon className="w-5 h-5" />
+                </div>
+                <p className="text-3xl sm:text-5xl font-extrabold text-white">{stat.value}</p>
+                <p className="text-slate-400 text-xs sm:text-sm font-medium">{stat.label}</p>
+              </div>
+            );
+          })}
         </section>
 
         {/* MISSION & VISION */}
         <section className="bg-slate-900 border border-slate-800 rounded-3xl p-8 sm:p-12 space-y-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-slate-950 border border-slate-800 p-8 rounded-2xl space-y-4">
-              <div className="w-12 h-12 bg-[#ff7027]/10 border border-[#ff7027]/30 rounded-xl flex items-center justify-center text-2xl">
-                🎯
+              <div className="w-12 h-12 bg-[#ff7027]/10 border border-[#ff7027]/30 rounded-xl flex items-center justify-center text-[#ff7027]">
+                <Target className="w-6 h-6" />
               </div>
               <h2 className="text-2xl font-bold text-white">Our Mission</h2>
               <p className="text-slate-400 text-sm leading-relaxed">
@@ -155,8 +178,8 @@ export default function AboutPage() {
             </div>
 
             <div className="bg-slate-950 border border-slate-800 p-8 rounded-2xl space-y-4">
-              <div className="w-12 h-12 bg-[#ff7027]/10 border border-[#ff7027]/30 rounded-xl flex items-center justify-center text-2xl">
-                🚀
+              <div className="w-12 h-12 bg-[#ff7027]/10 border border-[#ff7027]/30 rounded-xl flex items-center justify-center text-[#ff7027]">
+                <Rocket className="w-6 h-6" />
               </div>
               <h2 className="text-2xl font-bold text-white">Our Vision</h2>
               <p className="text-slate-400 text-sm leading-relaxed">
@@ -176,35 +199,40 @@ export default function AboutPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {servicePillars.map((pillar, idx) => (
-              <div key={idx} className="bg-slate-900 border border-slate-800 p-8 rounded-3xl space-y-6 flex flex-col justify-between hover:border-[#ff7027]/40 transition-all">
-                <div className="space-y-4">
-                  <span className="bg-[#ff7027]/10 text-[#ff7027] border border-[#ff7027]/20 text-xs font-bold px-3 py-1 rounded-full uppercase">
-                    {pillar.badge}
-                  </span>
-                  <h3 className="text-xl font-bold text-white">{pillar.title}</h3>
-                  <p className="text-slate-400 text-xs leading-relaxed">{pillar.desc}</p>
-                  
-                  <ul className="space-y-2 pt-2">
-                    {pillar.list.map((item, i) => (
-                      <li key={i} className="flex items-start gap-2 text-xs text-slate-300">
-                        <span className="text-[#ff7027] font-bold">✓</span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+            {servicePillars.map((pillar, idx) => {
+              const BadgeIcon = pillar.badgeIcon;
+              return (
+                <div key={idx} className="bg-slate-900 border border-slate-800 p-8 rounded-3xl space-y-6 flex flex-col justify-between hover:border-[#ff7027]/40 transition-all">
+                  <div className="space-y-4">
+                    <span className="bg-[#ff7027]/10 text-[#ff7027] border border-[#ff7027]/20 text-xs font-bold px-3 py-1.5 rounded-full uppercase inline-flex items-center gap-1.5">
+                      <BadgeIcon className="w-3.5 h-3.5" />
+                      {pillar.badge}
+                    </span>
+                    <h3 className="text-xl font-bold text-white">{pillar.title}</h3>
+                    <p className="text-slate-400 text-xs leading-relaxed">{pillar.desc}</p>
+                    
+                    <ul className="space-y-2 pt-2">
+                      {pillar.list.map((item, i) => (
+                        <li key={i} className="flex items-start gap-2 text-xs text-slate-300">
+                          <CheckCircle2 className="w-4 h-4 text-[#ff7027] shrink-0 mt-0.5" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
-                <div className="pt-4">
-                  <Link
-                    href="/services"
-                    className="text-[#ff7027] font-bold text-sm hover:underline inline-flex items-center gap-1"
-                  >
-                    Explore Services <span>→</span>
-                  </Link>
+                  <div className="pt-4">
+                    <Link
+                      href="/services"
+                      className="text-[#ff7027] font-bold text-sm hover:underline inline-flex items-center gap-1"
+                    >
+                      <span>Explore Services</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </section>
 
@@ -220,13 +248,18 @@ export default function AboutPage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {coreValues.map((val, idx) => (
-              <div key={idx} className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-                <span className="text-3xl">{val.icon}</span>
-                <h3 className="text-white font-bold text-base">{val.title}</h3>
-                <p className="text-slate-400 text-xs leading-relaxed">{val.desc}</p>
-              </div>
-            ))}
+            {coreValues.map((val, idx) => {
+              const Icon = val.icon;
+              return (
+                <div key={idx} className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-4">
+                  <div className="w-12 h-12 bg-[#ff7027]/10 border border-[#ff7027]/30 rounded-xl flex items-center justify-center text-[#ff7027]">
+                    <Icon className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-white font-bold text-base">{val.title}</h3>
+                  <p className="text-slate-400 text-xs leading-relaxed">{val.desc}</p>
+                </div>
+              );
+            })}
           </div>
         </section>
 
@@ -241,9 +274,10 @@ export default function AboutPage() {
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/check-eligibility"
-              className="w-full sm:w-auto bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline"
+              className="w-full sm:w-auto bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline inline-flex items-center justify-center gap-2"
             >
-              Assess Your Profile
+              <span>Assess Your Profile</span>
+              <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
               href="/book-appointment"
