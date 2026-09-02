@@ -34,7 +34,7 @@ export default function AboutPage() {
     {
       icon: "🤝",
       title: "Client-Centric Dedication",
-      desc: "Every applicant is assigned dedicated advisors who tailor immigration and study plans to meet personal and career aspirations.",
+      desc: "Every applicant is assigned their own advisors catering to their immigration and study plans according to their personal and career needs.",
     },
   ];
 
@@ -42,7 +42,7 @@ export default function AboutPage() {
     {
       badge: "Student Migration",
       title: "Global Study Abroad Pathways",
-      desc: "Comprehensive counseling for higher education, university admissions, scholarship assistance, and student visa processing across top study abroad hubs.",
+      desc: "All round guidance for higher studies, admissions in universities, scholarships & student visa assistance across top study abroad destinations.",
       list: [
         "University & Course Selection",
         "SOP & Personal Statement Drafting",
@@ -63,7 +63,7 @@ export default function AboutPage() {
     {
       badge: "Visit & Business Visas",
       title: "Tourist, Holiday & Corporate Travel Visas",
-      desc: "Fast-track processing for leisure, family visits, business delegations, and global tourism.",
+      desc: "Fast-track processing for free-time, family visits, business delegations, and global tourism.",
       list: [
         "Schengen Area 29-Nation Visit Visas",
         "USA B1/B2 & UK Standard Visitor Visas",
@@ -93,7 +93,7 @@ export default function AboutPage() {
             </h1>
 
             <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
-              For over two decades, ENI Consultants has been a trusted pioneer in global educational counseling, skilled migration, permanent residency, and international travel visas. We bridge the gap between ambitious students, professionals, families, and world-class opportunities.
+              Since 2017, ENI Consultants has been a trusted founder in global educational counseling, skilled immigration, permanent residency, and international travel visas. We bridge the gap between ambitious students, professionals, families, and world-class opportunities.
             </p>
 
             <div className="pt-2 flex flex-wrap gap-4">
@@ -150,7 +150,7 @@ export default function AboutPage() {
               </div>
               <h2 className="text-2xl font-bold text-white">Our Mission</h2>
               <p className="text-slate-400 text-sm leading-relaxed">
-                To empower individuals, students, and working professionals with ethical, accurate, and structured global mobility solutions. We aim to make international education, career advancement, and residency migration accessible through complete legal compliance and meticulous document structuring.
+                To strengthen individuals, students, and working professionals with ethical, accurate, and structured global mobility solutions. We enable international education, career advancement, and residency migration with complete legal compliance and meticulous document structuring.
               </p>
             </div>
 
@@ -160,7 +160,7 @@ export default function AboutPage() {
               </div>
               <h2 className="text-2xl font-bold text-white">Our Vision</h2>
               <p className="text-slate-400 text-sm leading-relaxed">
-                To stand as the most trusted and reliable overseas education and immigration consultancy in the region, recognized globally for high visa success rates, transparent business ethics, and strategic client advocacy.
+                To be an overseas education and immigration consultancy that is most trusted and reliable in the region, known worldwide for its high visa grant success ratio, ethical business practices, and strong advocacy on behalf of clients.
               </p>
             </div>
           </div>
@@ -172,7 +172,7 @@ export default function AboutPage() {
             <h2 className="text-2xl sm:text-4xl font-extrabold text-white">
               What We Do Best
             </h2>
-            <p className="text-slate-400 text-sm mt-1">Our core operational divisions designed to meet diverse client aspirations.</p>
+            <p className="text-slate-400 text-sm mt-1">Our key departments designed to meet various client needs.</p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -215,7 +215,7 @@ export default function AboutPage() {
               Why Choose ENI Consultants?
             </h2>
             <p className="text-slate-400 text-sm mt-2">
-              Our core principles ensure every applicant receives world-class advisory.
+              Our key principles ensure every applicant receives best-in-class advisory.
             </p>
           </div>
 
@@ -236,14 +236,14 @@ export default function AboutPage() {
             Start Your International Journey Today
           </h3>
           <p className="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
-            Book a private advisory appointment with our senior consultants to review your academic credentials, work history, or travel itinerary.
+            Book a private advisory appointment with our Chief Immigration Consultant Muhammad Farooq Khan to review your academic credentials, work history, or travel itinerary.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/check-eligibility"
               className="w-full sm:w-auto bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline"
             >
-              Assess Your Profile Free
+              Assess Your Profile
             </Link>
             <Link
               href="/book-appointment"
