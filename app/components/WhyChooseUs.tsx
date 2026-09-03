@@ -1,27 +1,32 @@
 import Link from "next/link";
+import { Globe, Zap, Search, ShieldCheck } from "lucide-react";
 import TestimonialSlider from "./TestimonialSlider";
 
 export default function WhyChooseUs() {
   const benefits = [
     {
-      icon: "🎯",
+      icon: Globe,
       title: "GCC Region Specialization",
-      description: "We have the expertise and insights to target your immigration needs if you are a resident of KSA, UAE, Qatar, Oman, Bahrain, and Kuwait.",
+      description:
+        "We have the expertise and insights to target your immigration needs if you are a resident of KSA, UAE, Qatar, Oman, Bahrain, and Kuwait.",
     },
     {
-      icon: "⚡",
+      icon: Zap,
       title: "Fast 48-Hour Consultations",
-      description: "Schedule a call with us and have your application evaluated swiftly and transparently.",
+      description:
+        "Schedule a call with us and have your application evaluated swiftly and transparently.",
     },
     {
-      icon: "🔍",
+      icon: Search,
       title: "Transparent Assessment",
-      description: "Your eligibility is evaluated objectively according to points, education and genuine visa criteria.",
+      description:
+        "Your eligibility is evaluated objectively according to points, education and genuine visa criteria.",
     },
     {
-      icon: "🛡️",
+      icon: ShieldCheck,
       title: "End-to-End Guidance",
-      description: "Preparation of documents, credential assessment, pre-departure orientation and visa application.",
+      description:
+        "Preparation of documents, credential assessment, pre-departure orientation and visa application.",
     },
   ];
 
@@ -43,18 +48,23 @@ export default function WhyChooseUs() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
-          {benefits.map((item, index) => (
-            <div
-              key={index}
-              className="bg-slate-950 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-[#ff7027] transition-all duration-300"
-            >
-              <div>
-                <div className="text-3xl mb-4">{item.icon}</div>
-                <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
-                <p className="text-slate-400 text-sm leading-relaxed">{item.description}</p>
+          {benefits.map((item, index) => {
+            const Icon = item.icon;
+            return (
+              <div
+                key={index}
+                className="bg-slate-950 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-[#ff7027] transition-all duration-300"
+              >
+                <div>
+                  <div className="w-12 h-12 bg-[#ff7027]/10 border border-[#ff7027]/30 rounded-xl flex items-center justify-center text-[#ff7027] mb-4">
+                    <Icon className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                  <p className="text-slate-400 text-sm leading-relaxed">{item.description}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* CLIENT REVIEWS SLIDESHOW */}
