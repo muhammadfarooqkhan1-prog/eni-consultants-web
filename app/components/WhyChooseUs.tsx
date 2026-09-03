@@ -6,22 +6,22 @@ export default function WhyChooseUs() {
     {
       icon: "🎯",
       title: "GCC Region Specialization",
-      description: "In-depth expertise tailored for residents across KSA, UAE, Qatar, Oman, Bahrain, and Kuwait.",
+      description: "We have the expertise and insights to target your immigration needs if you are a resident of KSA, UAE, Qatar, Oman, Bahrain, and Kuwait.",
     },
     {
       icon: "⚡",
       title: "Fast 48-Hour Consultations",
-      description: "Quick scheduling with transparent evaluation of your profile.",
+      description: "Schedule a call with us and have your application evaluated swiftly and transparently.",
     },
     {
       icon: "🔍",
       title: "Transparent Assessment",
-      description: "Strictly assessing cases based on points, education, and genuine visa requirements.",
+      description: "Your eligibility is evaluated objectively according to points, education and genuine visa criteria.",
     },
     {
       icon: "🛡️",
       title: "End-to-End Guidance",
-      description: "Document preparation, credential evaluations, pre-departure briefings, and visa filing.",
+      description: "Preparation of documents, credential assessment, pre-departure orientation and visa application.",
     },
   ];
 
@@ -38,7 +38,7 @@ export default function WhyChooseUs() {
             Trusted Global Immigration & Visa Partner
           </h2>
           <p className="text-slate-400 max-w-2xl text-base sm:text-lg leading-relaxed">
-            Delivering transparent, reliable, and professional consultancy services tailored for applicants across the Gulf and worldwide.
+            Offering comprehensive consultancy solutions for transparent, reliable and professional assistance to applicants from Pakistan, Gulf countries, and worldwide.
           </p>
         </div>
 
