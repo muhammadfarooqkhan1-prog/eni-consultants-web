@@ -1,5 +1,13 @@
 import Link from "next/link";
 import { Metadata } from "next";
+import {
+  Globe2,
+  GraduationCap,
+  Briefcase,
+  Plane,
+  Check,
+  ArrowRight,
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "USA Visas & Permanent Residency (Green Card) Advisory | ENI Consultants",
@@ -39,7 +47,7 @@ export default function USADestinationPage() {
       title: "Employment-Based Green Cards (EB-1, EB-2 NIW, EB-3)",
       badge: "Direct US Permanent Residency",
       description:
-        "Immigrant visa pathways providing direct Permanent Residency (Green Card) for high-achieving researchers, advanced degree professionals, and skilled workers.",
+        "Immigrant visa pathways provides direct Permanent Residency (Green Card) for high-achieving researchers, advanced degree professionals, and skilled workers.",
       highlights: [
         "EB-2 National Interest Waiver (NIW) for Advanced Degree Holders",
         "EB-1 Priority Worker classification for Executives & Researchers",
@@ -89,9 +97,10 @@ export default function USADestinationPage() {
             <div className="pt-2 flex flex-wrap gap-4">
               <Link
                 href="/check-eligibility"
-                className="bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline"
+                className="bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline inline-flex items-center gap-2"
               >
-                Assess USA Visa Eligibility
+                <span>Assess USA Visa Eligibility</span>
+                <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/book-appointment"
@@ -134,34 +143,42 @@ export default function USADestinationPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">🗽</span>
-              <h3 className="text-white font-bold text-base">Global Economic Hub</h3>
+              <div className="w-12 h-12 bg-[#ff7027]/10 border border-[#ff7027]/30 rounded-xl flex items-center justify-center text-[#ff7027]">
+                <Globe2 className="w-6 h-6" />
+              </div>
+              <h3 className="text-white font-bold text-base pt-1">Global Economic Hub</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
-                Access the world's largest economy with premier career opportunities in STEM, Finance, and Executive Management.
+                Access the world's largest economy with top career opportunities in STEM, Finance, and Executive Management.
               </p>
             </div>
 
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">🎓</span>
-              <h3 className="text-white font-bold text-base">World-Class Higher Ed</h3>
+              <div className="w-12 h-12 bg-[#ff7027]/10 border border-[#ff7027]/30 rounded-xl flex items-center justify-center text-[#ff7027]">
+                <GraduationCap className="w-6 h-6" />
+              </div>
+              <h3 className="text-white font-bold text-base pt-1">World-Class Higher Ed</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
                 Study at Ivy League and top-ranked universities with up to 3 years of STEM OPT practical work rights.
               </p>
             </div>
 
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">💼</span>
-              <h3 className="text-white font-bold text-base">EB-2 NIW Pathway</h3>
+              <div className="w-12 h-12 bg-[#ff7027]/10 border border-[#ff7027]/30 rounded-xl flex items-center justify-center text-[#ff7027]">
+                <Briefcase className="w-6 h-6" />
+              </div>
+              <h3 className="text-white font-bold text-base pt-1">EB-2 NIW Pathway</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
-                Self-petition for a Green Card without needing an employer sponsor through National Interest Waivers.
+                Lets you self-petition for a Green Card without needing an employer sponsor using National Interest Waivers.
               </p>
             </div>
 
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">✈️</span>
-              <h3 className="text-white font-bold text-base">Long-Term Visitor Visas</h3>
+              <div className="w-12 h-12 bg-[#ff7027]/10 border border-[#ff7027]/30 rounded-xl flex items-center justify-center text-[#ff7027]">
+                <Plane className="w-6 h-6" />
+              </div>
+              <h3 className="text-white font-bold text-base pt-1">Long-Term Visitor Visas</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
-                Enjoy multi-entry visitor visas valid up to 10 years for seamless business and personal travel.
+                Enjoy multi-entry visitor visas valid up to 10 years for smooth business and personal travel.
               </p>
             </div>
           </div>
@@ -210,7 +227,7 @@ export default function USADestinationPage() {
                   <ul className="space-y-2.5 pt-2">
                     {item.highlights.map((point, pIdx) => (
                       <li key={pIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
-                        <span className="text-[#ff7027] font-bold">✓</span>
+                        <Check className="w-4 h-4 text-[#ff7027] shrink-0 mt-0.5" />
                         <span>{point}</span>
                       </li>
                     ))}
@@ -221,7 +238,8 @@ export default function USADestinationPage() {
                       href="/check-eligibility"
                       className="inline-flex items-center gap-2 text-[#ff7027] font-bold text-sm hover:underline"
                     >
-                      Check Eligibility for {item.title.split(" ")[0]} <span>→</span>
+                      <span>Check Eligibility for {item.title.split(" ")[0]}</span>
+                      <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
                 </div>
@@ -236,14 +254,15 @@ export default function USADestinationPage() {
             Need Expert Guidance for Your US Visa Application?
           </h3>
           <p className="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
-            Schedule a confidential profile evaluation with senior consultant Muhammad Farooq Khan to assess your DS-160, F-1, H-1B, or EB-2 NIW profile.
+            Schedule a confidential profile evaluation with Chief Consultant Muhammad Farooq Khan to assess your DS-160, F-1, H-1B, or EB-2 NIW profile.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/check-eligibility"
-              className="w-full sm:w-auto bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline"
+              className="w-full sm:w-auto bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline inline-flex items-center justify-center gap-2"
             >
-              Check Your Eligibility Free
+              <span>Check Your Eligibility</span>
+              <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
               href="/book-appointment"
