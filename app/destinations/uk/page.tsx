@@ -1,5 +1,13 @@
 import Link from "next/link";
 import { Metadata } from "next";
+import {
+  Building2,
+  Stethoscope,
+  GraduationCap,
+  Briefcase,
+  Check,
+  ArrowRight,
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "UK Visas, Skilled Work & Permanent Residency (ILR) Advisory | ENI Consultants",
@@ -89,9 +97,10 @@ export default function UKDestinationPage() {
             <div className="pt-2 flex flex-wrap gap-4">
               <Link
                 href="/check-eligibility"
-                className="bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline"
+                className="bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline inline-flex items-center gap-2"
               >
-                Assess UK Visa Eligibility Free
+                <span>Assess UK Visa Eligibility</span>
+                <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/book-appointment"
@@ -128,38 +137,46 @@ export default function UKDestinationPage() {
               Why Choose the United Kingdom?
             </h2>
             <p className="text-slate-400 text-sm sm:text-base mt-2">
-              Core benefits available to qualified professionals, healthcare workers, and students in the UK.
+              Here are the main advantages that are open to professionals, medical staff and learners, in the United Kingdom.
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">🏛️</span>
-              <h3 className="text-white font-bold text-base">ILR in 5 Years</h3>
+              <div className="w-12 h-12 bg-[#ff7027]/10 border border-[#ff7027]/30 rounded-xl flex items-center justify-center text-[#ff7027]">
+                <Building2 className="w-6 h-6" />
+              </div>
+              <h3 className="text-white font-bold text-base pt-1">ILR in 5 Years</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
                 Clear 5-year pathway from Skilled Worker status to Indefinite Leave to Remain (ILR) and British Citizenship.
               </p>
             </div>
 
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">🩺</span>
-              <h3 className="text-white font-bold text-base">Free NHS Healthcare</h3>
+              <div className="w-12 h-12 bg-[#ff7027]/10 border border-[#ff7027]/30 rounded-xl flex items-center justify-center text-[#ff7027]">
+                <Stethoscope className="w-6 h-6" />
+              </div>
+              <h3 className="text-white font-bold text-base pt-1">Free NHS Healthcare</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
                 Full access to the National Health Service (NHS) for visa holders and immediate family dependents.
               </p>
             </div>
 
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">🎓</span>
-              <h3 className="text-white font-bold text-base">2-Year Post-Study Visa</h3>
+              <div className="w-12 h-12 bg-[#ff7027]/10 border border-[#ff7027]/30 rounded-xl flex items-center justify-center text-[#ff7027]">
+                <GraduationCap className="w-6 h-6" />
+              </div>
+              <h3 className="text-white font-bold text-base pt-1">2-Year Post-Study Visa</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
                 Graduate route allows international students to work in any role across the UK post-graduation without sponsorship.
               </p>
             </div>
 
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">💼</span>
-              <h3 className="text-white font-bold text-base">Global Finance Hub</h3>
+              <div className="w-12 h-12 bg-[#ff7027]/10 border border-[#ff7027]/30 rounded-xl flex items-center justify-center text-[#ff7027]">
+                <Briefcase className="w-6 h-6" />
+              </div>
+              <h3 className="text-white font-bold text-base pt-1">Global Finance Hub</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
                 Work in top global financial, tech, and engineering institutions located in London, Manchester, and Edinburgh.
               </p>
@@ -210,7 +227,7 @@ export default function UKDestinationPage() {
                   <ul className="space-y-2.5 pt-2">
                     {item.highlights.map((point, pIdx) => (
                       <li key={pIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
-                        <span className="text-[#ff7027] font-bold">✓</span>
+                        <Check className="w-4 h-4 text-[#ff7027] shrink-0 mt-0.5" />
                         <span>{point}</span>
                       </li>
                     ))}
@@ -221,7 +238,8 @@ export default function UKDestinationPage() {
                       href="/check-eligibility"
                       className="inline-flex items-center gap-2 text-[#ff7027] font-bold text-sm hover:underline"
                     >
-                      Check Eligibility for {item.title.split(" ")[0]} <span>→</span>
+                      <span>Check Eligibility for {item.title.split(" ")[0]}</span>
+                      <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
                 </div>
@@ -236,14 +254,15 @@ export default function UKDestinationPage() {
             Plan Your Move to the United Kingdom Today
           </h3>
           <p className="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
-            Get professional legal advice on CoS verification, ECCTIS credential assessments, and UKVI visa submission from senior consultant Muhammad Farooq Khan.
+            Get professional legal advice on CoS verification, ECCTIS credential assessments, and UKVI visa submission from Chief Consultant Muhammad Farooq Khan.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/check-eligibility"
-              className="w-full sm:w-auto bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline"
+              className="w-full sm:w-auto bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline inline-flex items-center justify-center gap-2"
             >
-              Evaluate UK Eligibility Free
+              <span>Evaluate UK Eligibility</span>
+              <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
               href="/book-appointment"
