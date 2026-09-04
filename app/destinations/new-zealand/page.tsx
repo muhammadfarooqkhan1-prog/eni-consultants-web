@@ -1,5 +1,13 @@
 import Link from "next/link";
 import { Metadata } from "next";
+import {
+  Award,
+  HeartPulse,
+  GraduationCap,
+  Globe,
+  Check,
+  ArrowRight,
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "New Zealand Permanent Residency & Skilled Visa Advisory | ENI Consultants",
@@ -83,15 +91,16 @@ export default function NewZealandDestinationPage() {
               Immigrate to New Zealand: Residence & Visa Pathways
             </h1>
             <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
-              Experience an exceptional work-life balance, high safety standards, world-class healthcare, and vibrant career opportunities in Aotearoa New Zealand. ENI Consultants manages your SMC 6-Points calculation, Green List qualification mapping, and Accredited Employer filing.
+              Experience an exceptional work-life balance, high safety standards, world-class healthcare, and energetic career opportunities in Aotearoa New Zealand. ENI Consultants manages your SMC 6-Points calculation, Green List qualification mapping, and Accredited Employer filing.
             </p>
             
             <div className="pt-2 flex flex-wrap gap-4">
               <Link
                 href="/check-eligibility"
-                className="bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline"
+                className="bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline inline-flex items-center gap-2"
               >
-                Assess NZ 6-Points Eligibility Free
+                <span>Assess NZ 6-Points Eligibility</span>
+                <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/book-appointment"
@@ -134,32 +143,40 @@ export default function NewZealandDestinationPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">🇳🇿</span>
-              <h3 className="text-white font-bold text-base">Direct Resident Status</h3>
+              <div className="w-12 h-12 bg-[#ff7027]/10 border border-[#ff7027]/30 rounded-xl flex items-center justify-center text-[#ff7027]">
+                <Award className="w-6 h-6" />
+              </div>
+              <h3 className="text-white font-bold text-base pt-1">Direct Resident Status</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
                 Live, work, and study indefinitely in New Zealand with full employment flexibility.
               </p>
             </div>
 
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">🏥</span>
-              <h3 className="text-white font-bold text-base">Public Healthcare</h3>
+              <div className="w-12 h-12 bg-[#ff7027]/10 border border-[#ff7027]/30 rounded-xl flex items-center justify-center text-[#ff7027]">
+                <HeartPulse className="w-6 h-6" />
+              </div>
+              <h3 className="text-white font-bold text-base pt-1">Public Healthcare</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
                 Free or subsidized public healthcare services for permanent residents and their children.
               </p>
             </div>
 
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">🎓</span>
-              <h3 className="text-white font-bold text-base">Domestic Education</h3>
+              <div className="w-12 h-12 bg-[#ff7027]/10 border border-[#ff7027]/30 rounded-xl flex items-center justify-center text-[#ff7027]">
+                <GraduationCap className="w-6 h-6" />
+              </div>
+              <h3 className="text-white font-bold text-base pt-1">Domestic Education</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
                 Free public schooling (K-12) for dependent children and domestic university fee rates.
               </p>
             </div>
 
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">🛂</span>
-              <h3 className="text-white font-bold text-base">Citizenship in 5 Years</h3>
+              <div className="w-12 h-12 bg-[#ff7027]/10 border border-[#ff7027]/30 rounded-xl flex items-center justify-center text-[#ff7027]">
+                <Globe className="w-6 h-6" />
+              </div>
+              <h3 className="text-white font-bold text-base pt-1">Citizenship in 5 Years</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
                 Eligible for a New Zealand Passport after completing 5 years of physical residency.
               </p>
@@ -210,7 +227,7 @@ export default function NewZealandDestinationPage() {
                   <ul className="space-y-2.5 pt-2">
                     {item.highlights.map((point, pIdx) => (
                       <li key={pIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
-                        <span className="text-[#ff7027] font-bold">✓</span>
+                        <Check className="w-4 h-4 text-[#ff7027] shrink-0 mt-0.5" />
                         <span>{point}</span>
                       </li>
                     ))}
@@ -221,7 +238,8 @@ export default function NewZealandDestinationPage() {
                       href="/check-eligibility"
                       className="inline-flex items-center gap-2 text-[#ff7027] font-bold text-sm hover:underline"
                     >
-                      Check Eligibility for {item.title.split(" ")[0]} <span>→</span>
+                      <span>Check Eligibility for {item.title.split(" ")[0]}</span>
+                      <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
                 </div>
@@ -236,14 +254,15 @@ export default function NewZealandDestinationPage() {
             Evaluate Your New Zealand SMC Points Score
           </h3>
           <p className="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
-            Book a consultation with senior consultant Muhammad Farooq Khan to assess your NZQA qualification equivalence, Green List status, and Accredited Employer job offer requirements.
+            Book a consultation with Chief Consultant Muhammad Farooq Khan to assess your NZQA qualification equivalence, Green List status, and Accredited Employer job offer requirements.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/check-eligibility"
-              className="w-full sm:w-auto bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline"
+              className="w-full sm:w-auto bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline inline-flex items-center justify-center gap-2"
             >
-              Evaluate Points Score Free
+              <span>Evaluate Points Score</span>
+              <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
               href="/book-appointment"
