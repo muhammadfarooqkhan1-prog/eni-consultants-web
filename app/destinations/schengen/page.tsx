@@ -1,5 +1,12 @@
 import Link from "next/link";
 import { Metadata } from "next";
+import {
+  Clock,
+  Landmark,
+  Check,
+  X,
+  ArrowRight,
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Schengen Europe Visit & Business Visa Advisory | 29 Countries | ENI Consultants",
@@ -54,7 +61,7 @@ export default function SchengenDestinationPage() {
     {
       step: "01",
       title: "Jurisdiction & Embassy Selection",
-      desc: "Identifying the correct consulate based on main destination duration or first port of entry rules.",
+      desc: "Guidance on identifying the appropriate consulate based on main destination length of stay or first port of entry requirements.",
     },
     {
       step: "02",
@@ -64,7 +71,7 @@ export default function SchengenDestinationPage() {
     {
       step: "03",
       title: "VFS / TLS / BLS Slot Booking",
-      desc: "Securing biometric submission appointments at authorized visa application centers in your region.",
+      desc: "Booking of biometric submission appointments at authorized visa application centers in your region.",
     },
     {
       step: "04",
@@ -90,7 +97,11 @@ export default function SchengenDestinationPage() {
 
           <div className="lg:col-span-7 space-y-6 relative z-10">
             <div className="flex items-center gap-3">
-              <span className="text-2xl">🇪🇺</span>
+              <img
+                src="https://flagcdn.com/w160/eu.png"
+                alt="European Union Flag"
+                className="w-8 h-5 object-cover rounded shadow"
+              />
               <span className="bg-[#ff7027]/10 text-[#ff7027] border border-[#ff7027]/30 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider">
                 Schengen Zone Advisory
               </span>
@@ -100,15 +111,16 @@ export default function SchengenDestinationPage() {
               Schengen Visa: Your Gateway to 29 European Nations
             </h1>
             <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
-              Travel across 29 European countries under a single short-stay visa. ENI Consultants handles end-to-end file preparation, VFS/TLS/BLS appointment scheduling, compliant insurance issuance, and cover letter drafting to ensure maximum success.
+              Travel across 29 European countries under a single short-stay visa. ENI Consultants handles complete file preparation, VFS/TLS/BLS appointment scheduling, compliant insurance issuance, and cover letter drafting to ensure maximum success.
             </p>
             
             <div className="pt-2 flex flex-wrap gap-4">
               <Link
                 href="/check-eligibility"
-                className="bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline"
+                className="bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline inline-flex items-center gap-2"
               >
-                Assess Schengen Eligibility
+                <span>Assess Schengen Eligibility</span>
+                <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/book-appointment"
@@ -150,7 +162,8 @@ export default function SchengenDestinationPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
             <div className="bg-slate-950 border border-slate-800 p-6 rounded-2xl space-y-3">
               <h3 className="text-white font-bold text-lg flex items-center gap-2">
-                <span>⏱️</span> The 90 / 180-Day Rule
+                <Clock className="w-5 h-5 text-[#ff7027]" />
+                <span>The 90 / 180-Day Rule</span>
               </h3>
               <p className="text-slate-400 text-sm leading-relaxed">
                 A standard Type C Schengen short-stay visa permits non-EU travelers to remain within the member states for up to <strong>90 days within any rolling 180-day window</strong> for tourism, business trips, or short-term family visits.
@@ -159,7 +172,8 @@ export default function SchengenDestinationPage() {
 
             <div className="bg-slate-950 border border-slate-800 p-6 rounded-2xl space-y-3">
               <h3 className="text-white font-bold text-lg flex items-center gap-2">
-                <span>🏛️</span> Where to File Your File
+                <Landmark className="w-5 h-5 text-[#ff7027]" />
+                <span>Where to File Your File</span>
               </h3>
               <p className="text-slate-400 text-sm leading-relaxed">
                 You must apply at the embassy/consulate of your <strong>Main Destination</strong> (where you spend the highest number of days). If stay durations are identical, apply at your <strong>First Port of Entry</strong> into Europe.
@@ -199,7 +213,7 @@ export default function SchengenDestinationPage() {
             {documentChecklist.map((item, idx) => (
               <div key={idx} className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-2">
                 <div className="flex items-center gap-2 text-[#ff7027] font-bold">
-                  <span>✓</span>
+                  <Check className="w-5 h-5 text-[#ff7027] shrink-0" />
                   <h3 className="text-white font-bold text-base">{item.title}</h3>
                 </div>
                 <p className="text-slate-400 text-xs leading-relaxed">{item.detail}</p>
@@ -239,13 +253,13 @@ export default function SchengenDestinationPage() {
             </h2>
 
             <p className="text-slate-400 text-xs leading-relaxed">
-              Consulates enforce strict refusal criteria. Our file reviewers eliminate these risks prior to your VFS/TLS biometrics appointment:
+              Consulates follow strict refusal criteria. Our file reviewers eliminate these risks before your VFS/TLS biometrics appointment:
             </p>
 
             <ul className="space-y-3">
               {refusalTriggers.map((trig, idx) => (
                 <li key={idx} className="flex items-start gap-2.5 text-xs text-slate-300">
-                  <span className="text-red-400 font-bold shrink-0">✕</span>
+                  <X className="w-4 h-4 text-red-400 shrink-0 mt-0.5" />
                   <span>{trig}</span>
                 </li>
               ))}
@@ -256,7 +270,8 @@ export default function SchengenDestinationPage() {
                 href="/check-eligibility"
                 className="inline-flex items-center gap-2 text-[#ff7027] font-bold text-sm hover:underline"
               >
-                Audit Your Schengen File Before Applying <span>→</span>
+                <span>Audit Your Schengen File Before Applying</span>
+                <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
@@ -269,14 +284,15 @@ export default function SchengenDestinationPage() {
             Ready to Plan Your Trip Across Europe?
           </h3>
           <p className="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
-            Book a 1-on-1 consultation with senior advisor Muhammad Farooq Khan to secure your VFS/TLS/BLS appointment slot and draft your cover letter.
+            Book a 1-on-1 consultation with Chief Consultant Muhammad Farooq Khan to secure your VFS/TLS/BLS appointment slot and draft your cover letter.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/check-eligibility"
-              className="w-full sm:w-auto bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline"
+              className="w-full sm:w-auto bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline inline-flex items-center justify-center gap-2"
             >
-              Check Schengen Eligibility Free
+              <span>Check Schengen Eligibility</span>
+              <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
               href="/book-appointment"
