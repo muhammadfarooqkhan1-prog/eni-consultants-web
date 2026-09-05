@@ -1,5 +1,13 @@
 import Link from "next/link";
 import { Metadata } from "next";
+import {
+  Hotel,
+  Briefcase,
+  MessageSquare,
+  Plane,
+  Check,
+  ArrowRight,
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Study, Work & Visit Maldives | ENI Consultants",
@@ -13,7 +21,7 @@ export default function MaldivesDestinationPage() {
       title: "Hospitality & Tourism Management Degrees",
       badge: "Industry-Integrated Training",
       description:
-        "Enroll in specialized diplomas, Bachelor's, and Master's programs in International Hospitality, Resort Management, and Culinary Arts. Gain hands-on exposure in world-renowned luxury resorts.",
+        "Enroll in specialized diplomas, Bachelor's, and Master's programs in International Hospitality, Resort Management, and Culinary Arts. Gain practical exposure in famous luxury resorts.",
       highlights: [
         "Globally recognized hospitality qualifications instructed in English",
         "Direct internship placements with luxury island resorts and chains",
@@ -27,7 +35,7 @@ export default function MaldivesDestinationPage() {
       title: "Resort Employment & Work Permit Advisory",
       badge: "Skilled Professional Pathways",
       description:
-        "Comprehensive processing guidance for professionals seeking employment in Maldives' thriving hospitality, healthcare, marine biology, and construction sectors.",
+        "Comprehensive processing guidance for professionals seeking employment in Maldives' booming hospitality, healthcare, marine biology, and construction sectors.",
       highlights: [
         "Work quota clearance and employment approval assistance",
         "Complete document attestation and medical check coordination",
@@ -41,7 +49,7 @@ export default function MaldivesDestinationPage() {
       title: "Tourist & Business Visit Entry",
       badge: "Free On-Arrival Visa",
       description:
-        "Hassle-free documentation and travel clearance support for tourists, corporate guests, and families exploring the Maldivian islands.",
+        "Stress-free documentation and travel clearance support for tourists, corporate guests, and families exploring the Maldivian islands.",
       highlights: [
         "Guidance for 30-day free tourist visa on arrival requirements",
         "IMUGA (Immigration Declaration) filing and hotel voucher support",
@@ -55,7 +63,7 @@ export default function MaldivesDestinationPage() {
       title: "Student Visa & Arrival Assistance",
       badge: "Complete Onboarding",
       description:
-        "End-to-end relocation support including institute application submission, student visa processing, and airport welcome in Malé.",
+        "Complete relocation support including institute application submission, student visa processing, and airport welcome in Malé.",
       highlights: [
         "Step-by-step guidance on institution admissions and fee clearance",
         "Student visa approval processing via Maldives Immigration",
@@ -91,15 +99,16 @@ export default function MaldivesDestinationPage() {
               Study, Work & Visit Maldives: Pathways & Visa Advisory
             </h1>
             <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
-              Discover world-class hospitality education, resort career opportunities, and tourist visa guidance in the Maldives. ENI Consultants handles your admissions, work permits, and travel documentation with expert care.
+              Discover best hospitality education, resort career opportunities, and tourist visa guidance in the Maldives. ENI Consultants handles your admissions, work permits, and travel documentation with expert care.
             </p>
             
             <div className="pt-2 flex flex-wrap gap-4">
               <Link
                 href="/check-eligibility"
-                className="bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline"
+                className="bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline inline-flex items-center gap-2"
               >
-                Assess Maldives Eligibility Free
+                <span>Assess Maldives Eligibility</span>
+                <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/book-appointment"
@@ -142,7 +151,7 @@ export default function MaldivesDestinationPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">🏨</span>
+              <Hotel className="w-8 h-8 text-[#ff7027]" />
               <h3 className="text-white font-bold text-base">Hospitality Hub</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
                 Direct exposure to world-class luxury resort chains and international standards.
@@ -150,7 +159,7 @@ export default function MaldivesDestinationPage() {
             </div>
 
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">💼</span>
+              <Briefcase className="w-8 h-8 text-[#ff7027]" />
               <h3 className="text-white font-bold text-base">Work Opportunities</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
                 High demand for foreign expertise in hotel management, marine biology, and health.
@@ -158,7 +167,7 @@ export default function MaldivesDestinationPage() {
             </div>
 
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">🗣️</span>
+              <MessageSquare className="w-8 h-8 text-[#ff7027]" />
               <h3 className="text-white font-bold text-base">English Environment</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
                 English is widely spoken across business, education, and hospitality sectors.
@@ -166,7 +175,7 @@ export default function MaldivesDestinationPage() {
             </div>
 
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">✈️</span>
+              <Plane className="w-8 h-8 text-[#ff7027]" />
               <h3 className="text-white font-bold text-base">Easy Entry Process</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
                 Streamlined visa-on-arrival procedures and swift student permit processing.
@@ -218,7 +227,7 @@ export default function MaldivesDestinationPage() {
                   <ul className="space-y-2.5 pt-2">
                     {item.highlights.map((point, pIdx) => (
                       <li key={pIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
-                        <span className="text-[#ff7027] font-bold">✓</span>
+                        <Check className="w-4 h-4 text-[#ff7027] shrink-0 mt-0.5" />
                         <span>{point}</span>
                       </li>
                     ))}
@@ -229,7 +238,8 @@ export default function MaldivesDestinationPage() {
                       href="/check-eligibility"
                       className="inline-flex items-center gap-2 text-[#ff7027] font-bold text-sm hover:underline"
                     >
-                      Check Eligibility for {item.title.split(" ")[0]} <span>→</span>
+                      <span>Check Eligibility for {item.title.split(" ")[0]}</span>
+                      <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
                 </div>
@@ -244,14 +254,15 @@ export default function MaldivesDestinationPage() {
             Plan Your Opportunities in Maldives
           </h3>
           <p className="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
-            Book a consultation with senior consultant Muhammad Farooq Khan to assess hospital/resort education options, work permits, and entry visa requirements.
+            Book a consultation with Chief Consultant Muhammad Farooq Khan to assess hospital/resort education options, work permits, and entry visa requirements.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/check-eligibility"
-              className="w-full sm:w-auto bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline"
+              className="w-full sm:w-auto bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline inline-flex items-center justify-center gap-2"
             >
-              Evaluate Eligibility Free
+              <span>Evaluate Eligibility Free</span>
+              <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
               href="/book-appointment"
