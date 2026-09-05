@@ -1,5 +1,13 @@
 import Link from "next/link";
 import { Metadata } from "next";
+import {
+  GraduationCap,
+  Banknote,
+  PlaneTakeoff,
+  FileCheck2,
+  Check,
+  ArrowRight,
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Study & Visit Opportunities in Malaysia | ENI Consultants",
@@ -19,7 +27,8 @@ export default function MalaysiaDestinationPage() {
         "Dual-degree options with UK, Australian, and US universities",
         "Streamlined English proficiency pathways and internal tests",
       ],
-      mediaUrl: "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=1000",
+      mediaUrl:
+        "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=1000",
       mediaAlt: "Malaysia Higher Education and University Campus",
     },
     {
@@ -32,33 +41,36 @@ export default function MalaysiaDestinationPage() {
         "Seamless credit transfers with partner institutions",
         "Direct graduation degrees awarded by parent western universities",
       ],
-      mediaUrl: "https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1000",
+      mediaUrl:
+        "https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1000",
       mediaAlt: "Malaysia Branch Campus and Transfer Pathways",
     },
     {
       title: "EMGS Student Visa Approval & VAL Support",
       badge: "High Approval Rate",
       description:
-        "End-to-end guidance for processing your Visa Approval Letter (VAL) through Education Malaysia Global Services (EMGS), medical screenings, and single-entry visa stamping.",
+        "Complete guidance for processing your Visa Approval Letter (VAL) through Education Malaysia Global Services (EMGS), medical screenings, and single-entry visa stamping.",
       highlights: [
         "Complete file audit before EMGS submission to prevent delays",
         "Guidance for medical health checks and insurance registration",
         "Single Entry Visa (SEV) application and post-arrival endorsement",
       ],
-      mediaUrl: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1000",
+      mediaUrl:
+        "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1000",
       mediaAlt: "EMGS Visa Approval and Student Assistance",
     },
     {
       title: "Tourist & Visit Visa Processing",
       badge: "eVISA & Social Visit",
       description:
-        "Hassle-free eVISA filing, Social Visit Visa file preparation, and travel documentation for families, business professionals, and tourists visiting Malaysia.",
+        "Stress-free eVISA filing, Social Visit Visa file preparation, and travel documentation for families, business professionals, and tourists visiting Malaysia.",
       highlights: [
         "Fast-track eVISA processing with full documentation support",
         "Complete hotel booking, flight itinerary, and financial proof planning",
         "Guidance for Malaysia Digital Arrival Card (MDAC) registration",
       ],
-      mediaUrl: "https://images.pexels.com/photos/1549326/pexels-photo-1549326.jpeg?auto=compress&cs=tinysrgb&w=1000",
+      mediaUrl:
+        "https://images.pexels.com/photos/1549326/pexels-photo-1549326.jpeg?auto=compress&cs=tinysrgb&w=1000",
       mediaAlt: "Malaysia Tourism and Visit Visa",
     },
   ];
@@ -93,9 +105,10 @@ export default function MalaysiaDestinationPage() {
             <div className="pt-2 flex flex-wrap gap-4">
               <Link
                 href="/check-eligibility"
-                className="bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline"
+                className="bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline inline-flex items-center gap-2"
               >
-                Assess Malaysia Eligibility Free
+                <span>Assess Malaysia Eligibility</span>
+                <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/book-appointment"
@@ -138,7 +151,7 @@ export default function MalaysiaDestinationPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">🇲🇾</span>
+              <GraduationCap className="w-8 h-8 text-[#ff7027]" />
               <h3 className="text-white font-bold text-base">Global Branch Campuses</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
                 Graduate with genuine UK, Australian, or US degrees right in Kuala Lumpur or Johor.
@@ -146,7 +159,7 @@ export default function MalaysiaDestinationPage() {
             </div>
 
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">💵</span>
+              <Banknote className="w-8 h-8 text-[#ff7027]" />
               <h3 className="text-white font-bold text-base">Low Cost of Living</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
                 High standard of modern living paired with significantly lower tuition and rental fees.
@@ -154,7 +167,7 @@ export default function MalaysiaDestinationPage() {
             </div>
 
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">✈️</span>
+              <PlaneTakeoff className="w-8 h-8 text-[#ff7027]" />
               <h3 className="text-white font-bold text-base">Easy Credit Transfers</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
                 Use Malaysia as a stepping stone to transfer seamlessly into UK/Australian main campuses.
@@ -162,7 +175,7 @@ export default function MalaysiaDestinationPage() {
             </div>
 
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">📋</span>
+              <FileCheck2 className="w-8 h-8 text-[#ff7027]" />
               <h3 className="text-white font-bold text-base">Streamlined EMGS Visa</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
                 Transparent and centralized student visa tracking system through EMGS.
@@ -214,7 +227,7 @@ export default function MalaysiaDestinationPage() {
                   <ul className="space-y-2.5 pt-2">
                     {item.highlights.map((point, pIdx) => (
                       <li key={pIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
-                        <span className="text-[#ff7027] font-bold">✓</span>
+                        <Check className="w-4 h-4 text-[#ff7027] shrink-0 mt-0.5" />
                         <span>{point}</span>
                       </li>
                     ))}
@@ -225,7 +238,8 @@ export default function MalaysiaDestinationPage() {
                       href="/check-eligibility"
                       className="inline-flex items-center gap-2 text-[#ff7027] font-bold text-sm hover:underline"
                     >
-                      Check Eligibility for {item.title.split(" ")[0]} <span>→</span>
+                      <span>Check Eligibility for {item.title.split(" ")[0]}</span>
+                      <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
                 </div>
@@ -240,14 +254,15 @@ export default function MalaysiaDestinationPage() {
             Plan Your Journey to Malaysia
           </h3>
           <p className="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
-            Book a consultation with senior consultant Muhammad Farooq Khan to assess university placement options, EMGS student visa approvals, and travel document requirements.
+            Book a consultation with Chief Consultant Muhammad Farooq Khan to assess university placement options, EMGS student visa approvals, and travel document requirements.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/check-eligibility"
-              className="w-full sm:w-auto bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline"
+              className="w-full sm:w-auto bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline inline-flex items-center justify-center gap-2"
             >
-              Evaluate Admissions Free
+              <span>Evaluate Admissions</span>
+              <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
               href="/book-appointment"
