@@ -1,5 +1,13 @@
 import Link from "next/link";
 import { Metadata } from "next";
+import {
+  Palmtree,
+  GraduationCap,
+  Building2,
+  TrendingUp,
+  Check,
+  ArrowRight,
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Study, Remote Work & Relocate to Indonesia | ENI Consultants",
@@ -27,7 +35,7 @@ export default function IndonesiaDestinationPage() {
       title: "B211A Social & Digital Nomad Residence",
       badge: "Remote Work & Extended Stays",
       description:
-        "Seamless guidance for digital nomads and remote professionals utilizing the popular B211A pathway for initial 60-day stays, extendable up to 180 days.",
+        "Seamless guidance for digital migrants and remote professionals utilizing the popular B211A pathway for initial 60-day stays, extendable up to 180 days.",
       highlights: [
         "Multiple 30-day extensions without leaving the country",
         "Ideal for remote workers, creative freelancers, and cultural visitors",
@@ -41,7 +49,7 @@ export default function IndonesiaDestinationPage() {
       title: "Second Home & Golden Visa Residency (E28C)",
       badge: "5 to 10-Year Long-Term Stay",
       description:
-        "Premium long-term residency options for high-net-worth individuals, property investors, and retirees seeking 5-year or 10-year residency in Bali or Jakarta.",
+        "Premium long-term residency options for wealthy individuals, property investors, and retirees seeking 5-year or 10-year residency in Bali or Jakarta.",
       highlights: [
         "Second Home Visa (5–10 years) via qualifying bank deposits or property",
         "E28C Golden Visa routes for real estate buyers and business investors",
@@ -97,9 +105,10 @@ export default function IndonesiaDestinationPage() {
             <div className="pt-2 flex flex-wrap gap-4">
               <Link
                 href="/check-eligibility"
-                className="bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline"
+                className="bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline inline-flex items-center gap-2"
               >
-                Assess Indonesia Eligibility Free
+                <span>Assess Indonesia Eligibility</span>
+                <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/book-appointment"
@@ -142,7 +151,7 @@ export default function IndonesiaDestinationPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">🌴</span>
+              <Palmtree className="w-8 h-8 text-[#ff7027]" />
               <h3 className="text-white font-bold text-base">Global Nomad Hub</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
                 World-class coworking infrastructure and lifestyle in Bali, Jakarta, and Yogyakarta.
@@ -150,15 +159,15 @@ export default function IndonesiaDestinationPage() {
             </div>
 
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">🎓</span>
+              <GraduationCap className="w-8 h-8 text-[#ff7027]" />
               <h3 className="text-white font-bold text-base">Affordable Degrees</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
-                English-taught degree options paired with exceptionally low student living expenses.
+                English-medium degree options paired with exceptionally low student living expenses.
               </p>
             </div>
 
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">🏛️</span>
+              <Building2 className="w-8 h-8 text-[#ff7027]" />
               <h3 className="text-white font-bold text-base">Golden Visa Routes</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
                 Flexible 5 to 10-year residency pathways for investors and property buyers.
@@ -166,7 +175,7 @@ export default function IndonesiaDestinationPage() {
             </div>
 
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">📈</span>
+              <TrendingUp className="w-8 h-8 text-[#ff7027]" />
               <h3 className="text-white font-bold text-base">Booming Economy</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
                 Southeast Asia's largest economy with expanding tech, tourism, and startup hubs.
@@ -218,7 +227,7 @@ export default function IndonesiaDestinationPage() {
                   <ul className="space-y-2.5 pt-2">
                     {item.highlights.map((point, pIdx) => (
                       <li key={pIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
-                        <span className="text-[#ff7027] font-bold">✓</span>
+                        <Check className="w-4 h-4 text-[#ff7027] shrink-0 mt-0.5" />
                         <span>{point}</span>
                       </li>
                     ))}
@@ -229,7 +238,8 @@ export default function IndonesiaDestinationPage() {
                       href="/check-eligibility"
                       className="inline-flex items-center gap-2 text-[#ff7027] font-bold text-sm hover:underline"
                     >
-                      Check Eligibility for {item.title.split(" ")[0]} <span>→</span>
+                      <span>Check Eligibility for {item.title.split(" ")[0]}</span>
+                      <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
                 </div>
@@ -244,14 +254,15 @@ export default function IndonesiaDestinationPage() {
             Plan Your Move to Indonesia
           </h3>
           <p className="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
-            Book a consultation with senior consultant Muhammad Farooq Khan to assess university entry, B211A digital nomad stays, and Golden Visa options.
+            Book a consultation with Chief Consultant Muhammad Farooq Khan to assess university entry, B211A digital nomad stays, and Golden Visa options.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/check-eligibility"
-              className="w-full sm:w-auto bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline"
+              className="w-full sm:w-auto bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline inline-flex items-center justify-center gap-2"
             >
-              Evaluate Eligibility Free
+              <span>Evaluate Eligibility</span>
+              <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
               href="/book-appointment"
