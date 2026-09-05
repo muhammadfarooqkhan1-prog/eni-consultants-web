@@ -27,14 +27,15 @@ export default function StudyAbroadServicePage() {
     {
       country: "United Kingdom",
       flag: "https://flagcdn.com/w160/gb.png",
-      title: "Russell Group Universities & Graduate Route",
-      badge: "2-Year Graduate Post-Study Visa",
+      title: "Top-Tier UK Universities & Graduate Route",
+      badge: "18 Months Graduate Post-Study Visa",
       description:
-        "Fast-track your higher education with 1-Year Master's degrees from world-renowned UK institutions, followed by the 2-Year Graduate Visa route for career building.",
+        "Fast-track your higher education with 1-Year Master's degrees from leading UK institutions, including Russell Group universities, followed by the 18 months Graduate Visa route for post-study career growth.",
       features: [
-        "CAS Letter Processing & Interview Preparation",
-        "MOI (Medium of Instruction) English Waiver Eligibility",
-        "Part-Time Work Permit (20 Hours/Week) Assistance",
+        "Admissions Across Top UK Universities & Russell Group Institutions",
+        "CAS Letter Processing & Visa Interview Coaching",
+        "MOI (Medium of Instruction) English Waiver Assistance",
+        "Part-Time Work Permit (20 Hours/Week) Guidance",
       ],
       mediaUrl: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=1000&auto=format&fit=crop",
       mediaAlt: "Study in UK Higher Education",
