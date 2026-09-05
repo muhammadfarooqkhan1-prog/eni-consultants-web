@@ -1,5 +1,13 @@
 import Link from "next/link";
 import { Metadata } from "next";
+import {
+  BookOpen,
+  Coins,
+  GraduationCap,
+  Zap,
+  Check,
+  ArrowRight,
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Study & Visit Opportunities in Turkey | ENI Consultants",
@@ -52,7 +60,7 @@ export default function TurkeyDestinationPage() {
       title: "Student Residence Permit (Ikamet) Support",
       badge: "Complete Onboarding",
       description:
-        "End-to-end relocation guidance including student residence permit (Ikamet) processing, health insurance setup, and pre-departure accommodation arrangements.",
+        "Complete relocation guidance including student residence permit (Ikamet) processing, health insurance setup, and pre-departure accommodation arrangements.",
       highlights: [
         "Step-by-step document attestation and tax ID generation",
         "Local Turkish health insurance setup and appointment booking",
@@ -93,9 +101,10 @@ export default function TurkeyDestinationPage() {
             <div className="pt-2 flex flex-wrap gap-4">
               <Link
                 href="/check-eligibility"
-                className="bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline"
+                className="bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline inline-flex items-center gap-2"
               >
-                Assess Turkey Eligibility
+                <span>Assess Turkey Eligibility</span>
+                <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/book-appointment"
@@ -138,7 +147,7 @@ export default function TurkeyDestinationPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">🇹🇷</span>
+              <BookOpen className="w-8 h-8 text-[#ff7027]" />
               <h3 className="text-white font-bold text-base">English-Medium Studies</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
                 Study in accredited universities offering programs instructed completely in English.
@@ -146,7 +155,7 @@ export default function TurkeyDestinationPage() {
             </div>
 
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">💰</span>
+              <Coins className="w-8 h-8 text-[#ff7027]" />
               <h3 className="text-white font-bold text-base">Affordable Expenses</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
                 Enjoy low tuition costs paired with highly affordable living and housing expenses.
@@ -154,7 +163,7 @@ export default function TurkeyDestinationPage() {
             </div>
 
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">🎓</span>
+              <GraduationCap className="w-8 h-8 text-[#ff7027]" />
               <h3 className="text-white font-bold text-base">Bologna Process Recognized</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
                 Degrees earned in Turkey are fully recognized across Europe and North America.
@@ -162,7 +171,7 @@ export default function TurkeyDestinationPage() {
             </div>
 
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">⚡</span>
+              <Zap className="w-8 h-8 text-[#ff7027]" />
               <h3 className="text-white font-bold text-base">Fast Visa Approvals</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
                 Streamlined student and visitor visa procedures with high visa success rates.
@@ -214,7 +223,7 @@ export default function TurkeyDestinationPage() {
                   <ul className="space-y-2.5 pt-2">
                     {item.highlights.map((point, pIdx) => (
                       <li key={pIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
-                        <span className="text-[#ff7027] font-bold">✓</span>
+                        <Check className="w-4 h-4 text-[#ff7027] shrink-0 mt-0.5" />
                         <span>{point}</span>
                       </li>
                     ))}
@@ -225,7 +234,8 @@ export default function TurkeyDestinationPage() {
                       href="/check-eligibility"
                       className="inline-flex items-center gap-2 text-[#ff7027] font-bold text-sm hover:underline"
                     >
-                      Check Eligibility for {item.title.split(" ")[0]} <span>→</span>
+                      <span>Check Eligibility for {item.title.split(" ")[0]}</span>
+                      <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
                 </div>
@@ -240,14 +250,15 @@ export default function TurkeyDestinationPage() {
             Plan Your Journey to Turkey
           </h3>
           <p className="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
-            Book a consultation with senior consultant Muhammad Farooq Khan to assess university entry options, document preparation, and entry visa requirements.
+            Book a consultation with Chief Consultant Muhammad Farooq Khan to assess university entry options, document preparation, and entry visa requirements.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/check-eligibility"
-              className="w-full sm:w-auto bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline"
+              className="w-full sm:w-auto bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline inline-flex items-center justify-center gap-2"
             >
-              Evaluate Admissions
+              <span>Evaluate Admissions</span>
+              <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
               href="/book-appointment"
