@@ -1,5 +1,13 @@
 import Link from "next/link";
 import { Metadata } from "next";
+import {
+  Globe,
+  Laptop,
+  Coins,
+  Plane,
+  Check,
+  ArrowRight,
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Study, Work & Visit Opportunities in Thailand | ENI Consultants",
@@ -27,7 +35,7 @@ export default function ThailandDestinationPage() {
       title: "Destination Thailand Visa (DTV) & Long-Term Visas",
       badge: "Remote Work & Long Stay",
       description:
-        "Guidance for digital nomads, remote workers, and professionals applying for 5-year multiple-entry visas (DTV) or Long-Term Resident (LTR) options.",
+        "Guidance for digital migrants, remote workers, and professionals applying for 5-year multiple-entry visas (DTV) or Long-Term Resident (LTR) options.",
       highlights: [
         "Multiple-entry access with stays up to 180 days per entry",
         "Coverage for remote workers, freelancers, and soft power activities",
@@ -41,7 +49,7 @@ export default function ThailandDestinationPage() {
       title: "Tourist & Business Entry Assistance",
       badge: "Fast-Track Entry",
       description:
-        "Hassle-free tourist visa (TR), visa-on-arrival, and corporate visit clearance for individuals and families traveling to Bangkok, Phuket, and Chiang Mai.",
+        "Stress-free tourist visa (TR), visa-on-arrival, and corporate visit clearance for individuals and families traveling to Bangkok, Phuket, and Chiang Mai.",
       highlights: [
         "Fast-track single and multiple-entry tourist visa processing",
         "Flight ticket, hotel reservation, and travel insurance assistance",
@@ -55,7 +63,7 @@ export default function ThailandDestinationPage() {
       title: "Student Non-Immigrant ED Visa Advisory",
       badge: "Complete Onboarding",
       description:
-        "End-to-end relocation support including university enrollment, Ministry of Education authorization letters, and Non-Immigrant ED visa filing.",
+        "Complete relocation support including university enrollment, Ministry of Education authorization letters, and Non-Immigrant ED visa filing.",
       highlights: [
         "Direct coordination with university admissions departments",
         "Ministry clearance and official ED visa application processing",
@@ -97,9 +105,10 @@ export default function ThailandDestinationPage() {
             <div className="pt-2 flex flex-wrap gap-4">
               <Link
                 href="/check-eligibility"
-                className="bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline"
+                className="bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline inline-flex items-center gap-2"
               >
-                Assess Thailand Eligibility Free
+                <span>Assess Thailand Eligibility</span>
+                <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/book-appointment"
@@ -142,7 +151,7 @@ export default function ThailandDestinationPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">🌏</span>
+              <Globe className="w-8 h-8 text-[#ff7027]" />
               <h3 className="text-white font-bold text-base">Global Campuses</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
                 Study in accredited international branch campuses and dual-degree programs.
@@ -150,7 +159,7 @@ export default function ThailandDestinationPage() {
             </div>
 
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">💻</span>
+              <Laptop className="w-8 h-8 text-[#ff7027]" />
               <h3 className="text-white font-bold text-base">DTV Remote Work</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
                 Long-term 5-year visa options for digital nomads and remote professionals.
@@ -158,7 +167,7 @@ export default function ThailandDestinationPage() {
             </div>
 
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">💰</span>
+              <Coins className="w-8 h-8 text-[#ff7027]" />
               <h3 className="text-white font-bold text-base">Affordable Quality</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
                 High standards of education paired with exceptionally low living costs.
@@ -166,10 +175,10 @@ export default function ThailandDestinationPage() {
             </div>
 
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">✈️</span>
+              <Plane className="w-8 h-8 text-[#ff7027]" />
               <h3 className="text-white font-bold text-base">Travel Gateway</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
-                Strategic location offering effortless travel across the entire Southeast Asian region.
+                Strategic location offering easy travel across the entire Southeast Asian region.
               </p>
             </div>
           </div>
@@ -218,7 +227,7 @@ export default function ThailandDestinationPage() {
                   <ul className="space-y-2.5 pt-2">
                     {item.highlights.map((point, pIdx) => (
                       <li key={pIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
-                        <span className="text-[#ff7027] font-bold">✓</span>
+                        <Check className="w-4 h-4 text-[#ff7027] shrink-0 mt-0.5" />
                         <span>{point}</span>
                       </li>
                     ))}
@@ -229,7 +238,8 @@ export default function ThailandDestinationPage() {
                       href="/check-eligibility"
                       className="inline-flex items-center gap-2 text-[#ff7027] font-bold text-sm hover:underline"
                     >
-                      Check Eligibility for {item.title.split(" ")[0]} <span>→</span>
+                      <span>Check Eligibility for {item.title.split(" ")[0]}</span>
+                      <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
                 </div>
@@ -244,14 +254,15 @@ export default function ThailandDestinationPage() {
             Plan Your Journey to Thailand
           </h3>
           <p className="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
-            Book a consultation with senior consultant Muhammad Farooq Khan to assess university entry, DTV remote visas, and tourist travel approvals.
+            Book a consultation with Chief Consultant Muhammad Farooq Khan to assess university entry, DTV remote visas, and tourist travel approvals.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/check-eligibility"
-              className="w-full sm:w-auto bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline"
+              className="w-full sm:w-auto bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline inline-flex items-center justify-center gap-2"
             >
-              Evaluate Eligibility Free
+              <span>Evaluate Eligibility</span>
+              <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
               href="/book-appointment"
