@@ -261,7 +261,7 @@ export default function MaldivesDestinationPage() {
               href="/check-eligibility"
               className="w-full sm:w-auto bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline inline-flex items-center justify-center gap-2"
             >
-              <span>Evaluate Eligibility Free</span>
+              <span>Evaluate Eligibility</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
