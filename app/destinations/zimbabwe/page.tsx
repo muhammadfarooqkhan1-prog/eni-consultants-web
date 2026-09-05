@@ -1,5 +1,13 @@
 import Link from "next/link";
 import { Metadata } from "next";
+import {
+  BookOpen,
+  Pickaxe,
+  Coins,
+  Globe,
+  Check,
+  ArrowRight,
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Study & Migration Opportunities in Zimbabwe | ENI Consultants",
@@ -41,7 +49,7 @@ export default function ZimbabweDestinationPage() {
       title: "Tourist & eVisa Assistance",
       badge: "Fast-Track Travel Approval",
       description:
-        "Hassle-free electronic visa (eVisa) processing for leisure travelers, eco-tourists, and families visiting Victoria Falls and national parks.",
+        "Stress-free electronic visa (eVisa) processing for free-time travelers, eco-tourists, and families visiting Victoria Falls and national parks.",
       highlights: [
         "Online eVisa application filing with high approval rates",
         "Complete itinerary, flight, and accommodation document support",
@@ -55,7 +63,7 @@ export default function ZimbabweDestinationPage() {
       title: "Student Visa & Relocation Support",
       badge: "Complete Onboarding",
       description:
-        "End-to-end relocation services including university admission processing, student permit applications, and pre-departure briefings.",
+        "Complete relocation services including university admission processing, student permit applications, and pre-departure briefings.",
       highlights: [
         "Document evaluation and direct university submission",
         "Student permit filing through Zimbabwean Immigration",
@@ -97,9 +105,10 @@ export default function ZimbabweDestinationPage() {
             <div className="pt-2 flex flex-wrap gap-4">
               <Link
                 href="/check-eligibility"
-                className="bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline"
+                className="bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline inline-flex items-center gap-2"
               >
-                Assess Zimbabwe Eligibility Free
+                <span>Assess Zimbabwe Eligibility</span>
+                <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/book-appointment"
@@ -142,7 +151,7 @@ export default function ZimbabweDestinationPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">🇿🇼</span>
+              <BookOpen className="w-8 h-8 text-[#ff7027]" />
               <h3 className="text-white font-bold text-base">English Medium</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
                 English is the primary language of instruction across all higher education institutions.
@@ -150,7 +159,7 @@ export default function ZimbabweDestinationPage() {
             </div>
 
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">⛏️</span>
+              <Pickaxe className="w-8 h-8 text-[#ff7027]" />
               <h3 className="text-white font-bold text-base">Specialized Fields</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
                 Renowned programs in Mining Engineering, Geology, Agriculture, and Environmental Sciences.
@@ -158,7 +167,7 @@ export default function ZimbabweDestinationPage() {
             </div>
 
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">💵</span>
+              <Coins className="w-8 h-8 text-[#ff7027]" />
               <h3 className="text-white font-bold text-base">Affordable Costs</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
                 Extremely competitive tuition fees and low cost of living for international students.
@@ -166,7 +175,7 @@ export default function ZimbabweDestinationPage() {
             </div>
 
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">🌐</span>
+              <Globe className="w-8 h-8 text-[#ff7027]" />
               <h3 className="text-white font-bold text-base">Simple eVisa</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
                 Streamlined electronic visa processing for visits, conferences, and tours.
@@ -218,7 +227,7 @@ export default function ZimbabweDestinationPage() {
                   <ul className="space-y-2.5 pt-2">
                     {item.highlights.map((point, pIdx) => (
                       <li key={pIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
-                        <span className="text-[#ff7027] font-bold">✓</span>
+                        <Check className="w-4 h-4 text-[#ff7027] shrink-0 mt-0.5" />
                         <span>{point}</span>
                       </li>
                     ))}
@@ -229,7 +238,8 @@ export default function ZimbabweDestinationPage() {
                       href="/check-eligibility"
                       className="inline-flex items-center gap-2 text-[#ff7027] font-bold text-sm hover:underline"
                     >
-                      Check Eligibility for {item.title.split(" ")[0]} <span>→</span>
+                      <span>Check Eligibility for {item.title.split(" ")[0]}</span>
+                      <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
                 </div>
@@ -244,14 +254,15 @@ export default function ZimbabweDestinationPage() {
             Plan Your Journey to Zimbabwe
           </h3>
           <p className="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
-            Book a consultation with senior consultant Muhammad Farooq Khan to assess university entry options, business permits, and electronic visa requirements.
+            Book a consultation with Chief Consultant Muhammad Farooq Khan to assess university entry options, business permits, and electronic visa requirements.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/check-eligibility"
-              className="w-full sm:w-auto bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline"
+              className="w-full sm:w-auto bg-[#ff7027] hover:bg-[#e05a14] text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm no-underline inline-flex items-center justify-center gap-2"
             >
-              Evaluate Your Eligibility
+              <span>Evaluate Your Eligibility</span>
+              <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
               href="/book-appointment"
