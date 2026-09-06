@@ -1,73 +1,222 @@
-import Link from "next/link";
-import { Metadata } from "next";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Skilled Immigration & Permanent Residency (PR) Services | ENI Consultants",
-  description:
-    "Expert immigration consultancy for Canada Express Entry, Australian Subclass 189/190, UK Skilled Worker, and European PR pathways.",
-};
+import { useState } from "react";
+import Link from "next/link";
 
 export default function SkilledImmigrationServicePage() {
-  const pathways = [
+  const initialPathways = [
     {
+      id: "canada",
       country: "Canada",
+      slug: "canada",
       flag: "https://flagcdn.com/w160/ca.png",
       title: "Express Entry & Provincial Nominee Programs (PNP)",
       badge: "Highest PR Success Rate",
       description:
-        "Direct Permanent Residency pathways through Federal Skilled Worker (FSWP), Canadian Experience Class (CEC), and Category-Based Selection draws for Healthcare, STEM, Trades, and French speakers.",
+        "Direct Permanent Residency pathways through Federal Skilled Worker (FSWP), Canadian Experience Class (CEC), and Category-Based Selection draws.",
+      stats: {
+        currentMigrants: "380,000 (Permanent Residents welcomed in 2026)",
+        targetMigrants: "365,000 PR target set for 2027 under revised immigration targets",
+        netFinancialWorth: "$2.25 Trillion Nominal GDP / ~$280 Billion Net Sovereign Wealth Holdings",
+        whyChoose:
+          "Offers a clear, direct path to unconditional Permanent Residency upon arrival with universal healthcare and high standard of living.",
+      },
       features: [
         "CRS Score Calculation & Points Maximization Strategy",
         "WES & Credential Assessment (ECA) Guidance",
         "Provincial Nomination (PNP) Application Management",
       ],
-      mediaType: "image",
-      // Recommended Image: High-tech Canadian skyline or professional welcoming environment
-      mediaUrl: "https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1000&auto=format&fit=crop", 
+      mediaUrl: "https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1000&auto=format&fit=crop",
       mediaAlt: "Canada Express Entry Permanent Residency Consultancy",
     },
-    
     {
-      country: "United Kingdom",
-      flag: "https://flagcdn.com/w160/gb.png",
-      title: "Skilled Worker & Health and Care Visas",
-      badge: "Fast-Track Processing",
+      id: "usa",
+      country: "United States",
+      slug: "usa",
+      flag: "https://flagcdn.com/w160/us.png",
+      title: "EB-2 NIW, EB-1A & Specialty Occupation Pathways",
+      badge: "Direct Green Card Pathways",
       description:
-        "Direct work visa pathways for qualified professionals entering the UK employment market with designated Certificate of Sponsorship (CoS) employers.",
+        "Permanent immigrant visa pathways for advanced degree professionals, high-impact researchers, and specialists without requiring labor certification.",
+      stats: {
+        currentMigrants: "1.15 Million (Legal Permanent Residents admitted in 2026)",
+        targetMigrants: "1.2 Million Green Cards allocation target for FY 2027",
+        netFinancialWorth: "$29.8 Trillion Nominal GDP / $155+ Trillion Total Household Wealth",
+        whyChoose:
+          "Unrivaled economic market size, top global compensation packages, and direct green card tracks via National Interest Waivers (NIW).",
+      },
+      features: [
+        "EB-2 National Interest Waiver (NIW) Petition Structuring",
+        "EB-1 Extraordinary Ability Profile Optimization",
+        "USCIS Documentation & Visa Processing Guidance",
+      ],
+      mediaUrl: "https://images.unsplash.com/photo-1485738422979-f5c462d49f74?q=80&w=1000&auto=format&fit=crop",
+      mediaAlt: "USA EB-2 NIW and Permanent Residency Services",
+    },
+    {
+      id: "uk",
+      country: "United Kingdom",
+      slug: "uk",
+      flag: "https://flagcdn.com/w160/gb.png",
+      title: "Skilled Worker, Health & Care, and Global Talent Visas",
+      badge: "Fast-Track Settlement",
+      description:
+        "Direct work visa and talent pathways for qualified professionals entering the UK economy with employer sponsorship or exceptional talent endorsement.",
+      stats: {
+        currentMigrants: "620,000 (Net Migration recorded in 2026 statistics)",
+        targetMigrants: "Focused skilled intake targeting healthcare, tech, and engineering sectors for 2027",
+        netFinancialWorth: "$3.65 Trillion Nominal GDP / Premier European Financial Hub",
+        whyChoose:
+          "Fast-track entry into major global corporations, short 5-year path to Indefinite Leave to Remain (ILR), and British citizenship.",
+      },
       features: [
         "Certificate of Sponsorship (CoS) Document Verification",
-        "UK NARIC / ECCTIS Credential Verification Support",
+        "UK ECCTIS Credential Verification Support",
         "Indefinite Leave to Remain (ILR) Strategic Planning",
       ],
-      mediaType: "image",
-      // Recommended Image: London skyline with iconic architecture
       mediaUrl: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=1000&auto=format&fit=crop",
       mediaAlt: "UK Skilled Worker Visa Guidance",
     },
     {
+      id: "ireland",
+      country: "Ireland",
+      slug: "ireland",
+      flag: "https://flagcdn.com/w160/ie.png",
+      title: "Critical Skills Employment Permit (CSEP) & Stamp 4 PR",
+      badge: "European Tech & Pharma Hub",
+      description:
+        "Specialized work permits for tech, engineering, healthcare, and finance experts leading directly to Ireland Permanent Residency (Stamp 4).",
+      stats: {
+        currentMigrants: "155,000 (Immigrants recorded in 2026 annual census estimates)",
+        targetMigrants: "45,000+ Employment Permits planned for critical shortage sectors in 2027",
+        netFinancialWorth: "$580 Billion Nominal GDP / European HQ for Global Tech & Bio-Pharma",
+        whyChoose:
+          "Fastest pathway to EU citizenship (Stamp 4 PR after just 2 years on CSEP), high salaries, and gateway to the entire European Union.",
+      },
+      features: [
+        "Critical Skills Employment Permit (CSEP) Strategy",
+        "Job Offer Matching and Employer Compliance Check",
+        "Stamp 4 PR & Irish Citizenship Roadmap Advisory",
+      ],
+      mediaUrl: "https://images.unsplash.com/photo-1590089415225-401ed6f9db8e?q=80&w=1000&auto=format&fit=crop",
+      mediaAlt: "Ireland Critical Skills Employment Permit Consultancy",
+    },
+    {
+      id: "nz",
+      country: "New Zealand",
+      slug: "new-zealand",
+      flag: "https://flagcdn.com/w160/nz.png",
+      title: "Skilled Migrant Category (SMC) & Green List Straight to Residence",
+      badge: "High Quality of Life",
+      description:
+        "Points-based residency and fast-tracked residence visas for in-demand roles across construction, healthcare, ICT, and engineering.",
+      stats: {
+        currentMigrants: "125,000 (Migrant arrivals recorded in 2026)",
+        targetMigrants: "Focused 2027 intake targeting Green List tier 1 & 2 critical skill gaps",
+        netFinancialWorth: "$265 Billion Nominal GDP / Top-Ranked Global Stability Index",
+        whyChoose:
+          "Exceptional work-life balance, pristine environment, direct-to-residence tracks for Green List profiles, and citizenship with Australia access rights.",
+      },
+      features: [
+        "6-Point System & SMC Points Audit",
+        "NZQA Qualification Assessment Strategy",
+        "Green List Straight to Residence Filing Guidance",
+      ],
+      mediaUrl: "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?q=80&w=1000&auto=format&fit=crop",
+      mediaAlt: "New Zealand Skilled Migrant Category Services",
+    },
+    {
+      id: "hk",
+      country: "Hong Kong",
+      slug: "hong-kong",
+      flag: "https://flagcdn.com/w160/hk.png",
+      title: "Top Talent Pass Scheme (TTPS) & Quality Migrant Admission Scheme (QMAS)",
+      badge: "Fast 4-Week Processing",
+      description:
+        "Rapid entry pathways for high earners and top-world university graduates seeking tax-efficient careers in Asia’s premier financial hub.",
+      stats: {
+        currentMigrants: "150,000+ (TTPS & Talent Scheme approvals in 2026)",
+        targetMigrants: "60,000+ Annual target for high-earning global professionals for 2027",
+        netFinancialWorth: "$400 Billion Nominal GDP / $520+ Billion Foreign Exchange Reserves",
+        whyChoose:
+          "Low tax regime (15% max personal income tax), no job offer required for initial entry under TTPS/QMAS, and direct access to Asian markets.",
+      },
+      features: [
+        "Top University Eligibility Check (Top 100 World Ranking)",
+        "QMAS Points Grid Assessment & Documentation",
+        "Hong Kong Permanent Residency (7-Year Rule) Guidance",
+      ],
+      mediaUrl: "https://images.unsplash.com/photo-1506970845246-18f21d533b20?q=80&w=1000&auto=format&fit=crop",
+      mediaAlt: "Hong Kong Top Talent Pass Scheme Advisory",
+    },
+    {
+      id: "germany",
       country: "Europe & Germany",
+      slug: "germany",
       flag: "https://flagcdn.com/w160/eu.png",
-      title: "EU Opportunity Card & Skilled Worker Pathways",
-      badge: "Chanceskarte & EU Blue Card",
+      title: "German Opportunity Card (Chancenkarte) & EU Blue Card",
+      badge: "Chancenkarte & EU Blue Card",
       description:
         "Points-based job search visas and EU Blue Card pathways for skilled specialists seeking long-term European residency and career mobility.",
+      stats: {
+        currentMigrants: "220,000+ (Skilled EU Blue Card and work visa holders welcomed in 2026)",
+        targetMigrants: "400,000 Skilled immigrants needed annually in 2027 to offset demographic trends",
+        netFinancialWorth: "$4.7 Trillion Nominal GDP (Germany) / Largest European Economy",
+        whyChoose:
+          "Chancenkarte allows legal job search inside Germany; accelerated PR within 21-27 months for EU Blue Card holders with German language skills.",
+      },
       features: [
         "German Opportunity Card (Chancenkarte) Points Grid Assessment",
-        "EU Blue Card Qualification Matching",
+        "EU Blue Card Qualification & Threshold Matching",
         "Schengen Area Work & Mobility Advisory",
       ],
-      mediaType: "image",
-      // Recommended Image: European business hub or Frankfurt skyline
       mediaUrl: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=1000&auto=format&fit=crop",
       mediaAlt: "European EU Blue Card and Opportunity Card Services",
     },
   ];
 
+  // State management to allow live manual editing of statistical metrics
+  const [pathways, setPathways] = useState(initialPathways);
+  const [editingCountryId, setEditingCountryId] = useState<string | null>(null);
+  const [editFormData, setEditFormData] = useState({
+    currentMigrants: "",
+    targetMigrants: "",
+    netFinancialWorth: "",
+  });
+
+  const handleOpenEdit = (item: (typeof initialPathways)[0]) => {
+    setEditingCountryId(item.id);
+    setEditFormData({
+      currentMigrants: item.stats.currentMigrants,
+      targetMigrants: item.stats.targetMigrants,
+      netFinancialWorth: item.stats.netFinancialWorth,
+    });
+  };
+
+  const handleSaveStats = (id: string) => {
+    setPathways((prev) =>
+      prev.map((p) =>
+        p.id === id
+          ? {
+              ...p,
+              stats: {
+                ...p.stats,
+                currentMigrants: editFormData.currentMigrants,
+                targetMigrants: editFormData.targetMigrants,
+                netFinancialWorth: editFormData.netFinancialWorth,
+              },
+            }
+          : p
+      )
+    );
+    setEditingCountryId(null);
+  };
+
   return (
     <main className="bg-slate-950 text-slate-300 min-h-screen py-16 px-5 sm:px-8">
       <div className="max-w-7xl mx-auto space-y-16">
         
-        {/* HERO SECTION WITH HERO MEDIA RECOMMENDATION */}
+        {/* HERO SECTION */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-slate-900 border border-slate-800 rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
           <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#ff7027] rounded-full blur-[140px] opacity-20 pointer-events-none" />
 
@@ -79,7 +228,7 @@ export default function SkilledImmigrationServicePage() {
               Skilled Immigration & Permanent Residency (PR) Services
             </h1>
             <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
-              We offer end to end strategic guidance to professionals, engineers, IT experts, medical practitioners, and other skilled workers seeking to gain permanent residency, work visas, and citizenship in first-world countries.
+              We offer end-to-end strategic guidance to professionals, engineers, IT experts, medical practitioners, and executive leaders seeking permanent residency, work visas, and citizenship across leading world economies.
             </p>
             <div className="pt-2 flex flex-wrap gap-4">
               <Link
@@ -97,11 +246,9 @@ export default function SkilledImmigrationServicePage() {
             </div>
           </div>
 
-          {/* RECOMMENDED HERO MEDIA: Video / High Impact Image */}
+          {/* HERO MEDIA */}
           <div className="lg:col-span-5 relative z-10">
             <div className="relative rounded-2xl overflow-hidden border border-slate-700 shadow-2xl group">
-              
-              {/* IMAGE / VIDEO PLACEHOLDER */}
               <img
                 src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=1000&auto=format&fit=crop"
                 alt="ENI Consultants Skilled PR Advisory"
@@ -115,11 +262,6 @@ export default function SkilledImmigrationServicePage() {
                 <p className="text-slate-400 text-xs mt-0.5">Custom points evaluation & legal documentation guidance</p>
               </div>
             </div>
-            
-            {/* Recommendation Note for Admin */}
-            <p className="text-slate-500 text-[11px] mt-2 text-center italic">
-              📸 Recommended: 30-sec promo video or high-res office consultation photo.
-            </p>
           </div>
         </div>
 
@@ -139,7 +281,7 @@ export default function SkilledImmigrationServicePage() {
               <span className="text-3xl font-extrabold text-[#ff7027]">01</span>
               <h3 className="text-white font-bold text-base">Points & Profile Audit</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
-                Detailed assessment of your age, qualifications, NOC/ANZSCO code, and foreign points criteria.
+                Detailed assessment of your age, qualifications, NOC/ANZSCO/SOC code, and global points criteria.
               </p>
             </div>
 
@@ -147,7 +289,7 @@ export default function SkilledImmigrationServicePage() {
               <span className="text-3xl font-extrabold text-[#ff7027]">02</span>
               <h3 className="text-white font-bold text-base">Credential Assessment</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
-                Guiding your degree verification through ECA bodies like WES, IQAS, ACS, or Engineers Australia.
+                Guiding degree verifications through WES, ECCTIS, NZQA, HKCAAVQ, ACS, or Engineers Australia.
               </p>
             </div>
 
@@ -155,7 +297,7 @@ export default function SkilledImmigrationServicePage() {
               <span className="text-3xl font-extrabold text-[#ff7027]">03</span>
               <h3 className="text-white font-bold text-base">EOI & Pool Filing</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
-                Strategic submission into Express Entry pools, Provincial nomination streams, or SkillSelect portals.
+                Strategic submission into Express Entry, SkillSelect, TTPS/QMAS, or state nomination portals.
               </p>
             </div>
 
@@ -178,13 +320,13 @@ export default function SkilledImmigrationServicePage() {
           </div>
 
           <div className="space-y-12">
-            {pathways.map((item, idx) => (
+            {pathways.map((item) => (
               <div
-                key={idx}
-                className="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-xl hover:border-[#ff7027]/40 transition-all"
+                key={item.id}
+                className="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start shadow-xl hover:border-[#ff7027]/40 transition-all"
               >
                 {/* Media Column (5 Cols) */}
-                <div className="lg:col-span-5 order-2 lg:order-1">
+                <div className="lg:col-span-5 order-2 lg:order-1 space-y-4">
                   <div className="relative rounded-2xl overflow-hidden border border-slate-800 shadow-md h-64 sm:h-72">
                     <img
                       src={item.mediaUrl}
@@ -196,6 +338,80 @@ export default function SkilledImmigrationServicePage() {
                       <img src={item.flag} alt={`${item.country} Flag`} className="w-7 h-4 object-cover rounded shadow" />
                       <span className="text-white font-bold text-sm">{item.country} Pathway</span>
                     </div>
+                  </div>
+
+                  {/* Country Key Economics & Migration Metrics Box */}
+                  <div className="bg-slate-950/80 border border-slate-800 p-4 rounded-xl space-y-2 text-xs relative">
+                    <div className="flex justify-between items-center">
+                      <p className="text-[#ff7027] font-bold uppercase tracking-wide text-[11px]">
+                        2026 / 2027 Migration Snapshot
+                      </p>
+                      <button
+                        onClick={() => handleOpenEdit(item)}
+                        className="text-[10px] bg-slate-800 hover:bg-slate-700 text-slate-300 px-2 py-0.5 rounded border border-slate-700 transition-colors"
+                      >
+                        ✏️ Edit Stats
+                      </button>
+                    </div>
+
+                    {/* MANUAL EDIT MODAL / FORM */}
+                    {editingCountryId === item.id ? (
+                      <div className="space-y-2 pt-2 border-t border-slate-800">
+                        <div>
+                          <label className="text-[10px] text-slate-400">2026 Intake:</label>
+                          <input
+                            type="text"
+                            value={editFormData.currentMigrants}
+                            onChange={(e) =>
+                              setEditFormData({ ...editFormData, currentMigrants: e.target.value })
+                            }
+                            className="w-full bg-slate-900 border border-slate-700 text-white text-xs px-2 py-1 rounded mt-0.5"
+                          />
+                        </div>
+                        <div>
+                          <label className="text-[10px] text-slate-400">2027 Target:</label>
+                          <input
+                            type="text"
+                            value={editFormData.targetMigrants}
+                            onChange={(e) =>
+                              setEditFormData({ ...editFormData, targetMigrants: e.target.value })
+                            }
+                            className="w-full bg-slate-900 border border-slate-700 text-white text-xs px-2 py-1 rounded mt-0.5"
+                          />
+                        </div>
+                        <div>
+                          <label className="text-[10px] text-slate-400">Economic Output:</label>
+                          <input
+                            type="text"
+                            value={editFormData.netFinancialWorth}
+                            onChange={(e) =>
+                              setEditFormData({ ...editFormData, netFinancialWorth: e.target.value })
+                            }
+                            className="w-full bg-slate-900 border border-slate-700 text-white text-xs px-2 py-1 rounded mt-0.5"
+                          />
+                        </div>
+                        <div className="flex gap-2 pt-1">
+                          <button
+                            onClick={() => handleSaveStats(item.id)}
+                            className="bg-[#ff7027] text-white font-bold text-[10px] px-3 py-1 rounded"
+                          >
+                            Save
+                          </button>
+                          <button
+                            onClick={() => setEditingCountryId(null)}
+                            className="bg-slate-800 text-slate-400 text-[10px] px-3 py-1 rounded"
+                          >
+                            Cancel
+                          </button>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="space-y-1.5 text-slate-300">
+                        <p><strong className="text-white">Recent 2026 Intake:</strong> {item.stats.currentMigrants}</p>
+                        <p><strong className="text-white">2027 Target:</strong> {item.stats.targetMigrants}</p>
+                        <p><strong className="text-white">Economic Output:</strong> {item.stats.netFinancialWorth}</p>
+                      </div>
+                    )}
                   </div>
                 </div>
 
@@ -215,6 +431,7 @@ export default function SkilledImmigrationServicePage() {
                     {item.description}
                   </p>
 
+                  {/* 1. POINTS/KEY FEATURES CHECKLIST */}
                   <ul className="space-y-2.5 pt-2">
                     {item.features.map((feat, fIdx) => (
                       <li key={fIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
@@ -224,74 +441,35 @@ export default function SkilledImmigrationServicePage() {
                     ))}
                   </ul>
 
-                  <div className="pt-4">
+                  {/* 2. "WHY CHOOSE" CALLOUT BOX (Moved after points & before action links) */}
+                  <div className="bg-slate-950/60 border-l-2 border-[#ff7027] p-3.5 rounded-r-lg my-2">
+                    <p className="text-xs sm:text-sm text-slate-300">
+                      <strong className="text-white">Why Choose {item.country}? </strong>
+                      {item.stats.whyChoose}
+                    </p>
+                  </div>
+
+                  {/* 3. DUAL ACTION LINKS: Check Eligibility & Learn More */}
+                  <div className="pt-2 flex items-center gap-6 flex-wrap">
                     <Link
                       href="/check-eligibility"
                       className="inline-flex items-center gap-2 text-[#ff7027] font-bold text-sm hover:underline"
                     >
                       Check Eligibility for {item.country} <span>→</span>
                     </Link>
+
+                    <Link
+                      href={`/destinations/${item.slug}`}
+                      className="inline-flex items-center gap-1.5 text-slate-400 hover:text-white font-medium text-sm transition-colors"
+                    >
+                      <span>Learn More</span>
+                      <span className="text-xs">↗</span>
+                    </Link>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-        </section>
-
-        {/* RECOMMENDED VIDEO PROMO / CLIENT TESTIMONIAL PLACEHOLDER */}
-        <section className="bg-slate-900 border border-slate-800 rounded-3xl p-8 sm:p-12 text-center space-y-8">
-          <div className="max-w-2xl mx-auto space-y-3">
-            <span className="text-[#ff7027] font-bold uppercase text-xs tracking-wider">Video Case Studies</span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
-              Real PR Success Stories & Consultations
-            </h2>
-            <p className="text-slate-400 text-sm">
-              Watch how we helped professionals in the Gulf region and Asia secure permanent residency visas in Canada and Australia.
-            </p>
-          </div>
-
-          {/* Video Container Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            
-            {/* Video Recommendation 1 */}
-            <div className="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden p-4 space-y-3">
-              <div className="relative aspect-video bg-slate-900 rounded-xl overflow-hidden flex items-center justify-center group cursor-pointer border border-slate-800">
-                <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop" 
-                  alt="Canada PR Case Study Video" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform"
-                />
-                <div className="absolute inset-0 bg-slate-950/50 group-hover:bg-slate-950/30 transition-colors" />
-                <div className="w-12 h-12 rounded-full bg-[#ff7027] text-white flex items-center justify-center text-xl shadow-lg relative z-10 group-hover:scale-110 transition-transform">
-                  ▶
-                </div>
-              </div>
-              <p className="text-white font-bold text-sm text-left">Canada Express Entry Success: Engineer Profile</p>
-              <p className="text-slate-500 text-xs text-left">CRS Points boosted through PNP nomination</p>
-            </div>
-
-            {/* Video Recommendation 2 */}
-            <div className="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden p-4 space-y-3">
-              <div className="relative aspect-video bg-slate-900 rounded-xl overflow-hidden flex items-center justify-center group cursor-pointer border border-slate-800">
-                <img 
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop" 
-                  alt="Australia PR Case Study Video" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform"
-                />
-                <div className="absolute inset-0 bg-slate-950/50 group-hover:bg-slate-950/30 transition-colors" />
-                <div className="w-12 h-12 rounded-full bg-[#ff7027] text-white flex items-center justify-center text-xl shadow-lg relative z-10 group-hover:scale-110 transition-transform">
-                  ▶
-                </div>
-              </div>
-              <p className="text-white font-bold text-sm text-left">Australia Subclass 190 Direct PR Granted</p>
-              <p className="text-slate-500 text-xs text-left">IT Specialist profile cleared via ACS Assessment</p>
-            </div>
-
-          </div>
-
-          <p className="text-slate-500 text-xs italic">
-            🎬 Recommended: Embed actual client testimonial videos (MP4 / YouTube embeds) or consultant video overviews.
-          </p>
         </section>
 
         {/* CALL TO ACTION */}
