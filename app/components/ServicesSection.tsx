@@ -7,7 +7,7 @@ export default function ServicesSection() {
       title: "Skilled Immigration",
       icon: Briefcase,
       description: "Direct PR & Work pathways for qualified professionals in Pakistan, KSA, UAE, Qatar, and across the Gulf.",
-      features: ["Canada Express Entry & PNP", "Europe", "UK Skilled Worker"],
+      features: ["Canada Express Entry & PNP", "Europe", "Ireland", "Hong Kong", "UK", "USA"],
       link: "/services/skilled-immigration",
       highlight: false,
     },

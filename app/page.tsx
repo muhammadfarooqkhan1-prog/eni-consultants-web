@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import ServicesSection from "./components/ServicesSection";
 import WhyChooseUs from "./components/WhyChooseUs";
 import SchengenPhdBanner from "./components/SchengenPhdBanner"; 
+import FloatingReviewToast from "./components/FloatingReviewToast";
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
       <SchengenPhdBanner />
       <DestinationsSection />
       <WhyChooseUs />
+      <FloatingReviewToast />
       <Footer />
 
       {/* You can add more homepage sections below here later */}

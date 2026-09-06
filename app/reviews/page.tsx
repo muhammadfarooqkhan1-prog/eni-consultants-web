@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { Metadata } from "next";
+//  UPDATE THIS IMPORT LINE BELOW:
+import FloatingReviewToast from "@/app/components/FloatingReviewToast";
 
 export const metadata: Metadata = {
   title: "Client Reviews & Success Stories | ENI Consultants Pakistan",
@@ -17,6 +19,7 @@ export default function ReviewsPage() {
 
   const testimonials = [
     {
+      id: "review-1",
       name: "Muhammad Usman",
       location: "Lahore, Pakistan",
       visaType: "New Zealand Skilled Migrant Category (SMC) PR",
@@ -27,6 +30,7 @@ export default function ReviewsPage() {
       flag: "🇳🇿",
     },
     {
+      id: "review-2",
       name: "Dr. Ayesha Malik",
       location: "Islamabad, Pakistan",
       visaType: "Canada Express Entry (Healthcare Draw)",
@@ -37,6 +41,7 @@ export default function ReviewsPage() {
       flag: "🇨🇦",
     },
     {
+      id: "review-3",
       name: "Hassan Raza",
       location: "Karachi, Pakistan",
       visaType: "UK Higher Education & Student Visa",
@@ -47,6 +52,7 @@ export default function ReviewsPage() {
       flag: "🇬🇧",
     },
     {
+      id: "review-4",
       name: "Syed Bilal Ahmed",
       location: "Riyadh, Saudi Arabia",
       visaType: "Saudi Arabia Premium Residency (Gold Visa)",
@@ -57,6 +63,7 @@ export default function ReviewsPage() {
       flag: "🇸🇦",
     },
     {
+      id: "review-5",
       name: "Zainab Chaudhry",
       location: "Rawalpindi, Pakistan",
       visaType: "Schengen France Tourist Visa",
@@ -67,6 +74,7 @@ export default function ReviewsPage() {
       flag: "🇪🇺",
     },
     {
+      id: "review-6",
       name: "Tariq Mahmood",
       location: "Faisalabad, Pakistan",
       visaType: "Australia Subclass 190 PR Visa",
@@ -81,7 +89,6 @@ export default function ReviewsPage() {
   return (
     <main className="bg-slate-950 text-slate-300 min-h-screen py-16 px-5 sm:px-8">
       <div className="max-w-7xl mx-auto space-y-16">
-        
         {/* HERO SECTION */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-slate-900 border border-slate-800 rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
           <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#ff7027] rounded-full blur-[140px] opacity-20 pointer-events-none" />
@@ -136,8 +143,8 @@ export default function ReviewsPage() {
 
         {/* STATS STRIP */}
         <section className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-          {overallStats.map((st, idx) => (
-            <div key={idx} className="bg-slate-900 border border-slate-800 p-6 sm:p-8 rounded-2xl text-center space-y-1">
+          {overallStats.map((st) => (
+            <div key={st.label} className="bg-slate-900 border border-slate-800 p-6 sm:p-8 rounded-2xl text-center space-y-1">
               <p className="text-3xl sm:text-4xl font-extrabold text-[#ff7027]">{st.value}</p>
               <p className="text-slate-400 text-xs sm:text-sm font-medium">{st.label}</p>
             </div>
@@ -156,30 +163,26 @@ export default function ReviewsPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((item, idx) => (
+            {testimonials.map((item) => (
               <div
-                key={idx}
+                key={item.id}
                 className="bg-slate-900 border border-slate-800 p-8 rounded-3xl space-y-6 flex flex-col justify-between hover:border-[#ff7027]/40 transition-all shadow-xl"
               >
                 <div className="space-y-4">
-                  {/* Rating & Flag Header */}
                   <div className="flex items-center justify-between">
                     <span className="text-amber-400 text-sm">{"★".repeat(item.rating)}</span>
                     <span className="text-2xl">{item.flag}</span>
                   </div>
 
-                  {/* Visa Type Badge */}
                   <span className="inline-block bg-[#ff7027]/10 text-[#ff7027] border border-[#ff7027]/20 text-xs font-bold px-3 py-1 rounded-full">
                     {item.visaType}
                   </span>
 
-                  {/* Review Text */}
                   <p className="text-slate-300 text-xs sm:text-sm leading-relaxed italic">
                     "{item.review}"
                   </p>
                 </div>
 
-                {/* Client Info */}
                 <div className="border-t border-slate-800 pt-4 flex justify-between items-end">
                   <div>
                     <p className="text-white font-bold text-sm">{item.name}</p>
@@ -193,7 +196,7 @@ export default function ReviewsPage() {
         </section>
 
         {/* CALL TO ACTION */}
-        <div className="bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 border border-[#ff7027]/40 rounded-3xl p-8 sm:p-12 text-center space-y-6">
+        <div className="bg-[#0b1329] border border-[#ff7027]/40 rounded-3xl p-8 sm:p-12 text-center space-y-6">
           <h3 className="text-2xl sm:text-4xl font-extrabold text-white">
             Ready to Write Your Success Story?
           </h3>
@@ -215,8 +218,10 @@ export default function ReviewsPage() {
             </Link>
           </div>
         </div>
-
       </div>
+
+      {/* FLOATING REVIEW TOAST */}
+      <FloatingReviewToast />
     </main>
   );
 }
