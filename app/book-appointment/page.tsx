@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { submitAppointmentForm } from "@/app/actions/bookAppointment";
+import { Zap, Target, ShieldCheck, Check } from "lucide-react";
 
 export default function BookAppointmentSection() {
   const initialFormState = {
@@ -68,8 +69,8 @@ export default function BookAppointmentSection() {
             Book a 1-on-1 Consultation
           </h2>
           <p className="text-slate-400 text-base sm:text-lg">
-            Schedule a confidential assessment session with Chief
-            Immigration consultant{" "}
+            Schedule a confidential assessment session with Chief Immigration
+            consultant{" "}
             <strong className="text-white">Muhammad Farooq Khan</strong> to
             evaluate your profile for global visas or career optimization.
           </p>
@@ -85,22 +86,22 @@ export default function BookAppointmentSection() {
 
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-xl bg-[#ff7027]/10 border border-[#ff7027]/30 flex items-center justify-center text-[#ff7027] font-bold flex-shrink-0">
-                  ⚡
+                  <Zap className="w-5 h-5 text-[#ff7027]" />
                 </div>
                 <div>
                   <h4 className="text-white font-bold text-base">
                     48-Hour Priority Response
                   </h4>
                   <p className="text-slate-400 text-xs sm:text-sm mt-1 leading-relaxed">
-                    Fast turnaround time to review your eligibility points, CV,
-                    or visa requirements.
+                    Fast turnaround time to review your eligibility points,
+                    CV, or visa requirements.
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-xl bg-[#ff7027]/10 border border-[#ff7027]/30 flex items-center justify-center text-[#ff7027] font-bold flex-shrink-0">
-                  🎯
+                  <Target className="w-5 h-5 text-[#ff7027]" />
                 </div>
                 <div>
                   <h4 className="text-white font-bold text-base">
@@ -115,7 +116,7 @@ export default function BookAppointmentSection() {
 
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-xl bg-[#ff7027]/10 border border-[#ff7027]/30 flex items-center justify-center text-[#ff7027] font-bold flex-shrink-0">
-                  🔒
+                  <ShieldCheck className="w-5 h-5 text-[#ff7027]" />
                 </div>
                 <div>
                   <h4 className="text-white font-bold text-base">
@@ -174,8 +175,8 @@ export default function BookAppointmentSection() {
           <div className="lg:col-span-7 bg-slate-900 border border-slate-800 rounded-3xl p-8 sm:p-10 shadow-2xl relative">
             {isSubmitted ? (
               <div className="text-center py-16 space-y-4">
-                <div className="w-16 h-16 bg-[#ff7027]/10 border border-[#ff7027] text-[#ff7027] rounded-full flex items-center justify-center text-3xl mx-auto">
-                  ✓
+                <div className="w-16 h-16 bg-[#ff7027]/10 border border-[#ff7027] text-[#ff7027] rounded-full flex items-center justify-center mx-auto">
+                  <Check className="w-8 h-8 text-[#ff7027]" />
                 </div>
                 <h3 className="text-2xl font-bold text-white">
                   Appointment Request Received!
@@ -187,7 +188,8 @@ export default function BookAppointmentSection() {
                   <span className="text-[#ff7027]">
                     {formData.preferredDate}
                   </span>
-                  ) and contact you within <strong>48 hours</strong> to confirm your schedule.
+                  ) and contact you within <strong>48 hours</strong> to confirm
+                  your schedule.
                 </p>
                 <button
                   onClick={handleReset}
@@ -400,7 +402,9 @@ export default function BookAppointmentSection() {
                   disabled={isSubmitting}
                   className="w-full bg-[#ff7027] hover:bg-[#e05a14] disabled:bg-slate-800 text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-orange-500/20 text-base cursor-pointer mt-2"
                 >
-                  {isSubmitting ? "Sending Request..." : "Confirm Appointment Booking"}
+                  {isSubmitting
+                    ? "Sending Request..."
+                    : "Confirm Appointment Booking"}
                 </button>
               </form>
             )}
