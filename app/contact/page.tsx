@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Mail, Phone, MapPin, CheckCircle2, PartyPopper, ChevronDown } from "lucide-react";
 
 const initialFormData = {
   fullName: "",
@@ -110,8 +111,8 @@ export default function ContactPage() {
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center text-xl text-[#ff7027] flex-shrink-0">
-                    📧
+                  <div className="w-12 h-12 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center text-[#ff7027] flex-shrink-0">
+                    <Mail className="w-5 h-5" />
                   </div>
                   <div>
                     <h3 className="text-slate-400 text-xs uppercase tracking-wider font-semibold">
@@ -136,8 +137,8 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center text-xl text-[#ff7027] flex-shrink-0">
-                    📞
+                  <div className="w-12 h-12 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center text-[#ff7027] flex-shrink-0">
+                    <Phone className="w-5 h-5" />
                   </div>
                   <div>
                     <h3 className="text-slate-400 text-xs uppercase tracking-wider font-semibold">
@@ -166,8 +167,8 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center text-xl text-[#ff7027] flex-shrink-0">
-                    📍
+                  <div className="w-12 h-12 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center text-[#ff7027] flex-shrink-0">
+                    <MapPin className="w-5 h-5" />
                   </div>
                   <div>
                     <h3 className="text-slate-400 text-xs uppercase tracking-wider font-semibold">
@@ -194,9 +195,10 @@ export default function ContactPage() {
                 Schedule a priority evaluation session directly with senior
                 consultant Muhammad Farooq Khan.
               </p>
-              <span className="text-[#ff7027] text-xs font-bold uppercase tracking-wider">
-                ✓ Confidential & Direct Guidance
-              </span>
+              <div className="flex items-center gap-1.5 text-[#ff7027] text-xs font-bold uppercase tracking-wider">
+                <CheckCircle2 className="w-4 h-4" />
+                <span>Confidential & Direct Guidance</span>
+              </div>
             </div>
           </div>
 
@@ -204,7 +206,9 @@ export default function ContactPage() {
           <div className="lg:col-span-7 bg-slate-900 border border-slate-800 rounded-3xl p-8 sm:p-10 shadow-2xl">
             {isSubmitted ? (
               <div className="text-center py-16 space-y-4">
-                <div className="text-5xl">🎉</div>
+                <div className="w-16 h-16 bg-[#ff7027]/10 text-[#ff7027] border border-[#ff7027]/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <PartyPopper className="w-8 h-8" />
+                </div>
                 <h3 className="text-2xl font-bold text-white">
                   Thank You for Contacting Us!
                 </h3>
@@ -370,9 +374,11 @@ export default function ContactPage() {
                   className="w-full flex items-center justify-between p-6 text-left focus:outline-none cursor-pointer"
                 >
                   <h3 className="text-white font-bold text-lg">{faq.question}</h3>
-                  <span className="text-[#ff7027] text-xl font-bold ml-4">
-                    {openFaq === idx ? "−" : "+"}
-                  </span>
+                  <ChevronDown
+                    className={`text-[#ff7027] w-5 h-5 transition-transform duration-200 ${
+                      openFaq === idx ? "rotate-180" : ""
+                    }`}
+                  />
                 </button>
                 {openFaq === idx && (
                   <div className="px-6 pb-6 text-slate-400 text-sm leading-relaxed border-t border-slate-800/50 pt-4">
