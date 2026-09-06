@@ -1,61 +1,70 @@
 import Link from "next/link";
 import { Metadata } from "next";
+import { 
+  GraduationCap, 
+  Award, 
+  FileText, 
+  Globe, 
+  Building2, 
+  Users, 
+  CheckCircle2 
+} from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Schengen PhD Admissions & Research Fellowships | ENI Consultants",
+  title: "European Schengen PhD & Doctorate Advisory | ENI Consultants",
   description:
-    "Pakistan's exclusive consultancy for PhD admissions, fully funded MSCA fellowships, supervisor matching, and Type D researcher visas across the Schengen area.",
+    "First Company in Pakistan offering European Schengen Countries PhD/Doctorate services since 2017. Guidance for suitable PhD positions in top world-ranking universities.",
 };
 
 export default function SchengenPhDPage() {
   const phdPathways = [
     {
-      title: "Salaried PhD Positions & University Employment",
-      badge: "Fully Funded Contracts",
+      title: "PhD Positions in Top Schengen Universities",
+      badge: "World-Ranking Universities",
       description:
-        "In countries like Germany, the Netherlands, Norway, and Sweden, PhD candidates are hired as university research staff with standard employment benefits.",
+        "Access to research doctorate opportunities at leading European economic bloc universities in Germany, France, Netherlands, Sweden, Italy, and other regional countries.",
       highlights: [
-        "Monthly salaried compensation (ranging from €2,000 to €3,500/month after tax)",
-        "Social security, health insurance, and paid vacation benefits included",
-        "Direct pathway to Permanent Residency (PR) after 2–4 years of employment",
+        "Placement guidance for top world-ranking European research faculties",
+        "Thorough academic credential evaluation and university shortlisting",
+        "A structured pathway towards obtaining long-term European research qualifications",
       ],
-      icon: "💶",
+      icon: GraduationCap,
     },
     {
       title: "Marie Skłodowska-Curie Actions (MSCA) Fellowships",
       badge: "Prestigious EU Grants",
       description:
-        "Highly competitive flagship EU research fellowships designed for exceptional international researchers pursuing doctoral training across European consortia.",
+        "The EU’s flagship research fellowships open to excellent researchers from around the globe who want to pursue a PhD in European Higher Education institutions.",
       highlights: [
-        "Full tuition waiver plus generous living and mobility allowances",
-        "Intersectoral mobility (academic research combined with industrial placements)",
-        "International networking across top EU research institutions",
+        "Full tuition fee coverage as well as research mobility allowances",
+        "Intersectoral mobility between academic and industrial research sectors",
+        "International academic networking across top EU research institutes",
       ],
-      icon: "🇪🇺",
+      icon: Award,
     },
     {
-      title: "Supervisor Matchmaking & Proposal Alignment",
-      badge: "Strategic Academic Outreach",
+      title: "Research Proposal & Profile Optimization",
+      badge: "Academic Advisory",
       description:
-        "Navigating cold outreach to European professors requires a tailored approach. We refine your research proposal to match active departmental projects.",
+        "Aligning your academic achievements and research interests with European university standards to enhance your candidature appeal.",
       highlights: [
-        "1-on-1 proposal drafting and formatting to European academic standards",
-        "Identification of active university funding calls and professor vacancies",
-        "Interview preparation for academic selection committee panels",
+        "1-on-1 advisory on research proposal formatting and structuring",
+        "Optimization of your academic CV and motivation letters",
+        "Preparing you for university selection board interactions",
       ],
-      icon: "🔬",
+      icon: FileText,
     },
     {
-      title: "Type D National Researcher Visa & Family Relocation",
-      badge: "Immigration Support",
+      title: "Complete Application & Visa Advisory",
+      badge: "End-to-End Support",
       description:
-        "Complete visa advisory for principal researchers and accompanying family members under European Scientific Visa regulations.",
+        "Complete guidance through university registration, document authentication, and national visa filing protocols for scholars and dependents.",
       highlights: [
-        "Fast-track Type D Schengen National Visa processing for researchers",
-        "Full work rights for accompanying spouse/dependents",
-        "No embassy interview delays under scientific host agreement protocols",
+        "Step-by-step guidance on filing the Schengen national student/scholar visa",
+        "Family relocation advisory in line with standard European immigration laws",
+        "Document verification and embassy interview preparation support",
       ],
-      icon: "📜",
+      icon: Globe,
     },
   ];
 
@@ -71,7 +80,7 @@ export default function SchengenPhDPage() {
             <div className="flex items-center gap-3">
               <span className="text-xl">🇵🇰</span>
               <span className="bg-[#ff7027]/10 text-[#ff7027] border border-[#ff7027]/30 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider">
-                Exclusive in Pakistan
+                Exclusive Founder in Pakistan
               </span>
             </div>
 
@@ -80,7 +89,7 @@ export default function SchengenPhDPage() {
             </h1>
 
             <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
-              ENI Consultants is the <span className="text-[#ff7027] font-semibold">only agency in Pakistan</span> providing direct advisory, research supervisor matching, fully funded fellowship guidance, and Type D researcher visas across top European universities.
+              ENI Consultants is the <span className="text-[#ff7027] font-semibold">First Company in Pakistan</span> offering European Schengen Countries PhD/Doctorate services since 2017.
             </p>
 
             <div className="pt-2 flex flex-wrap gap-4">
@@ -111,7 +120,7 @@ export default function SchengenPhDPage() {
               <div className="absolute bottom-6 left-6 right-6 p-4 bg-slate-900/90 backdrop-blur-md border border-slate-800 rounded-xl">
                 <p className="text-xs font-bold text-[#ff7027] uppercase">Doctoral Excellence</p>
                 <p className="text-white font-bold text-sm">European Research Opportunities</p>
-                <p className="text-slate-400 text-xs mt-0.5">MSCA, Salaried Contracts & Supervisor Matching</p>
+                <p className="text-slate-400 text-xs mt-0.5">Top World-Ranking European Universities & MSCA</p>
               </div>
             </div>
           </div>
@@ -121,43 +130,41 @@ export default function SchengenPhDPage() {
         <section className="space-y-8">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-2xl sm:text-4xl font-extrabold text-white">
-              Why We Are Pakistan's Exclusive PhD Consultancy
+              Why We Are Pakistan's Founder PhD Consultancy
             </h2>
             <p className="text-slate-400 text-sm sm:text-base mt-2">
-              Unlike standard student visa agencies, we specialize in academic research matching and scientific immigration.
+              Assisting scholars with structured academic guidance and European doctorate placements since 2017.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">🎯</span>
-              <h3 className="text-white font-bold text-base">Direct Supervisor Outreach</h3>
+              <div className="w-10 h-10 bg-[#ff7027]/10 rounded-xl flex items-center justify-center text-[#ff7027]">
+                <Building2 className="w-5 h-5" />
+              </div>
+              <h3 className="text-white font-bold text-base">Top University Placements</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
-                We assist you in crafting targeted emails and proposals that capture European professors' attention.
+                We assist you in identifying suitable PhD positions in top European Schengen Universities.
               </p>
             </div>
 
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">💰</span>
-              <h3 className="text-white font-bold text-base">Fully Funded Positions</h3>
+              <div className="w-10 h-10 bg-[#ff7027]/10 rounded-xl flex items-center justify-center text-[#ff7027]">
+                <Award className="w-5 h-5" />
+              </div>
+              <h3 className="text-white font-bold text-base">European Grant Advisory</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
-                We focus on positions where you are paid a salary, eliminating the need for bank statement proofs.
+                Expert support for prestigious European research calls and Marie Skłodowska-Curie fellowship applications.
               </p>
             </div>
 
             <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">👨‍👩‍👧</span>
-              <h3 className="text-white font-bold text-base">Immediate Family Accompanying</h3>
+              <div className="w-10 h-10 bg-[#ff7027]/10 rounded-xl flex items-center justify-center text-[#ff7027]">
+                <Users className="w-5 h-5" />
+              </div>
+              <h3 className="text-white font-bold text-base">Family Relocation Guidance</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
-                European scientific visa rules allow your spouse to relocate with you and work full-time.
-              </p>
-            </div>
-
-            <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-3">
-              <span className="text-3xl">🇪🇺</span>
-              <h3 className="text-white font-bold text-base">Fast-Track Residency</h3>
-              <p className="text-slate-400 text-xs leading-relaxed">
-                Doctoral research years count directly toward permanent residency and EU citizenship.
+                Comprehensive visa advice for accompanying family members under official European regulations.
               </p>
             </div>
           </div>
@@ -172,41 +179,46 @@ export default function SchengenPhDPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {phdPathways.map((item, idx) => (
-              <div
-                key={idx}
-                className="bg-slate-900 border border-slate-800 rounded-3xl p-8 space-y-5 hover:border-[#ff7027]/40 transition-all shadow-xl"
-              >
-                <div className="flex items-center justify-between">
-                  <span className="text-4xl">{item.icon}</span>
-                  <span className="bg-[#ff7027]/10 text-[#ff7027] border border-[#ff7027]/20 text-xs font-bold px-3 py-1 rounded-full uppercase">
-                    {item.badge}
-                  </span>
+            {phdPathways.map((item, idx) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={idx}
+                  className="bg-slate-900 border border-slate-800 rounded-3xl p-8 space-y-5 hover:border-[#ff7027]/40 transition-all shadow-xl"
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="w-12 h-12 bg-[#ff7027]/10 rounded-2xl flex items-center justify-center text-[#ff7027]">
+                      <Icon className="w-6 h-6" />
+                    </div>
+                    <span className="bg-[#ff7027]/10 text-[#ff7027] border border-[#ff7027]/20 text-xs font-bold px-3 py-1 rounded-full uppercase">
+                      {item.badge}
+                    </span>
+                  </div>
+
+                  <h3 className="text-2xl font-bold text-white">{item.title}</h3>
+                  <p className="text-slate-400 text-sm leading-relaxed">{item.description}</p>
+
+                  <ul className="space-y-2.5 pt-2">
+                    {item.highlights.map((point, pIdx) => (
+                      <li key={pIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
+                        <CheckCircle2 className="w-4 h-4 text-[#ff7027] shrink-0 mt-0.5" />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-
-                <h3 className="text-2xl font-bold text-white">{item.title}</h3>
-                <p className="text-slate-400 text-sm leading-relaxed">{item.description}</p>
-
-                <ul className="space-y-2.5 pt-2">
-                  {item.highlights.map((point, pIdx) => (
-                    <li key={pIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
-                      <span className="text-[#ff7027] font-bold">✓</span>
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </section>
 
         {/* CALL TO ACTION */}
         <div className="bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 border border-[#ff7027]/40 rounded-3xl p-8 sm:p-12 text-center space-y-6">
           <h3 className="text-2xl sm:text-4xl font-extrabold text-white">
-            Begin Your European Research Career
+            Begin Your European Doctorate Journey
           </h3>
           <p className="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
-            Book an advisory session with lead consultant Muhammad Farooq Khan to assess your academic profile and target European research vacancies.
+            Book an advisory session with Chief Consultant Muhammad Farooq Khan to assess your academic credentials and target European research programs.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
