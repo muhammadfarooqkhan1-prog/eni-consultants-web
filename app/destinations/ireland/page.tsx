@@ -51,7 +51,7 @@ export default function IrelandDestinationPage() {
         "Study Medicine, Nursing, Clinical Research, and Pharmaceutical Sciences in Ireland's world-renowned medical faculties and cutting-edge biotech research centers.",
       highlights: [
         "Hands-on clinical rotations in top Irish teaching hospitals",
-        "Strong ties to Ireland's massive global pharmaceutical manufacturing sector",
+        "Strong links to Ireland's large global pharmaceutical manufacturing sector",
         "Clear registration pathways for healthcare professionals upon graduation",
       ],
       mediaUrl:
@@ -62,7 +62,7 @@ export default function IrelandDestinationPage() {
       title: "Student Visa & Post-Study Work Pathway (Stamp 1G)",
       badge: "2-Year Post-Study Work Visa",
       description:
-        "Comprehensive end-to-end guidance including university application handling, Irish Student Visa (Stamp 2) filing, financial proofing, and Stamp 1G work permit conversion.",
+        "Complete detailed guidance including university application handling, Irish Student Visa (Stamp 2) filing, financial proofing, and Stamp 1G work permit conversion.",
       highlights: [
         "Up to 2-year post-study work permissions for Master's/PhD graduates",
         "In-depth support for financial documentation and Irish immigration compliance",
@@ -98,7 +98,7 @@ export default function IrelandDestinationPage() {
               Study & Work in Ireland: Higher Education & Visa Pathways
             </h1>
             <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
-              Discover prestigious Irish universities, top-ranked tech & medical programs, and lucrative Stamp 1G post-study work visas. ENI Consultants guides your university selection, document filing, and student visa processing.
+              Discover prestigious Irish universities, high-ranked tech & medical programs, and profitable Stamp 1G post-study work visas. ENI Consultants guides your university selection, document filing, and student visa processing.
             </p>
             
             <div className="pt-2 flex flex-wrap gap-4">
@@ -161,7 +161,7 @@ export default function IrelandDestinationPage() {
               <Stethoscope className="w-8 h-8 text-[#ff7027]" />
               <h3 className="text-white font-bold text-base">Top Pharma & Tech</h3>
               <p className="text-slate-400 text-xs leading-relaxed">
-                European headquarters for global giants offering unmatched career prospects post-graduation.
+                European headquarters for global giants offering matchless career prospects post-graduation.
               </p>
             </div>
 
