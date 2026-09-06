@@ -1,10 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 
 export default function SkilledImmigrationServicePage() {
-  const initialPathways = [
+  const pathways = [
     {
       id: "canada",
       country: "Canada",
@@ -175,43 +174,6 @@ export default function SkilledImmigrationServicePage() {
     },
   ];
 
-  // State management to allow live manual editing of statistical metrics
-  const [pathways, setPathways] = useState(initialPathways);
-  const [editingCountryId, setEditingCountryId] = useState<string | null>(null);
-  const [editFormData, setEditFormData] = useState({
-    currentMigrants: "",
-    targetMigrants: "",
-    netFinancialWorth: "",
-  });
-
-  const handleOpenEdit = (item: (typeof initialPathways)[0]) => {
-    setEditingCountryId(item.id);
-    setEditFormData({
-      currentMigrants: item.stats.currentMigrants,
-      targetMigrants: item.stats.targetMigrants,
-      netFinancialWorth: item.stats.netFinancialWorth,
-    });
-  };
-
-  const handleSaveStats = (id: string) => {
-    setPathways((prev) =>
-      prev.map((p) =>
-        p.id === id
-          ? {
-              ...p,
-              stats: {
-                ...p.stats,
-                currentMigrants: editFormData.currentMigrants,
-                targetMigrants: editFormData.targetMigrants,
-                netFinancialWorth: editFormData.netFinancialWorth,
-              },
-            }
-          : p
-      )
-    );
-    setEditingCountryId(null);
-  };
-
   return (
     <main className="bg-slate-950 text-slate-300 min-h-screen py-16 px-5 sm:px-8">
       <div className="max-w-7xl mx-auto space-y-16">
@@ -342,76 +304,15 @@ export default function SkilledImmigrationServicePage() {
 
                   {/* Country Key Economics & Migration Metrics Box */}
                   <div className="bg-slate-950/80 border border-slate-800 p-4 rounded-xl space-y-2 text-xs relative">
-                    <div className="flex justify-between items-center">
-                      <p className="text-[#ff7027] font-bold uppercase tracking-wide text-[11px]">
-                        2026 / 2027 Migration Snapshot
-                      </p>
-                      <button
-                        onClick={() => handleOpenEdit(item)}
-                        className="text-[10px] bg-slate-800 hover:bg-slate-700 text-slate-300 px-2 py-0.5 rounded border border-slate-700 transition-colors"
-                      >
-                        ✏️ Edit Stats
-                      </button>
-                    </div>
+                    <p className="text-[#ff7027] font-bold uppercase tracking-wide text-[11px]">
+                      2026 / 2027 Migration Snapshot
+                    </p>
 
-                    {/* MANUAL EDIT MODAL / FORM */}
-                    {editingCountryId === item.id ? (
-                      <div className="space-y-2 pt-2 border-t border-slate-800">
-                        <div>
-                          <label className="text-[10px] text-slate-400">2026 Intake:</label>
-                          <input
-                            type="text"
-                            value={editFormData.currentMigrants}
-                            onChange={(e) =>
-                              setEditFormData({ ...editFormData, currentMigrants: e.target.value })
-                            }
-                            className="w-full bg-slate-900 border border-slate-700 text-white text-xs px-2 py-1 rounded mt-0.5"
-                          />
-                        </div>
-                        <div>
-                          <label className="text-[10px] text-slate-400">2027 Target:</label>
-                          <input
-                            type="text"
-                            value={editFormData.targetMigrants}
-                            onChange={(e) =>
-                              setEditFormData({ ...editFormData, targetMigrants: e.target.value })
-                            }
-                            className="w-full bg-slate-900 border border-slate-700 text-white text-xs px-2 py-1 rounded mt-0.5"
-                          />
-                        </div>
-                        <div>
-                          <label className="text-[10px] text-slate-400">Economic Output:</label>
-                          <input
-                            type="text"
-                            value={editFormData.netFinancialWorth}
-                            onChange={(e) =>
-                              setEditFormData({ ...editFormData, netFinancialWorth: e.target.value })
-                            }
-                            className="w-full bg-slate-900 border border-slate-700 text-white text-xs px-2 py-1 rounded mt-0.5"
-                          />
-                        </div>
-                        <div className="flex gap-2 pt-1">
-                          <button
-                            onClick={() => handleSaveStats(item.id)}
-                            className="bg-[#ff7027] text-white font-bold text-[10px] px-3 py-1 rounded"
-                          >
-                            Save
-                          </button>
-                          <button
-                            onClick={() => setEditingCountryId(null)}
-                            className="bg-slate-800 text-slate-400 text-[10px] px-3 py-1 rounded"
-                          >
-                            Cancel
-                          </button>
-                        </div>
-                      </div>
-                    ) : (
-                      <div className="space-y-1.5 text-slate-300">
-                        <p><strong className="text-white">Recent 2026 Intake:</strong> {item.stats.currentMigrants}</p>
-                        <p><strong className="text-white">2027 Target:</strong> {item.stats.targetMigrants}</p>
-                        <p><strong className="text-white">Economic Output:</strong> {item.stats.netFinancialWorth}</p>
-                      </div>
-                    )}
+                    <div className="space-y-1.5 text-slate-300">
+                      <p><strong className="text-white">Recent 2026 Intake:</strong> {item.stats.currentMigrants}</p>
+                      <p><strong className="text-white">2027 Target:</strong> {item.stats.targetMigrants}</p>
+                      <p><strong className="text-white">Economic Output:</strong> {item.stats.netFinancialWorth}</p>
+                    </div>
                   </div>
                 </div>
 
@@ -441,7 +342,7 @@ export default function SkilledImmigrationServicePage() {
                     ))}
                   </ul>
 
-                  {/* 2. "WHY CHOOSE" CALLOUT BOX (Moved after points & before action links) */}
+                  {/* 2. "WHY CHOOSE" CALLOUT BOX */}
                   <div className="bg-slate-950/60 border-l-2 border-[#ff7027] p-3.5 rounded-r-lg my-2">
                     <p className="text-xs sm:text-sm text-slate-300">
                       <strong className="text-white">Why Choose {item.country}? </strong>
