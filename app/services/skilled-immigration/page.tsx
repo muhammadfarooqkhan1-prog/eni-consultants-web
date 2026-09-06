@@ -190,7 +190,7 @@ export default function SkilledImmigrationServicePage() {
               Skilled Immigration & Permanent Residency (PR) Services
             </h1>
             <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
-              We offer end-to-end strategic guidance to professionals, engineers, IT experts, medical practitioners, and executive leaders seeking permanent residency, work visas, and citizenship across leading world economies.
+              We offer complete strategic guidance to professionals, engineers, IT experts, medical practitioners, and executive leaders seeking permanent residency, work visas, and citizenship across leading world economies.
             </p>
             <div className="pt-2 flex flex-wrap gap-4">
               <Link
@@ -379,7 +379,7 @@ export default function SkilledImmigrationServicePage() {
             Ready to Begin Your Permanent Residency Journey?
           </h3>
           <p className="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
-            Book a dedicated points review session with ENI Consultants to map out your immigration pathway.
+            Book a dedicated points review session with Chief Consultant Muhammad Farooq Khan to map out your immigration pathway.
           </p>
           <div className="pt-2">
             <Link
