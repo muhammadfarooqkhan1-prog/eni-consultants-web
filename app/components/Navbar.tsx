@@ -73,6 +73,7 @@ export default function Navbar() {
     { name: "United Kingdom", code: "gb", href: "/destinations/uk" },
     { name: "USA", code: "us", href: "/destinations/usa" },
     { name: "Ireland", code: "ie", href: "/destinations/ireland" },
+    { name: "Hong Kong", code: "hk", href: "/destinations/hong-kong" },
     { name: "New Zealand", code: "nz", href: "/destinations/new-zealand" },
     { name: "Schengen Area", code: "eu", href: "/destinations/schengen" },
     { name: "Turkey", code: "tr", href: "/destinations/turkey" },
