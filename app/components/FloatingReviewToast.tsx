@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 interface Review {
   id: number;
@@ -78,7 +80,7 @@ export default function FloatingReviewToast() {
       <div className="bg-slate-900/95 backdrop-blur-md border border-slate-800 text-slate-200 p-4 rounded-2xl shadow-2xl relative">
         <button
           onClick={() => setIsDismissed(true)}
-          className="absolute top-2.5 right-2.5 text-slate-500 hover:text-slate-300 text-xs font-bold p-1"
+          className="absolute top-2.5 right-2.5 text-slate-500 hover:text-slate-300 text-xs font-bold p-1 z-10"
           aria-label="Close review popup"
         >
           ✕
@@ -86,7 +88,7 @@ export default function FloatingReviewToast() {
 
         <div className="flex items-start gap-3">
           <span className="text-2xl mt-0.5">{current.flag}</span>
-          <div className="space-y-1 pr-4">
+          <div className="space-y-1 pr-4 w-full">
             <div className="flex items-center gap-1 text-amber-400 text-xs">
               ★★★★★
               <span className="text-slate-400 text-[10px] font-bold uppercase ml-1">
@@ -99,6 +101,17 @@ export default function FloatingReviewToast() {
             <div className="pt-1 flex items-center justify-between text-[11px]">
               <span className="font-bold text-white">{current.name}</span>
               <span className="text-[#ff7027] font-semibold">{current.visaType}</span>
+            </div>
+
+            {/* LEARN MORE / READ ALL REVIEWS LINK */}
+            <div className="pt-2 mt-2 border-t border-slate-800/80 flex items-center justify-between">
+              <Link
+                href="/reviews"
+                className="inline-flex items-center gap-1 text-[11px] text-[#ff7027] hover:text-[#e05a14] font-bold transition-colors"
+              >
+                <span>Learn More & Read All Reviews</span>
+                <ArrowRight className="w-3 h-3" />
+              </Link>
             </div>
           </div>
         </div>
