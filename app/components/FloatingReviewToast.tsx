@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 interface Review {
@@ -9,7 +10,7 @@ interface Review {
   name: string;
   visaType: string;
   comment: string;
-  flag: string;
+  flagCode: string;
 }
 
 const reviews: Review[] = [
@@ -18,21 +19,28 @@ const reviews: Review[] = [
     name: "Muhammad Usman",
     visaType: "New Zealand SMC PR",
     comment: "ENI Consultants guided me through the new NZ SMC pathway seamlessly!",
-    flag: "🇳🇿",
+    flagCode: "nz",
   },
   {
     id: 2,
     name: "Dr. Ayesha Malik",
     visaType: "Canada Express Entry",
     comment: "Got my COPR within 5 months. The documentation guidance was perfect!",
-    flag: "🇨🇦",
+    flagCode: "ca",
   },
   {
     id: 3,
     name: "Hassan Raza",
     visaType: "UK Student Visa",
     comment: "Secured admission & visa with zero stress. Highly recommended!",
-    flag: "🇬🇧",
+    flagCode: "gb",
+  },
+  {
+    id: 4,
+    name: "Farhan Ali",
+    visaType: "Hong Kong IANG Visa",
+    comment: "Seamless university application and post-study work visa support!",
+    flagCode: "hk",
   },
 ];
 
@@ -87,7 +95,17 @@ export default function FloatingReviewToast() {
         </button>
 
         <div className="flex items-start gap-3">
-          <span className="text-2xl mt-0.5">{current.flag}</span>
+          {/* Flag Image Component */}
+          <div className="w-7 h-5 relative shrink-0 mt-1 rounded overflow-hidden shadow-sm border border-slate-700">
+            <Image
+              src={`https://flagcdn.com/w160/${current.flagCode}.png`}
+              alt={`${current.visaType} Flag`}
+              fill
+              unoptimized
+              className="object-cover"
+            />
+          </div>
+
           <div className="space-y-1 pr-4 w-full">
             <div className="flex items-center gap-1 text-amber-400 text-xs">
               ★★★★★
