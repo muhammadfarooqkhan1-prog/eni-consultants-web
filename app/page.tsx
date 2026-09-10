@@ -16,9 +16,8 @@ export default function HomePage() {
       <DestinationsSection />
       <WhyChooseUs />
       <FloatingReviewToast />
-      <Footer />
 
-      {/* You can add more homepage sections below here later */}
+      <Footer />
     </main>
   );
 }
