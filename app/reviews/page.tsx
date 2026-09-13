@@ -8,6 +8,7 @@ import {
   ArrowRight,
   ShieldCheck,
   Award,
+  User,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -19,12 +20,13 @@ export const metadata: Metadata = {
 export default function ClientReviewsPage() {
   const stats = [
     { label: "Visa Approval Rate", value: "98.4%" },
-    { label: "Successful Clients", value: "1,200+" },
+    { label: "Successful Clients", value: "1,000+" },
     { label: "Scholarships Secured", value: "£6,000+" },
     { label: "Average Review Rating", value: "4.9/5" },
   ];
 
   const clientReviews = [
+    // --- WITH PICTURES ---
     {
       id: "shoaib-irfan",
       name: "Shoaib Irfan",
@@ -33,9 +35,9 @@ export default function ClientReviewsPage() {
       highlight: "Canada Success Story",
       imageSrc: "/images/reviews/shoaib-irfan.jpeg",
       comment:
-        "ENI Consultants made my Canadian immigration process seamless. From profile evaluation to document preparation and final visa approval, their guidance was accurate and professional throughout.",
+        "Met Farooq Khan in 2017 regarding Canadian Skilled Immigration. I got an ITA in the same year and finally moved to Canada in 2019. Today, I am a Canadian citizen.",
       rating: 5,
-      year: "2026",
+      year: "2019",
     },
     {
       id: "abdullah-shakeel",
@@ -45,7 +47,7 @@ export default function ClientReviewsPage() {
       highlight: "6000 GBP Scholarship UK",
       imageSrc: "/images/reviews/abdullah-shakeel.jpeg",
       comment:
-        "Secured a £6,000 scholarship alongside my UK study visa approval! The team at ENI Consultants expertly structured my university application and visa documentation without any delays.",
+        "I got an admission to a Masters Degree in Business Analytics from a top university in London with a massive 6000 GBP scholarship. I would recommend ENI Consultants to anyone looking for expert guidance in securing scholarships and admissions abroad.",
       rating: 5,
       year: "2026",
     },
@@ -69,9 +71,9 @@ export default function ClientReviewsPage() {
       highlight: "Finland Success Story",
       imageSrc: "/images/reviews/hammad-khattak.jpeg",
       comment:
-        "Navigating European visa requirements was smooth thanks to ENI Consultants. They guided me step-by-step through university admission and Finnish residence permit filing.",
+        "Did Software Engineering from COMSATS University. After working in Pakistan for ten years, I wanted to explore the world for education and career growth. I met Farooq Khan and currently, I am in completion of my Masters degree in Software Engineering. I would like to persue a PHD from Finland soon.",
       rating: 5,
-      year: "2026",
+      year: "2025",
     },
     {
       id: "danish-mahmood",
@@ -84,6 +86,116 @@ export default function ClientReviewsPage() {
         "Outstanding counseling for my US visa application! Their interview preparation and document structuring were key factors in getting my approval.",
       rating: 5,
       year: "2026",
+    },
+    {
+      id: "hira-azan",
+      name: "Hira Azan",
+      country: "Canada",
+      flagCode: "ca",
+      highlight: "Canada Success Story",
+      imageSrc: "/images/reviews/Hira_Azan.jpeg",
+      comment:
+        "As a LUMS graduate, I needed expert guidance. Working with Muhammad Farooq Khan provided precise, step-by-step support. I successfully transitioned to Canada PR and achieved my goal of becoming a Canadian Citizen! Highly recommended.",
+      rating: 5,
+      year: "2020",
+    },
+    {
+      id: "daniyal-khan",
+      name: "Muhammad Daniyal Khan",
+      country: "USA",
+      flagCode: "us",
+      highlight: "USA Success Story",
+      imageSrc: "/images/reviews/Daniyal_Khan.jpeg",
+      comment:
+        "ENI Consultants handled our family's US Green Card application back in 2018. Thanks to their expert guidance, our entire family received Green Cards, relocated smoothly to the USA, and today we are proud American citizens! I highly recommend their team for reliable, complete immigration support.",
+      rating: 5,
+      year: "2018",
+    },
+    {
+      id: "ashan-hussain-khan",
+      name: "Ashan Hussain Khan",
+      country: "Instanbul, Turkey",
+      flagCode: "tr",
+      highlight: "Turkey Success Story",
+      imageSrc: "/images/reviews/male_client.png",
+      comment:
+        "As a civil engineer from Karachi, Pakistan, I met Muhammad Farooq Khan in 2020. I was admitted to a MS Civil Engineering program. After completion of the degree, I did another Masters Degree in AI based on recommendation. Today I have my own company, providing AI services for Turkey, Middle East and Europe.",
+      rating: 5,
+      year: "2020",
+    },
+
+    // --- WITHOUT PICTURES ---
+    {
+      id: "syeda-fatima",
+      name: "Syeda Fatima",
+      country: "Joensuu, Finland",
+      flagCode: "fi",
+      highlight: "Bachelors AI",
+      imageSrc: "/images/reviews/Client.png",
+      comment:
+        "For a trusted company like ENI Consultants Pakistan, decision was easy, got admitted in Bachelor's degree in top university of Finland with maximum scholarship.",
+      rating: 5,
+      year: "2025",
+    },
+    {
+      id: "syed-ali",
+      name: "Syed Ali Hassan",
+      country: "Japan",
+      flagCode: "jp",
+      highlight: "Japan Visit Visa",
+      imageSrc: "/images/reviews/male_client.png",
+      comment:
+        "As an autmotive business person, i was fascinated by the Japan and wanted to explore it. I got visit visa of Japan. Thanks to ENI Consultants Pakistan for their professional services.",
+      rating: 5,
+      year: "2020",
+    },
+    {
+      id: "mussyeb-ali-khan",
+      name: "Mussyeb Ali Khan",
+      country: "United Kingdom",
+      flagCode: "gb",
+      highlight: "UK Visit Visa Success",
+      imageSrc: "/images/reviews/male_client.png",
+      comment:
+        "As a business person, it was time consuming for me to apply for a UK visit visa for short duration. So having known Muhammad Farooq Khan for several years, i got a 5 year UK visit visa.",
+      rating: 5,
+      year: "2025",
+    },
+    {
+      id: "muhammad-ahmed",
+      name: "Muhammad Ahmed",
+      country: "Canada",
+      flagCode: "ca",
+      highlight: "Canada Success Story",
+      imageSrc: "/images/reviews/male_client.png",
+      comment:
+        "I graduated with a Bachelors Degree in Mechanical Engineering from NUST. Eni Consultants not only guided me and did not take any fee, helped me in landing a full scholarship in Masters of Applied Sciences in Civil Engineering from one of the prestigious universities in Canada. Not only I successfully completed this Masters, I also successfully landed a job in one of the world's top most energy company in Canada.",
+      rating: 5,
+      year: "2020",
+    },
+    {
+      id: "fazal-ur-rehman",
+      name: "Fazal ur Rehman",
+      country: "Sweden",
+      flagCode: "se",
+      highlight: "Master's Degree Admission",
+      imageSrc: "/images/reviews/male_client.png",
+      comment:
+        "As a business person from Minerals processing industry, I wanted to buy minerals processing machinery but no company was offering any services. Only ENI Consultants brought an invitation from that company in Chine, but also ensured, I got successful approval of short term trade visit visa.",
+      rating: 5,
+      year: "2017",
+    },
+    {
+      id: "muhammad-wasi",
+      name: "Muhammad Wasi",
+      country: "Europe",
+      flagCode: "eu",
+      highlight: "PHD Admission & Scholarship",
+      imageSrc: "/images/reviews/male_client.png",
+      comment:
+        "Met Muhammad Farooq Khan and he helped me in securing a scholarship PHD position in Telecommunication Engineering in one of the world's top 300 univerisities of the world in Europe. For anyone confused about PHD or career growth, ENI Consultants is the right platform. Wish them all the best.",
+      rating: 5,
+      year: "2020",
     },
   ];
 
@@ -139,23 +251,44 @@ export default function ClientReviewsPage() {
                 key={review.id}
                 className="bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden shadow-xl flex flex-col justify-between hover:border-[#ff7027]/50 transition-all duration-300 group"
               >
-                {/* SUCCESS STORY IMAGE DISPLAY */}
-                <div className="relative w-full aspect-[4/3] bg-slate-950 overflow-hidden border-b border-slate-800">
-                  <Image
-                    src={review.imageSrc}
-                    alt={`${review.name} - ${review.country}`}
-                    fill
-                    className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                  />
-                  
-                  {/* Top Badge Overlay */}
-                  <div className="absolute top-3 right-3 bg-slate-950/80 backdrop-blur-md border border-slate-700 px-3 py-1 rounded-full flex items-center gap-1.5 text-xs text-emerald-400 font-medium">
-                    <CheckCircle2 className="w-3.5 h-3.5" />
-                    <span>Verified Success</span>
+                {/* CONDITIONAL TOP SECTION: IMAGE VS AVATAR BANNER */}
+                {review.imageSrc ? (
+                  <div className="relative w-full aspect-[4/3] bg-slate-950 overflow-hidden border-b border-slate-800">
+                    <Image
+                      src={review.imageSrc}
+                      alt={`${review.name} - ${review.country}`}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    />
+                    
+                    {/* Top Badge Overlay */}
+                    <div className="absolute top-3 right-3 bg-slate-950/80 backdrop-blur-md border border-slate-700 px-3 py-1 rounded-full flex items-center gap-1.5 text-xs text-emerald-400 font-medium">
+                      <CheckCircle2 className="w-3.5 h-3.5" />
+                      <span>Verified Success</span>
+                    </div>
                   </div>
-                </div>
+                ) : (
+                  <div className="p-6 pb-0 flex items-center justify-between border-b border-slate-800/50">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-300">
+                        <User className="w-5 h-5 text-[#ff7027]" />
+                      </div>
+                      <div>
+                        <h3 className="text-white font-bold text-base">
+                          {review.name}
+                        </h3>
+                        <p className="text-slate-500 text-xs">Verified Client</p>
+                      </div>
+                    </div>
+                    <span className="text-xs font-semibold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20 flex items-center gap-1">
+                      <CheckCircle2 className="w-3 h-3" />
+                      Verified
+                    </span>
+                  </div>
+                )}
 
-                {/* REVIEW CONTENT BELOW IMAGE */}
+                {/* REVIEW CONTENT BELOW IMAGE / AVATAR */}
                 <div className="p-6 sm:p-8 space-y-5 flex-1 flex flex-col justify-between">
                   <div className="space-y-4">
                     {/* Country & Highlight Tag */}
@@ -167,6 +300,7 @@ export default function ClientReviewsPage() {
                             alt={`${review.country} Flag`}
                             fill
                             unoptimized
+                            sizes="24px"
                             className="object-cover"
                           />
                         </div>
