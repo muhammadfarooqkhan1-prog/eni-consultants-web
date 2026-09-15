@@ -28,7 +28,7 @@ export default function TestimonialSlider() {
       rating: "★★★★★",
     },
     {
-      img: null,
+      img: "/hassaan.PNG",
       quote: "When we decided to immigrate to Canada under the Express Entry Skilled Professional pathway for pilots, a family relative recommended ENI Consultants with high expectations. Their deep knowledge of specialized professional categories and end-to-end guidance exceeded all our hopes. We are deeply grateful to their team for handling our file with complete precision.",
       name: "Hassaan Zahid",
       location: "Lahore, Pakistan 2025",
@@ -44,7 +44,7 @@ export default function TestimonialSlider() {
       rating: "★★★★★",
     },
     {
-      img: null,
+      img: "/hammad.PNG",
       quote: "After completing my Software Engineering degree at COMSATS Pakistan and working in the industry for ten years, I felt it was time to explore global opportunities for higher education and career growth. Meeting Muhammad Farooq Khan was a turning point. With his professional guidance, I successfully completed my Master's degree in Software Engineering abroad, and I am now confidently pursuing my PhD degree in Finland.",
       name: "Hammad Khattak",
       location: "Helsinki, Finland 2025",
