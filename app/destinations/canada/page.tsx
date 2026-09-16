@@ -105,26 +105,24 @@ export default function CanadaDestinationPage() {
           </div>
 
           {/* HERO MEDIA */}
-<div className="lg:col-span-5 relative z-10 flex flex-col justify-center">
-  <div className="relative w-full rounded-2xl overflow-hidden border border-slate-700 shadow-2xl bg-black">
-    <video
-      controls
-      autoPlay
-      muted
-      loop
-      playsInline
-      className="w-full h-auto max-h-[450px] object-contain block mx-auto"
-    >
-      <source src="/videos/canada-immigration.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-    
-    <div className="p-3 bg-slate-900 border-t border-slate-800">
-      <p className="text-xs font-bold text-[#ff7027] uppercase">IRCC In-Demand Professions</p>
-      <p className="text-white font-bold text-sm">Doctors, Physiotherapists, Nurses & Pharmacists</p>
-    </div>
-  </div>
-</div>
+          <div className="lg:col-span-5 relative z-10 flex flex-col justify-center">
+            <div className="relative w-full rounded-2xl overflow-hidden border border-slate-700 shadow-2xl bg-black">
+              <video
+                controls
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-auto max-h-[450px] object-contain block mx-auto"
+              >
+                <source src="/videos/Canada_Immigration.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              
+              
+            </div>
+          </div>
+        </div>
 
         {/* STATS & ECONOMIC LANDSCAPE SECTION */}
         <section className="bg-slate-900/80 border border-slate-800 rounded-3xl p-8 sm:p-12 space-y-8 shadow-xl">

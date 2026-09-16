@@ -1,15 +1,32 @@
+"use client";
+
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 
 export default function Hero() {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    // Force muted state on the actual DOM element to bypass browser autoplay policy
+    if (videoRef.current) {
+      videoRef.current.muted = true;
+      videoRef.current.play().catch((err) => {
+        console.warn("Autoplay interaction blocked by browser:", err);
+      });
+    }
+  }, []);
+
   return (
-    <section className="relative w-full min-h-[85vh] md:min-h-screen overflow-hidden flex items-center justify-center border-none p-0 m-0">
-      {/* 1. Full-Bleed Video (No borders, frames, or black margins) */}
+    <section className="relative w-full min-h-[85vh] md:min-h-screen overflow-hidden flex items-center justify-center border-none p-0 m-0 bg-slate-950">
+      {/* 1. Full-Bleed Background Video */}
       <video
+        ref={videoRef}
         autoPlay
         loop
         muted
         playsInline
-        className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover border-none outline-none z-10"
+        preload="auto"
+        className="absolute inset-0 w-full h-full object-cover border-none outline-none z-10"
       >
         <source src="/videos/video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
@@ -20,7 +37,6 @@ export default function Hero() {
 
       {/* 3. Responsive Content Layer */}
       <div className="relative z-30 max-w-7xl w-full mx-auto px-5 sm:px-8 py-16 md:py-24 flex flex-col items-start justify-center">
-        
         {/* Tagline Badge */}
         <span className="bg-[#ff7027] text-white px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold tracking-wider uppercase mb-4 sm:mb-6 shadow-md">
           Making Immigration Easy
@@ -36,7 +52,7 @@ export default function Hero() {
           Expert global guidance for Local & Overseas Pakistanis across the Middle East, GCC, and worldwide.
         </p>
 
-        {/* Action Buttons (Stacked on Mobile, Side-by-Side on Desktop) */}
+        {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
           <Link
             href="/check-eligibility"
@@ -52,7 +68,6 @@ export default function Hero() {
             Book Consultation
           </Link>
         </div>
-
       </div>
     </section>
   );
