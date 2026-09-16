@@ -104,21 +104,22 @@ export default function CanadaDestinationPage() {
             </div>
           </div>
 
-          {/* HERO MEDIA */}
+          {/* HERO MEDIA (UPDATED WITH VIDEO) */}
           <div className="lg:col-span-5 relative z-10">
-            <div className="relative rounded-2xl overflow-hidden border border-slate-700 shadow-2xl group">
-              <img
-                src="https://images.pexels.com/photos/1549326/pexels-photo-1549326.jpeg?auto=compress&cs=tinysrgb&w=1000"
-                alt="Canada Permanent Residency Advisory"
-                className="w-full h-80 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
+            <div className="relative rounded-2xl overflow-hidden border border-slate-700 shadow-2xl bg-black">
+              <video
+                controls
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-80 sm:h-96 object-cover"
+              >
+                <source src="/videos/Canada_Immigration.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
               
-              <div className="absolute bottom-6 left-6 right-6 p-4 bg-slate-900/90 backdrop-blur-md border border-slate-800 rounded-xl">
-                <p className="text-xs font-bold text-[#ff7027] uppercase">IRCC Application Experts</p>
-                <p className="text-white font-bold text-sm">Strategic CRS Score Enhancement</p>
-                <p className="text-slate-400 text-xs mt-0.5">Express Entry, PNPs & Category Draws</p>
-              </div>
+              
             </div>
           </div>
         </div>
