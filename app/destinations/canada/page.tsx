@@ -1,10 +1,27 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Canada Permanent Residency (PR) & Express Entry Advisory | ENI Consultants",
   description:
     "Expert consultancy for Canada Express Entry, Federal Skilled Worker Program (FSWP), Category-Based Selection, PNPs (OINP, AAIP, BC PNP), and Study Permits.",
+  keywords: [
+    "Canada PR",
+    "Express Entry",
+    "Federal Skilled Worker Program",
+    "PNP Canada",
+    "OINP",
+    "AAIP",
+    "Canadian Immigration Consultant",
+  ],
+  openGraph: {
+    title: "Canada Permanent Residency (PR) & Express Entry Advisory | ENI Consultants",
+    description:
+      "Expert consultancy for Canada Express Entry, FSWP, Category-Based Selection, and PNPs.",
+    url: "https://eniconsultants.com/destination/canada",
+    type: "website",
+  },
 };
 
 export default function CanadaDestinationPage() {
@@ -20,7 +37,7 @@ export default function CanadaDestinationPage() {
         "CRS Score optimization & ECA (WES) verification strategy",
       ],
       mediaUrl: "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=1000",
-      mediaAlt: "Canada Express Entry Consultation",
+      mediaAlt: "Educational degrees and ECA assessment for Canada Express Entry eligibility",
     },
     {
       title: "Category-Based Selection Draws",
@@ -34,7 +51,7 @@ export default function CanadaDestinationPage() {
         "French Language Proficiency stream",
       ],
       mediaUrl: "https://images.pexels.com/photos/2048865/pexels-photo-2048865.jpeg?auto=compress&cs=tinysrgb&w=1000",
-      mediaAlt: "Canada Category Based Selection",
+      mediaAlt: "Healthcare and STEM professionals qualifying for Category-Based Selection",
     },
     {
       title: "Provincial Nominee Programs (PNPs)",
@@ -48,7 +65,7 @@ export default function CanadaDestinationPage() {
         "Saskatchewan SINP & Atlantic Immigration Program (AIP)",
       ],
       mediaUrl: "https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1000",
-      mediaAlt: "Canada Provincial Nominee Program PNP",
+      mediaAlt: "Canadian provincial landscape illustrating PNP immigration options",
     },
     {
       title: "Study-to-PR & Post-Graduation Work Permit (PGWP)",
@@ -61,7 +78,7 @@ export default function CanadaDestinationPage() {
         "Spouse Open Work Permit (SOWP) eligibility for Master's programs",
       ],
       mediaUrl: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1000",
-      mediaAlt: "Study in Canada Universities",
+      mediaAlt: "International students studying in Canadian university library",
     },
   ];
 
@@ -75,7 +92,13 @@ export default function CanadaDestinationPage() {
 
           <div className="lg:col-span-7 space-y-6 relative z-10">
             <div className="flex items-center gap-3">
-              <img src="https://flagcdn.com/w160/ca.png" alt="Canada Flag" className="w-8 h-5 object-cover rounded shadow" />
+              <Image 
+                src="https://flagcdn.com/w160/ca.png" 
+                alt="Flag of Canada" 
+                width={32} 
+                height={20} 
+                className="w-8 h-5 object-cover rounded shadow"
+              />
               <span className="bg-[#ff7027]/10 text-[#ff7027] border border-[#ff7027]/30 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider">
                 Destination Guide
               </span>
@@ -85,7 +108,7 @@ export default function CanadaDestinationPage() {
               Immigrate to Canada: Permanent Residency & Visa Pathways
             </h1>
             <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
-              As a global economic hub, Canada heavily relies on international talent to run its industries. With structured pathways to PR, universal healthcare, and citizenship, ENI Consultants provides complete legal and technical representation for your immigration journey.
+              As a global economic hub, Canada heavily relies on international talent to support its growing industries. With structured pathways to Permanent Residency (PR), universal healthcare, and citizenship, ENI Consultants provides complete legal and technical representation for your immigration journey.
             </p>
             
             <div className="pt-2 flex flex-wrap gap-4">
@@ -118,8 +141,6 @@ export default function CanadaDestinationPage() {
                 <source src="/videos/Canada_Immigration.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              
-              
             </div>
           </div>
         </div>
@@ -129,10 +150,10 @@ export default function CanadaDestinationPage() {
           <div className="max-w-3xl space-y-3">
             <span className="text-[#ff7027] font-bold text-xs uppercase tracking-wider">Economic & Demographic Landscape</span>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-white">
-              Over $2 Trillion Economy is run by Immigration
+              Over $2 Trillion Economy Powered by Immigration
             </h2>
             <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-              Canada is the world&apos;s 9th largest economy, supported by advanced technology, energy, healthcare, and engineering sectors. To keep the economy growing and deal with the problem of people the Canadian government always brings in almost "500,000 new permanent residents each year". The focus is, on people who come for reasons because they can help fill important jobs that are needed.
+              Canada is the world&apos;s 9th largest economy, supported by advanced technology, energy, healthcare, and engineering sectors. To sustain economic growth and address demographic shifts, Immigration, Refugees and Citizenship Canada (IRCC) welcomes approximately 500,000 new permanent residents annually through economic class immigration.
             </p>
           </div>
 
@@ -173,52 +194,50 @@ export default function CanadaDestinationPage() {
 
         {/* LIFE IN CANADA & WHY MOVE SECTION */}
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Life in Canada */}
           <div className="bg-slate-900 border border-slate-800 p-8 rounded-3xl space-y-6">
             <div className="space-y-2">
               <span className="text-[#ff7027] text-xs font-bold uppercase tracking-wider">Lifestyle & Infrastructure</span>
               <h3 className="text-2xl font-bold text-white">What Life in Canada Looks Like</h3>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed">
-              Living in Canada feels like a blend of top‑tier city life and stunning nature. People in Canada enjoy a multicultural society, great public transport, clean air and water and a strong system of help for everyone.
+              Living in Canada balances world-class urban infrastructure with abundant natural surroundings. Residents enjoy high living standards, efficient public transportation, and robust social security systems.
             </p>
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
                 <span className="text-[#ff7027] font-bold">✓</span>
-                <span><strong>Clean & Safe Communities:</strong> Very low crime rates across major cities like Toronto, Vancouver, Calgary, and Ottawa.</span>
+                <span><strong>Clean & Safe Communities:</strong> Exceptionally low crime rates across major hubs like Toronto, Vancouver, Calgary, and Ottawa.</span>
               </li>
               <li className="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
                 <span className="text-[#ff7027] font-bold">✓</span>
-                <span><strong>Work-Life Balance:</strong> Canada has solid labor laws, fair wages, paid leave and strong employee protection.</span>
+                <span><strong>Work-Life Balance:</strong> Strong labor standards, competitive compensation, paid leave, and employee rights.</span>
               </li>
               <li className="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
                 <span className="text-[#ff7027] font-bold">✓</span>
-                <span><strong>Inclusive Multiculturalism:</strong> Canada welcomes people from cultures, religions and backgrounds and they thrive together.</span>
+                <span><strong>Inclusive Multiculturalism:</strong> A welcoming environment supporting diverse global cultures and backgrounds.</span>
               </li>
             </ul>
           </div>
 
-          {/* Why You Should Move */}
           <div className="bg-slate-900 border border-slate-800 p-8 rounded-3xl space-y-6">
             <div className="space-y-2">
               <span className="text-[#ff7027] text-xs font-bold uppercase tracking-wider">Value Proposition</span>
               <h3 className="text-2xl font-bold text-white">Why You Should Move to Canada</h3>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed">
-              Getting Canadian Permanent Residency isn&apos;t just a visa—it&apos;s a long-term investment in your family&apos;s future, providing benefits to generations from day one.
+              Securing Canadian Permanent Residency offers a foundation for long-term stability and success for your family.
             </p>
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
                 <span className="text-[#ff7027] font-bold">✓</span>
-                <span><strong>Universal Healthcare:</strong> Free essential medical treatments, surgeries, and doctor visits via Medicare.</span>
+                <span><strong>Universal Healthcare:</strong> Access to publicly funded essential healthcare services and hospital treatments.</span>
               </li>
               <li className="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
                 <span className="text-[#ff7027] font-bold">✓</span>
-                <span><strong>Free K-12 Schooling:</strong> World-class public primary and secondary education for your children at zero tuition cost.</span>
+                <span><strong>Free K-12 Schooling:</strong> High-quality public primary and secondary education at no cost.</span>
               </li>
               <li className="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
                 <span className="text-[#ff7027] font-bold">✓</span>
-                <span><strong>Direct Passport Pathway:</strong> Become eligible for a top-tier Canadian passport after completing 3 years of residency.</span>
+                <span><strong>Direct Passport Pathway:</strong> Eligibility to apply for Canadian citizenship after 3 years of physical residency.</span>
               </li>
             </ul>
           </div>
@@ -238,7 +257,6 @@ export default function CanadaDestinationPage() {
                 key={idx}
                 className="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-xl hover:border-[#ff7027]/40 transition-all"
               >
-                {/* Media Column */}
                 <div className="lg:col-span-5 order-2 lg:order-1">
                   <div className="relative rounded-2xl overflow-hidden border border-slate-800 shadow-md h-64 sm:h-72">
                     <img
@@ -250,7 +268,6 @@ export default function CanadaDestinationPage() {
                   </div>
                 </div>
 
-                {/* Content Column */}
                 <div className="lg:col-span-7 space-y-5 order-1 lg:order-2">
                   <span className="bg-[#ff7027]/10 text-[#ff7027] border border-[#ff7027]/20 text-xs font-bold px-3 py-1 rounded-full uppercase">
                     {item.badge}
