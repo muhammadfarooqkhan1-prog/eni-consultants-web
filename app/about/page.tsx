@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Metadata } from "next";
 import {
   Target,
@@ -12,6 +13,7 @@ import {
   Briefcase,
   Plane,
   ArrowRight,
+  ExternalLink,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -131,11 +133,12 @@ export default function AboutPage() {
 
           {/* HERO IMAGE */}
           <div className="lg:col-span-5 relative z-10">
-            <div className="relative rounded-2xl overflow-hidden border border-slate-700 shadow-2xl group">
-              <img
+            <div className="relative rounded-2xl overflow-hidden border border-slate-700 shadow-2xl group h-80 sm:h-96">
+              <Image
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1000&auto=format&fit=crop"
                 alt="ENI Education and Immigration Consultants Pakistan Team"
-                className="w-full h-80 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-700"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
               
@@ -186,6 +189,82 @@ export default function AboutPage() {
                 To be an overseas education and immigration consultancy that is most trusted and reliable in the region, known worldwide for its high visa grant success ratio, ethical business practices, and strong advocacy on behalf of clients.
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* FOUNDER'S SPOTLIGHT & ALUMNI FEATURE (UPDATED WITH IMAGE & HIGHLIGHTS) */}
+        <section className="bg-slate-900 border border-slate-800 rounded-3xl p-8 sm:p-12 relative overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            {/* Left Content */}
+            <div className="lg:col-span-7 space-y-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#ff7027]/10 text-[#ff7027] border border-[#ff7027]/30 rounded-full text-xs font-bold uppercase tracking-wider">
+                <GraduationCap className="w-4 h-4" />
+                Featured UK Alumni Success Story
+              </div>
+
+              <h2 className="text-2xl sm:text-4xl font-extrabold text-white leading-snug">
+                Meet Our Founder: Muhammad Farooq Khan
+              </h2>
+
+              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+                ENI Consultants was established by <strong className="text-white">Muhammad Farooq Khan</strong> to provide transparent, and firsthand guidance for international applicants. Having successfully completed his education in the United Kingdom, his own journey was highlighted globally by the <strong className="text-white">University of Sunderland Alumni Association</strong> in their official <em>"Where Are They Now?"</em> feature.
+              </p>
+
+              <div className="space-y-3 pt-1">
+                <h3 className="text-xs font-bold text-white uppercase tracking-wider">Key Success Highlights</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
+                    <CheckCircle2 className="w-4 h-4 text-[#ff7027] shrink-0 mt-0.5" />
+                    <span><strong>UK Alumni Credibility:</strong> University of Sunderland graduate with firsthand personal experience in overseas student visa processing.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
+                    <CheckCircle2 className="w-4 h-4 text-[#ff7027] shrink-0 mt-0.5" />
+                    <span><strong>Global Recognition:</strong> Officially featured in the University of Sunderland&apos;s 2010–2019 global alumni spotlight series.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
+                    <CheckCircle2 className="w-4 h-4 text-[#ff7027] shrink-0 mt-0.5" />
+                    <span><strong>Proven Leadership:</strong> Scaled ENI Consultants into a top-rated consultancy firm in Pakistan with over 5,000 successful visa applications.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <blockquote className="border-l-2 border-[#ff7027] pl-4 italic text-slate-400 text-xs sm:text-sm my-2">
+                &quot;Having walked the path of an international student in the UK, I ensure our clients receive real, transparent, and accurate guidance every step of the way.&quot;
+              </blockquote>
+
+              <div className="pt-2">
+                <a
+                  href="https://alumni.sunderland.ac.uk/Keep-Informed/WAYN/2010-2019/Muhammad-Farooq-Khan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-bold text-[#ff7027] hover:text-[#e05a14] transition-colors group"
+                >
+                  <span>Read full story on University of Sunderland Portal</span>
+                  <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                </a>
+              </div>
+            </div>
+
+            {/* Right Image */}
+            <div className="lg:col-span-5 flex justify-center">
+              <div className="relative rounded-2xl overflow-hidden border border-slate-700 shadow-2xl group w-full max-w-md h-[400px]">
+                <Image
+                  src="/images/Muhammad-Farooq-Khan.jpg"
+                  alt="Muhammad Farooq Khan - Founder of ENI Consultants"
+                  fill
+                  className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
+                
+                <div className="absolute bottom-4 left-4 right-4 p-4 bg-slate-900/90 backdrop-blur-md border border-slate-800 rounded-xl">
+                  <p className="text-white font-bold text-base">Muhammad Farooq Khan</p>
+                  <p className="text-[#ff7027] text-xs font-semibold">Founder & Chief Consultant</p>
+                  <p className="text-slate-400 text-[11px] mt-0.5">University of Sunderland Alumni (UK)</p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
 
